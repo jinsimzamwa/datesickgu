@@ -1,0 +1,121 @@
+<section class="intro">
+    <div class="sprite-container">
+    
+    </div>
+
+    <div class="controls">
+        <!-- <button id="prevBtn">◀</button>
+        <button id="nextBtn">▶</button> -->
+        <button id="skipBtn">SKIP</button>
+    </div>
+    
+</section>
+
+<script>
+    $(function () {
+			const classes = ['bg-01_01', 'bg-01_02', 'bg-01_03', 'bg-01_04', 'bg-01_05', 'bg-01_06', 'bg-01_07', 'bg-01_08', 'bg-01_09', 'bg-01_10',
+											 'bg-02_01', 'bg-02_02', 'bg-02_03', 'bg-02_04', 'bg-02_05', 'bg-02_06', 'bg-02_07', 'bg-02_08', 'bg-02_09', 'bg-02_10', 'bg-02_11', 'bg-02_12', 'bg-02_13', 'bg-02_14',
+											 'bg-03_01', 'bg-03_02', 'bg-03_03', 'bg-03_04', 'bg-03_05', 'bg-03_06', 'bg-03_07', 'bg-03_08', 'bg-03_09', 'bg-03_10', 'bg-03_11', 'bg-03_12', 'bg-03_13', 'bg-03_14', 'bg-03_15',
+											 'bg-04_01', 'bg-04_02', 'bg-04_03', 'bg-04_04', 'bg-04_05', 'bg-04_06', 'bg-04_07', 'bg-04_08', 'bg-04_09', 'bg-04_10', 'bg-04_11', 'bg-04_12', 'bg-04_13', 'bg-04_14', 'bg-04_15', 'bg-04_16',
+											 'bg-05_01', 'bg-05_02', 'bg-05_03', 'bg-05_04', 'bg-05_05', 'bg-05_06', 'bg-05_07', 'bg-05_08'
+			];
+
+			let i = 0;
+			let currentPrefix = '';
+
+			function getPrefix(className) {
+				return className.split('_')[0];
+			}
+
+			function getIndicesWithPrefix(prefix) {
+				return classes.reduce((acc, cls, index) => {
+					if (getPrefix(cls) === prefix) acc.push(index);
+					return acc;
+				}, []);
+			}
+
+			function renderSeries(prefix, visibleCount = Infinity) {
+				$('.sprite-container').empty();
+				const indices = getIndicesWithPrefix(prefix);
+
+				for (let j = 0; j < indices.length && j < visibleCount; j++) {
+					const idx = indices[j];
+					$('.sprite-container').append(`<div class="${classes[idx]}"></div>`);
+				}
+				currentPrefix = prefix;
+			}
+
+			(function initFirstImage() {
+				const firstClass = classes[0];
+				$('.sprite-container').append(`<div class="${firstClass}"></div>`);
+				currentPrefix = getPrefix(firstClass);
+				i = 1;
+			})();
+
+			// $('#nextBtn').click(function () {				
+			$('.intro').click(function () {			
+				if (i < classes.length) {
+						const nextClass = classes[i];
+						const nextPrefix = getPrefix(nextClass);
+
+						console.log(nextClass)
+						if(nextClass === 'bg-02_01'){
+							bgmManager.play('intro2', true, false);
+							bgmManager.fadeIn(0.7, 2000);
+						}
+						if (currentPrefix !== nextPrefix) {
+								$('.sprite-container').empty();
+								currentPrefix = nextPrefix;
+
+								const indices = getIndicesWithPrefix(nextPrefix);
+								i = indices[0];
+						}
+
+						$('.sprite-container').append(`<div class="${classes[i]}"></div>`);
+						i++;
+				} else {
+					$('.container-inner').css('opacity', 0).load('./game/part01_story.html', function () {
+						$('.container-inner').animate({ opacity: 1 }, 800);
+					});
+				}
+		});
+
+			// $('#prevBtn').click(function () {
+			// 	if (i > 0) {
+			// 		i--;
+
+			// 		//화면 새로그리기 조정
+			// 		if(i == 10) i = 9; 
+			// 		else if(i == 24) i = 23; 
+			// 		else if(i == 39) i = 38; 
+			// 		else if(i == 54) i = 53; 
+					
+			// 		const prevClass = classes[i];
+			// 		const prevPrefix = getPrefix(prevClass);
+
+			// 		if (currentPrefix !== prevPrefix) {
+			// 			const indices = getIndicesWithPrefix(prevPrefix);
+			// 			const visibleCount = indices.indexOf(i) + 1;
+			// 			renderSeries(prevPrefix, visibleCount);
+			// 		} else {
+			// 			$('.sprite-container div').last().remove();
+			// 		}
+			// 	}
+			// });
+
+			$('#skipBtn').click(function () {
+				// while (i < classes.length) {
+				// 	$('#nextBtn').click();
+				// }
+				bgmManager.play('intro2', true, false);
+				bgmManager.fadeIn(0.7, 2000);
+				
+				$('.container-inner').css('opacity', 0).load('./game/part01_story.html', function () {
+						$('.container-inner').animate({ opacity: 1 }, 800);
+					});
+					// $('.container-inner').css('opacity', 0).load('./game/part05_story.html', function () {
+					// 	$('.container-inner').animate({ opacity: 1 }, 800);
+					// });
+			});
+  });
+</script>

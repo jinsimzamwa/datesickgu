@@ -1,0 +1,1619 @@
+@charset "utf-8";
+
+body{
+    background-color: #fffde2;
+    user-select: none;         /* 텍스트 선택 방지 */
+    -webkit-user-select: none; /* Safari/Chrome */
+    -ms-user-select: none;     /* IE/Edge */
+}
+#wrap{
+    width: 1100px;
+    margin: 0 auto;
+}
+::selection{color: #fff;background-color: #74c5b6;}
+/* header>h1{
+    height: 200px;
+    font-size: 50px;
+    line-height: 200px;
+    text-align: center;
+} */
+
+header{
+    width: 1100px;
+    height: 340px;
+    background-image: url(../images/header2.png);
+    margin-bottom: 50px;
+}
+header>h1{text-indent: -9999px;}
+
+section.page{
+    margin-bottom: 80px;
+}
+section.page>article{
+    width: 1100px;
+    margin: 0 auto;
+}
+section.page>article>h2{
+    width: 250px;
+    height: 65px;
+    margin: 20px auto;
+    color: #fff;
+    font-size: 48px;
+    font-weight: 500;
+    text-align: center;
+    text-shadow: 1px 1px 1px #999;
+    background-color: #74c5b5;
+    border-radius: 15px;
+}
+section.page>article>.txt{
+    width: 1100px;
+}
+
+/* 게임스토리 */
+section.page>.story>.txt{
+    display: flex;
+    align-items: center;
+    height: 940px;
+    background-image: url(../images/bg_story.png);
+    background-repeat: no-repeat;
+}
+section.page>.story>.txt>img{
+    display: block;
+    margin: 0 60px 0 120px;
+}
+section.page>.story>.txt>p>span{
+    display: block;
+    margin-bottom: 32px;
+    font-size: 30px;
+    text-align: center;
+}
+section.page>.story>.txt>p>.catchphrase{
+    font-size: 42px;
+}
+section.page>.story>.txt>p>.porori{
+    margin-bottom: 60px;
+}
+
+/* 게임방법 */
+section.page>.howto>.txt{
+    position: relative;
+    height: 550px;
+    background-image: url(../images/bg_howtoway.png);
+}
+section.page>.howto>.txt>p{
+    position: absolute;
+    left: 100px;
+    top: 16px;
+    width: 900px;
+    height: 438px;
+    font-size: 26px;
+    text-align: center;
+}
+section.page>.howto>.txt>p>span{
+    display: block;
+    margin-top: 45px;
+}
+section.page>.howto>.txt>p>.neoburi{
+    font-size: 42px;
+}
+
+/* 타이틀화면 */
+.game{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 778px;
+    background-image: url(../images/main/background.png);
+    border: 1px solid #000;
+    box-sizing: border-box;
+}
+.game #ichiku_sd{
+    overflow: hidden;
+    position: absolute;
+    width: 291px;
+    height: 234px; 
+    left: 231px;
+    top: 281px;
+    background: url(../images/main/ichiku_sd.png) no-repeat;
+    animation: shake-sd 0.6s ease-in-out infinite;
+    transform-origin: center bottom;
+}
+.game #saburo_sd{
+    overflow: hidden;
+    position: absolute;
+    width: 163px;
+    height: 194px;
+    left: 599px;
+    top: 200px;
+    background: url(../images/main/saburo_sd.png) no-repeat;
+    animation: shake-sd 0.6s ease-in-out infinite;
+    transform-origin: center bottom;
+}
+.game #jakurai_sd{
+    overflow: hidden;
+    position: absolute;
+    width: 200px;
+    height: 249px;
+    left: 670px;
+    top: 110px;
+    background: url(../images/main/jakurai_sd.png) no-repeat;
+    animation: shake-sd 0.6s ease-in-out infinite;
+    transform-origin: center bottom;
+}
+.game #hitoya_sd{
+    overflow: hidden;
+    position: absolute;
+    width: 157px;
+    height: 229px;
+    left: 785px;
+    top: 90px;
+    background: url(../images/main/hitoya_sd.png) no-repeat;
+    animation: shake-sd 0.6s ease-in-out infinite;
+    transform-origin: center bottom;
+}
+.game #rei_sd{
+    overflow: hidden;
+    position: absolute;
+    width: 213px;
+    height: 260px;
+    left: 850px;
+    top: 20px;
+    background: url(../images/main/rei_sd.png) no-repeat;
+    animation: shake-sd 0.6s ease-in-out infinite;
+    transform-origin: center bottom;
+}
+
+@keyframes shake-sd {
+    0%   { transform: rotate(-0.5deg); }
+    50%  { transform: rotate(0.5deg); }
+    100% { transform: rotate(-0.5deg); }
+}
+
+.intro .sprite-container > div {
+  animation: fadeUp 0.4s ease-in;
+}
+
+#container {
+    width: 100%;
+    height: 778px;
+    background: rgba(0, 0, 0) !important;
+}
+
+
+/* 인트로 화면 */
+.intro{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 778px;
+    background-image: url(../images/intro/background.png);
+    border: 1px solid #000;
+    box-sizing: border-box;
+}
+.intro .sprite-container {
+    width: 100%;
+    height: 705px;
+    margin: auto;
+    border: 1px solid #ccc;
+}
+
+[class^="bg-"] {
+  position: absolute;
+}
+
+.intro .sprite-container > div {
+  animation: fadeUp 0.4s ease-in;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.intro .bg-01_01 {
+    width: 200px; height: 366px;
+    background: url(../images/intro/01.png) -195px -653px;
+    left: 852px;
+    top: 28px;
+}
+.intro .bg-01_02 {
+    width: 195px; height: 685px;
+    background: url(../images/intro/01.png) -0 -653px;
+    left: 774px;
+    top: 20px;
+    z-index: 5;
+}
+.intro .bg-01_03 {
+    width: 402px; height: 269px;
+    background: url(../images/intro/01.png) -314px -354px;
+    left: 393px;
+    top: 29px;
+}
+.intro .bg-01_04 {
+    width: 123px; height: 161px;
+    background: url(../images/intro/01.png) -323px -1019px;
+    left: 420px;
+    top: 67px;
+}
+.intro .bg-01_05 {
+    width: 403px; height: 354px;
+    background: url(../images/intro/01.png) -314px -0;
+    left: 393px;
+    top: 326px;
+}
+.intro .bg-01_06 {
+    width: 128px; height: 170px;
+    background: url(../images/intro/01.png) -195px -1019px;
+    left: 654px;
+    top: 280px;
+}
+.intro .bg-01_07 {
+    width: 135px; height: 160px;
+    background: url(../images/intro/01.png) -395px -853px;
+    left: 681px;
+    top: 485px;
+}
+.intro .bg-01_08 {
+    width: 314px; height: 653px;
+    background: url(../images/intro/01.png) -0 -0;
+    left: 38px;
+    top: 28px;
+}
+.intro .bg-01_09 {
+    width: 137px; height: 200px;
+    background: url(../images/intro/01.png) -395px -653px;
+    left: 236px;
+    top: 61px;
+}
+.intro .bg-01_10 {
+    width: 129px; height: 179px;
+    background: url(../images/intro/01.png) -532px -653px;
+    left: 74px;
+    top: 366px;
+}
+
+.intro .bg-02_01 {
+    width: 256px; height: 666px;
+    background: url(../images/intro/02.png) -0 -640px;
+    left: 802px;
+    top: 20px;
+}
+
+.intro .bg-02_02 {
+    width: 126px; height: 178px;
+    background: url(../images/intro/02.png) -724px -1011px;
+    left: 974px;
+    top: 45px;
+}
+
+.intro .bg-02_03 {
+    width: 164px; height: 257px;
+    background: url(../images/intro/02.png) -724px -0;
+    left: 817px;
+    top: 400px;
+}
+
+.intro .bg-02_06 {
+    width: 155px; height: 199px;
+    background: url(../images/intro/02.png) -724px -465px;
+    left: 200px;
+    top: 25px;
+}
+
+.intro .bg-02_05 {
+    width: 237px; height: 322px;
+    background: url(../images/intro/02.png) -483px -640px;
+    left: 546px;
+    top: 2px;
+}
+
+.intro .bg-02_07 {
+    width: 137px; height: 157px;
+    background: url(../images/intro/02.png) -437px -991px;
+    left: 25px;
+    top: 139px;
+}
+
+.intro .bg-02_04 {
+    width: 724px; height: 286px;
+    background: url(../images/intro/02.png) -0 -0;
+    left: 49px;
+    top: 28px;
+}
+
+.intro .bg-02_08 {
+    width: 511px; height: 354px;
+    background: url(../images/intro/02.png) -0 -286px;
+    left: 309px;
+    top: 335px;
+}
+
+.intro .bg-02_09 {
+    width: 184px; height: 353px;
+    background: url(../images/intro/02.png) -511px -286px;
+    left: 631px;
+    top: 303px;
+}
+
+.intro .bg-02_10 {
+    width: 181px; height: 255px;
+    background: url(../images/intro/02.png) -256px -991px;
+    left: 325px;
+    top: 277px;
+}
+
+.intro .bg-02_11 {
+    width: 151px; height: 173px;
+    background: url(../images/intro/02.png) -724px -664px;
+    left: 279px;
+    top: 532px;
+    z-index: 10;
+}
+
+.intro .bg-02_12 {
+    width: 227px; height: 351px;
+    background: url(../images/intro/02.png) -256px -640px;
+    left: 48px;
+    top: 337px;
+}
+
+.intro .bg-02_13 {
+    width: 148px; height: 174px;
+    background: url(../images/intro/02.png) -724px -837px;
+    left: 155px;
+    top: 311px;
+}
+
+.intro .bg-02_14 {
+    width: 154px; height: 208px;
+    background: url(../images/intro/02.png) -724px -257px;
+    left: 5px;
+    top: 495px;
+}
+
+
+.intro .bg-03_01 {
+    width: 436px; height: 285px;
+    background: url(../images/intro/03.png) -386px -393px;
+    left: 602px;
+    top: 26px;
+}
+
+.intro .bg-03_02 {
+    width: 216px; height: 322px;
+    background: url(../images/intro/03.png) -222px -748px;
+    left: 876px;
+    top: 22px;
+    z-index: 10;
+}
+
+.intro .bg-03_03 {
+    width: 128px; height: 172px;
+    background: url(../images/intro/03.png) -969px -748px;
+    left: 603px;
+    top: 80px;
+}
+
+.intro .bg-03_04 {
+    width: 386px; height: 355px;
+    background: url(../images/intro/03.png) -0 -393px;
+    left: 652px;
+    top: 331px;
+}
+
+.intro .bg-03_05 {
+    width: 130px; height: 195px;
+    background: url(../images/intro/03.png) -723px -748px;
+    left: 781px;
+    top: 327px;
+}
+
+.intro .bg-03_06 {
+    width: 149px; height: 211px;
+    background: url(../images/intro/03.png) -438px -748px;
+    left: 577px;
+    top: 271px;
+    z-index: 10;
+}
+
+.intro .bg-03_07 {
+    width: 134px; height: 164px;
+    background: url(../images/intro/03.png) -1205px -0;
+    left: 700px;
+    top: 546px;
+}
+
+.intro .bg-03_08 {
+    width: 581px; height: 393px;
+    background: url(../images/intro/03.png) -0 -0;
+    left: 45px;
+    top: 29px;
+}
+
+.intro .bg-03_09 {
+    width: 222px; height: 404px;
+    background: url(../images/intro/03.png) -0 -748px;
+    left: 376px;
+    top: 25px;
+}
+
+.intro .bg-03_10 {
+    width: 136px; height: 204px;
+    background: url(../images/intro/03.png) -587px -748px;
+    left: 89px;
+    top: 25px;
+}
+
+.intro .bg-03_11 {
+    width: 120px; height: 181px;
+    background: url(../images/intro/03.png) -1205px -164px;
+    left: 15px;
+    top: 236px;
+}
+
+.intro .bg-03_12 {
+    width: 624px; height: 238px;
+    background: url(../images/intro/03.png) -581px -0;
+    left: 46px;
+    top: 438px;
+}
+
+.intro .bg-03_13 {
+    width: 223px; height: 284px;
+    background: url(../images/intro/03.png) -822px -393px;
+    left: 379px;
+    top: 421px;
+}
+
+.intro .bg-03_14 {
+    width: 156px; height: 257px;
+    background: url(../images/intro/03.png) -1045px -393px;
+    left: 134px;
+    top: 398px;
+}
+
+.intro .bg-03_15 {
+    width: 116px; height: 193px;
+    background: url(../images/intro/03.png) -853px -748px;
+    left: 8px;
+    top: 512px;
+}
+
+.intro .bg-04_01 {
+    width: 247px; height: 284px;
+    background: url(../images/intro/04.png) -750px -336px;
+    left: 784px;
+    top: 35px;
+}
+
+.intro .bg-04_02 {
+    width: 140px; height: 171px;
+    background: url(../images/intro/04.png) -674px -635px;
+    left: 929px;
+    top: 24px;
+}
+
+.intro .bg-04_03 {
+    width: 139px; height: 146px;
+    background: url(../images/intro/04.png) -0 -948px;
+    left: 956px;
+    top: 226px;
+    z-index: 10;
+}
+
+.intro .bg-04_04 {
+    width: 321px; height: 336px;
+    background: url(../images/intro/04.png) -750px -0;
+    left: 711px;
+    top: 353px;
+}
+
+.intro .bg-04_05 {
+    width: 143px; height: 174px;
+    background: url(../images/intro/04.png) -531px -635px;
+    left: 953px;
+    top: 527px;
+}
+
+.intro .bg-04_06 {
+    width: 750px; height: 346px;
+    background: url(../images/intro/04.png) -0 -0;
+    left: 49px;
+    top: 35px;
+}
+
+.intro .bg-04_07 {
+    width: 102px; height: 142px;
+    background: url(../images/intro/04.png) -1071px -418px;
+    left: 692px;
+    top: 29px;
+}
+
+.intro .bg-04_08 {
+    width: 186px; height: 236px;
+    background: url(../images/intro/04.png) -478px -346px;
+    left: 386px;
+    top: 51px;
+}
+
+.intro .bg-04_09 {
+    width: 228px; height: 313px;
+    background: url(../images/intro/04.png) -0 -635px;
+    left: 29px;
+    top: 19px;
+}
+
+.intro .bg-04_10 {
+    width: 478px; height: 289px;
+    background: url(../images/intro/04.png) -0 -346px;
+    left: 235px;
+    top: 399px;
+}
+
+.intro .bg-04_11 {
+    width: 126px; height: 202px;
+    background: url(../images/intro/04.png) -1071px -216px;
+    left: 626px;
+    top: 353px;
+}
+
+.intro .bg-04_12 {
+    width: 138px; height: 216px;
+    background: url(../images/intro/04.png) -1071px -0;
+    left: 422px;
+    top: 331px;
+}
+
+.intro .bg-04_13 {
+    width: 153px; height: 202px;
+    background: url(../images/intro/04.png) -378px -635px;
+    left: 228px;
+    top: 488px;
+}
+
+.intro .bg-04_14 {
+    width: 150px; height: 284px;
+    background: url(../images/intro/04.png) -228px -635px;
+    left: 49px;
+    top: 400px;
+}
+
+.intro .bg-04_15 {
+    width: 96px; height: 131px;
+    background: url(../images/intro/04.png) -1071px -708px;
+    left: 112px;
+    top: 395px;
+}
+
+.intro .bg-04_16 {
+    width: 93px; height: 148px;
+    background: url(../images/intro/04.png) -1071px -560px;
+    left: 32px;
+    top: 541px;
+}
+
+.intro .bg-05_01 {
+    width: 356px; height: 667px;
+    background: url(../images/intro/05.png) -687px -0;
+    left: 693px;
+    top: 23px;
+}
+
+.intro .bg-05_02 {
+    width: 135px; height: 227px;
+    background: url(../images/intro/05.png) -135px -667px;
+    left: 960px;
+    top: 16px;
+}
+
+.intro .bg-05_03 {
+    width: 135px; height: 252px;
+    background: url(../images/intro/05.png) -0 -667px;
+    left: 757px;
+    top: 354px;
+}
+
+.intro .bg-05_04 {
+    width: 75px; height: 91px;
+    background: url(../images/intro/05.png) -650px -667px;
+    left: 691px;
+    top: 578px;
+}
+
+.intro .bg-05_05 {
+    width: 687px; height: 667px;
+    background: url(../images/intro/05.png) -0 -0;
+    left: 42px;
+    top: 23px;
+}
+
+.intro .bg-05_06 {
+    width: 112px; height: 191px;
+    background: url(../images/intro/05.png) -538px -667px;
+    left: 592px;
+    top: 11px;
+}
+
+.intro .bg-05_07 {
+    width: 125px; height: 225px;
+    background: url(../images/intro/05.png) -270px -667px;
+    left: 94px;
+    top: 200px;
+}
+
+.intro .bg-05_08 {
+    width: 143px; height: 194px;
+    background: url(../images/intro/05.png) -395px -667px;
+    left: 97px;
+    top: 480px;
+}
+
+.intro .controls {
+    text-align: center;
+    margin-top: 10px;
+}
+.intro .controls button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+
+/* 대화 화면 */
+.part01_story, .part01_success, .part01_fail, .part01_story2 {
+  position: relative;
+  width: 100%;
+  height: 778px;
+  background-image: url(../images/background/road.png);
+  background-size: cover;
+  overflow: hidden;
+}
+
+.standing-area {
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: center; 
+  align-items: flex-end;
+  bottom: 0;
+  gap: 40px;  /* 캐릭터 간격 */
+}
+
+.standing-area.char-count-2 {
+  gap: 10px;
+}
+
+.character {
+  width: 300px;
+  height: 600px;
+  position: relative;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.character img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.dialogue-box {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1100px; 
+  height: 276px; 
+  color: #fff;
+  padding: 41px 73px 31px 60px; /* 이미지에 따라 텍스트 영역 보정 */
+  box-sizing: border-box;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  /*justify-content: flex-end;*/
+
+   overflow: hidden; /* 중요: 인디케이터 넘치지 않게 */
+}
+
+.name-box {
+  background-image: url(../images/ui/UI_ADV_NamePlate.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 298px;
+    height: 58px;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin-bottom: 10px;
+    top: 1px;
+    left: 0px;
+    font-size: 33px;
+    font-family: 'Keinan Pop', sans-serif;
+}
+
+.text-box {
+  background-image: url('../images/ui/UI_ADV_Window.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 21px;
+  left: 0px;
+  font-size: 26px;
+  line-height: 37px;
+}
+
+.text-text {
+  font-size: 23px;
+  color: #fff;
+  padding: 0 12px; /* 텍스트 영역 조절 */
+  text-align: center;
+  line-height: normal;
+  text-align: left;
+  white-space: normal;
+  word-break: break-word;
+
+  position: absolute;
+  top: 60px;
+  left: 74px;
+
+  width: 955px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.next-indicator {
+  position: absolute;
+  bottom: 15px;
+  right: 25px;
+  font-size: 18px;
+  color: #fff;
+  animation: blink 1s step-end infinite;
+  display: none;
+  pointer-events: none;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/*========================================*/
+
+.part01_game {
+  position: relative;
+  width: 100%;
+  height: 778px;
+  background-image: url(../images/game/part_1_bg.png);
+  background-size: cover;
+  overflow: hidden;
+}
+.part_1_layer0 {
+  position: absolute;
+  width: 451px;
+  height: 778px;
+  right: 0px;
+  background-image: url(../images/game/part_1_layer0.png);
+  background-size: cover;
+  overflow: hidden;
+}
+.part_1_layer1 {
+  position: absolute;
+  width: 492px;
+  height: 643px;
+  right: 0px;
+  bottom: 0px;
+  background-image: url(../images/game/part_1_layer1.png);
+  background-size: cover;
+  overflow: hidden;
+}
+.part_1_layer2 {
+  position: absolute;
+  width: 100%;
+  height: 778px;
+  background-image: url(../images/game/part_1_layer2.png);
+  background-size: cover;
+  overflow: hidden;
+}
+
+.game-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: none;
+}
+
+.part01-modal, .part02-modal, .part03-modal, .part04-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1100;
+  display: none;
+  text-align: center;
+}
+
+.part01-modal img.part01-modal { display: block; width: 600px; height: auto; }
+.part02-modal img.part02-modal { display: block; width: 600px; height: auto; }
+.part03-modal img.part03-modal { display: block; width: 600px; height: auto; }
+.part04-modal img.part04-modal { display: block; width: 600px; height: auto; }
+
+.ok_btn {
+  position: absolute;
+  top: 54px;
+  left: -94px;
+  z-index: 1100;
+
+  height: auto;
+  cursor: pointer;
+}
+
+.ok_btn:hover {
+  transform: scale(1.05);
+}
+
+.start-game, .success-game, .fail-game {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1200;
+  display: none;
+  width: 300px; /* 원하는 크기로 조절 */
+}
+
+/* part0 걷는 모션*/
+@keyframes walkRightBouncy {
+  0% {
+    right: 0px;
+    transform: translateY(0px);
+  }
+  10% {
+    right: 110px;
+    transform: translateY(-6px);
+  }
+  20% {
+    right: 220px;
+    transform: translateY(6px);
+  }
+  30% {
+    right: 330px;
+    transform: translateY(-5px);
+  }
+  40% {
+    right: 440px;
+    transform: translateY(5px);
+  }
+  50% {
+    right: 550px;
+    transform: translateY(-4px);
+  }
+  60% {
+    right: 660px;
+    transform: translateY(4px);
+  }
+  70% {
+    right: 770px;
+    transform: translateY(-3px);
+  }
+  80% {
+    right: 880px;
+    transform: translateY(3px);
+  }
+  90% {
+    right: 990px;
+    transform: translateY(0px);
+  }
+  100% {
+    right: 1100px;
+    transform: translateY(0px);
+  }
+}
+
+.part_1_layer1.walk {
+  animation: walkRightBouncy 5.5s ease-out forwards;
+}
+
+@keyframes kaboom {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    transform: translate(-50%, -50%) scale(1.3) rotate(5deg);
+    opacity: 1;
+  }
+  40% {
+    transform: translate(-50%, -50%) scale(1) rotate(-5deg);
+  }
+  60% {
+    transform: translate(-50%, -50%) scale(1.1) rotate(3deg);
+  }
+  80% {
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+  }
+}
+
+.kaboom {
+  display: block;
+  animation: kaboom 0.8s ease-out;
+}
+
+.part_1_layer1.paused {
+  animation-play-state: paused;
+}
+
+
+/*==================*/
+
+
+.part01_success, .part01_fail, .part01_story2, .part04_story{
+  position: relative;
+  width: 100%;
+  height: 778px;
+  background-image: url(../images/background/road.png);
+  background-size: cover;
+  overflow: hidden;
+}
+
+.part02_story {
+  position: relative;
+  width: 100%;
+  height: 778px;
+  background-image: url(../images/background/car_road.png);
+  background-size: cover;
+  overflow: hidden;
+}
+
+.part02_game {
+  position: relative;
+  width: 100%;
+  height: 778px;
+  background-image: url(../images/game/part_2_bg.png);
+  background-size: cover;
+  overflow: hidden;
+}
+.part_2_layer1 {
+  position: absolute;
+  width: 276px;
+	height: 446px;
+	top: -116px;
+  left: 232px;
+  background-image: url(../images/game/part_2_layer1.png);
+  background-size: cover;
+  overflow: hidden;
+}
+.part_2_layer2 {
+  position: absolute;
+  top: 106px;
+  right: -800px;
+  width: 963px;
+  height: 609px;
+  background-image: url(../images/game/part_2_layer2.png);
+  background-size: cover;
+  overflow: hidden;
+}
+
+.left_btn, .right_btn {
+  position: absolute;
+  bottom: 50px;
+  width: 80px;
+  height: auto;
+  z-index: 2000;
+  cursor: pointer;
+}
+
+.fail-zone {
+  position: absolute;
+	top: 477px;
+	right: 606px;
+	width: 334px;
+	height: 60px;
+  background-color: rgba(255, 0, 0, 0.3);
+  border: 2px dashed red;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.car-hitbox {
+  position: absolute;
+  width: 481px;
+  height: 146px;
+  background-color: rgba(0, 255, 255, 0.3);
+  border: 2px dashed cyan;
+  z-index: 999;
+  pointer-events: none;
+}
+
+.splash-effect {
+  position: absolute;
+  width: 662px;
+  height: 286px;
+  top: 100px;
+  right: 460px;
+  display: none;
+  z-index: 1200;
+  pointer-events: none;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: none;
+}
+
+.splash-effect.active {
+  display: block;
+  animation: splashPop 2s ease-out forwards;
+}
+
+@keyframes splashPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.4) rotate(0deg);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1.1) rotate(3deg);
+  }
+  70% {
+    transform: scale(1) rotate(-2deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.8) rotate(0deg);
+  }
+}
+
+
+/* 차 + 웅덩이 충돌판정시 주석할것*/
+.fail-zone, .car-hitbox {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.left_btn { left: 50px; }
+.right_btn { right: 50px; }
+
+.part02_success, .part02_fail{
+  position: relative;
+  width: 100%;
+  height: 778px;
+  background-image: url(../images/background/car_road.png);
+  background-size: cover;
+  overflow: hidden;
+}
+
+/*==================*/
+
+.part03_story, .part03_success, .part03_fail_1, .part03_fail_2{
+  position: relative;
+  width: 100%;
+  height: 778px;
+  background-image: url(../images/background/ramenya.png);
+  background-size: cover;
+  overflow: hidden;
+}
+
+.part03_game {
+  position: relative;
+  width: 100%;
+  height: 778px;
+  background-image: url(../images/game/part_3_bg.png);
+  background-size: cover;
+  overflow: hidden;
+}
+.part_3_layer1 {
+  position: absolute;
+  width: 764px;
+  height: 699px;
+  right: 180px;
+  bottom: 0px;
+  background-image: url(../images/game/part_3_layer1.png);
+  background-size: cover;
+  overflow: hidden;
+}
+.part_3_layer2 {
+  position: absolute;
+  width: 329px;
+  height: 301px;
+  top: 197px;
+  left: 529px;
+  background-image: url(../images/game/part_3_layer2.png);
+  background-size: cover;
+  overflow: hidden;
+}
+.part_3_layer2.upward {
+  animation: diagonalUp 2.5s linear forwards;
+}
+
+.upward.paused {
+  animation-play-state: paused !important;
+}
+
+@keyframes diagonalUp {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-64px, -34px);
+  }
+}
+
+/* 실패 트리거 */
+.part03_fail-zone {
+  position: absolute;
+  bottom: 0;
+  right: 184px;
+  width: 186px;
+  height: 93px;
+  z-index: 10;
+}
+
+.part03_fail-zone-2 {
+  position: absolute;
+    top: 72px;
+    left: 75px;
+    width: 668px;
+    height: 146px;
+    z-index: 10;
+    transform: rotate(5deg);
+}
+
+.part_3_layer3 {
+  position: absolute;
+  width: 779px;
+  height: 778px;
+  background-image: url(../images/game/part_3_layer3.png);
+  background-size: cover;
+  overflow: hidden;
+}
+
+.part_3_layer4 {
+  position: absolute;
+  width: 969px;
+  height: 714px;
+  top: 519px;
+  left: 530px;
+  background-image: url(../images/game/part_3_layer4.png);
+  background-size: cover;
+  overflow: hidden;
+}
+
+.part_3_layer4.upward2 {
+  animation: diagonalUp2 3s linear forwards;
+}
+
+.upward2.paused2 {
+  animation-play-state: paused !important;
+}
+
+@keyframes diagonalUp2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-166px, -37px);
+  }
+}
+
+.game-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: none;
+}
+
+/*==================*/
+
+.part04_story2, .part04_success, .part04_fail{
+  position: relative;
+  width: 100%;
+  height: 778px;
+  background-image: url(../images/background/gamecenter.png);
+  background-size: cover;
+  overflow: hidden;
+}
+
+.part04_game {
+  position: relative;
+  width: 100%;
+  height: 778px;
+  background-image: url(../images/game/part_4_bg.png);
+  background-size: cover;
+  overflow: hidden;
+}
+.part_4_layer1 {
+ position: absolute;
+  width: 90px;
+  height: 365px;
+  top: -26px;
+  left: 272px;
+  background-image: url(../images/game/part_4_layer1.png);
+  background-size: cover;
+  overflow: hidden;
+  z-index: 100;
+}
+.part_4_layer2 {
+  position: relative;
+  width: 100%;
+  height: 778px;
+  background-image: url(../images/game/part_4_layer2.png);
+  background-size: cover;
+  overflow: hidden;
+  z-index: 110;
+}
+.part_4_layer3 {
+  position: absolute;
+  width: 712px;
+  height: 738px;
+  bottom: 0px;
+  right: 0px;
+  background-image: url(../images/game/part_4_layer3.png);
+  background-size: cover;
+  overflow: hidden;
+  z-index: 150;
+}
+.part_4_layer4 {
+  position: absolute;
+  width: 313px;
+  height: 311px;
+  bottom: -47px;
+  left: -52px;
+  background-image: url(../images/game/part_4_layer4.png);
+  background-size: cover;
+  overflow: hidden;
+  z-index: 120;
+}
+.part_4_layer5 {
+  position: absolute;
+  width: 212px;
+  height: 281px;
+  bottom: 92px;
+  left: 208px;
+  background-image: url(../images/game/part_4_layer5.png);
+  background-size: cover;
+  overflow: hidden;
+  z-index: 121;
+}
+
+@keyframes moveDiagonal {
+  0% {
+    top: -26px;
+    left: 272px;
+  }
+  50% {
+    top: -26px;
+    left: 100px;
+  }
+  100% {
+    top: 141px;
+    left: 100px;
+  }
+}
+
+.part_4_layer1.move-diagonal {
+  position: absolute;
+  animation: moveDiagonal 5s linear forwards;
+}
+
+.part_4_layer1.paused {
+  animation-play-state: paused;
+}
+
+@keyframes pulsate {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.part_4_layer5.pulsate {
+  animation: pulsate 1s infinite;
+  cursor: pointer;
+}
+
+.end01, .end02, .end03, .end04, .end05, .end06 {
+  position: relative;
+  width: 100%;
+  height: 778px;
+  background-color: black;
+  overflow: hidden;
+  color: white;
+}
+
+.end-text {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  font-size: 24px;
+  font-family: 'Pretendard', sans-serif;
+}
+
+.next-indicator {
+  display: block;
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  font-size: 20px;
+  color: white;  
+  animation: blink 1s infinite;
+  z-index: 10000; 
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ===================== */
+
+.part05_story, .part05_story_true{
+  position: relative;
+  width: 100%;
+  height: 778px;
+  background-image: url(../images/background/station.png);
+  background-size: cover;
+  overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+.end-modal-overlay {
+  display: none;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+.end-modal {
+  position: relative;
+  width: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: auto;
+  background: transparent;
+  text-align: center;
+}
+
+.end-modal img {
+  width: 100%;
+}
+
+.end-buttons {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.end-buttons button {
+  background: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.game #start{
+    background: url(../images/main/start_btn.png) no-repeat;
+    position: absolute;
+    width: 225px;
+    height: 126px;
+    border: none;
+    outline: none;
+    font-size: 0;
+    padding: 0;
+    left: 629px;
+    top: 440px;
+    cursor: pointer;
+}
+
+.game #credit{
+    background: url(../images/main/credit_btn.png) no-repeat;
+    position: absolute;
+    width: 236px;
+    height: 139px;
+    border: none;
+    outline: none;
+    font-size: 0;
+    padding: 0;
+    left: 678px;
+    top: 527px;
+    cursor: pointer;
+}
+
+.game>button:hover{
+    color: #304e42;
+    background-color: #fff;
+}
+
+.game>button:active{
+    left: 355px;
+    top: 43px;
+    box-shadow: none;
+}
+
+footer:before{
+    display: block;
+    width: 160px;
+    height: 110px;
+    margin: 95px auto 20px;
+    background-image: url(../images/img_bottom.png);
+    content: '';
+}
+
+footer{
+    height: 280px;
+    font-size: 14px;
+    font-family: "Noto Sans KR";
+}
+footer>span{
+    display: block;
+    margin-bottom: 14px;
+    text-align: center;
+}
+footer>address{
+    text-align: center;
+}
+
+.credit-screen {
+  position: relative;
+  width: 100%;
+  height: 778px;
+  background: black;
+  overflow: hidden;
+  color: white;
+  font-family: sans-serif;
+}
+
+.credit-step {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 28px;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.credit-step.show {
+  display: flex;
+  opacity: 1;
+}
+
+.credit-step.fade-out {
+  opacity: 0;
+}
+
+.credit-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  max-width: 900px;
+}
+
+.credit-step.hide {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.credit-label {
+  font-size: 32px;
+  text-align: left;
+  white-space: pre-line;
+  line-height: 1.4;
+}
+
+.bonus-img {
+  display: block;
+  opacity: 0;
+  transform: scale(0.9);
+  margin-left: 20px;
+  width: 489px;
+  height: 346px;
+  transition: all 0.6s ease;
+}
+
+.bonus-img.show-img {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.credit-scroll {
+  position: relative;
+  height: 2000px; /* 적당히 고정 높이 */
+  overflow: hidden; /* 스크롤 영역 숨기기 */
+  margin-top: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+.scroll-content {
+  position: relative;
+  top: 350px;
+  transition: top 4s ease-in-out; /* 부드러운 이동 */
+}
+
+.credit-center {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.credit-lower {
+  position: absolute;
+  top: 500px;
+  font-size: 20px;
+}
+
+.credit-center {
+  font-size: 36px;
+  font-weight: bold;
+  opacity: 0;
+  transition: all 0.8s ease;
+  position: relative;
+  top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.credit-center.move-up {
+  top: -60px;
+  opacity: 0.7;
+  font-size: 28px;
+}
+
+.credit-scroll.scrolling {
+  position: relative;
+  margin-top: 30px;
+  overflow: hidden;
+}
+
+.final-img {
+  width: 1100px;
+  height: 654px;
+}
+

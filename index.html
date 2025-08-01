@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title lang="ja">デートに絡んでくる邪魔物が多すぎる</title>
+  <title lang="ko">데이트하는데 군식구가 너무 많아</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://code.jquery.com/jquery.min.js"></script>
+  <script src="./js/bgmManager.js"></script>
+  <script src="./js/sfxManager.js"></script>
+  <script src="./js/function.js"></script>
+
+  <style>
+    #container {
+      position: relative;
+      min-height: 600px;
+    }
+    .intro-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      backdrop-filter: blur(3px);
+      z-index: 10;
+    }
+    .intro-overlay strong {
+      font-size: 2rem;
+      animation: blinkText 1.5s infinite;
+    }
+    @keyframes blinkText {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+    .intro-overlay small {
+      font-size: 1rem;
+      opacity: 0.7;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <h1>デートに絡んでくる邪魔物が多すぎる</h1>
+    </header>
+    <div id="container">
+      <div class="intro-overlay">
+        <strong>Press the screen</strong>
+        <small>サウンドがあります</small>
+      </div>
+      <div class="container-inner"></div>
+    </div>
+    <footer>
+      <span>본 페이지는 히프노시스마이크의 비공식 2차창작 팬게임으로 제작되었습니다.</span>
+      <address>&copy; 2025 Designed by +, All Rights Reserved.</address>
+    </footer>
+  </div>
+
+  <script>
+    $(function () {
+      $('.intro-overlay').one('click', function () {
+        bgmManager.play('intro', true, false);
+        bgmManager.fadeIn(0.7, 2000);
+
+        $('.intro-overlay').fadeOut(500, function () {
+          $(this).remove();
+          $('.container-inner').load('./game/main.html', function () {
+            attachGameEvents();
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
