@@ -44,7 +44,7 @@ function initDialogue({ sectionSelector, script }) {
 
     characters.forEach(char => {
       const $char = $section.find(`.character.${char.position}`);
-      const imgSrc = `/images/stand/${char.name}_${char.expression}.png`;
+      const imgSrc = `./images/stand/${char.name}_${char.expression}.png`;
 
       const adjust = (characterAdjustments[char.name]?.[char.expression] ||
                       characterAdjustments[char.name]?.['default'] || 
@@ -128,7 +128,7 @@ function initDialogue({ sectionSelector, script }) {
 
   $section.fadeOut(400, function () {
     $section
-      .css('background-image', 'url(/images/background/' + line.bgChange + '.png)')
+      .css('background-image', 'url(./images/background/' + line.bgChange + '.png)')
       .css({ backgroundPositionX: '0%' })
       .fadeIn(100)
       .promise()
@@ -154,7 +154,7 @@ function initDialogue({ sectionSelector, script }) {
   if (line.bgRestore) {
     $('.part05_story, .part05_story_true')
       .stop(true, true)
-      .css('background-image', 'url(../images/background/station.png)')
+      .css('background-image', 'url(./images/background/station.png)')
       .css({ backgroundPositionX: '0%' });
     $('.dialogue-box').fadeIn(300);
     $section.find('.character').show();

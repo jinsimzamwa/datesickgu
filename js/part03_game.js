@@ -29,7 +29,7 @@ $(function () {
           gameEnded = true;
 
           $('.part_3_layer1, .part_3_layer2').fadeOut(100, function () {
-            $('.part03_game').css('background-image', 'url(../images/game/part_3_bg2.png)');
+            $('.part03_game').css('background-image', 'url(./images/game/part_3_bg2.png)');
             $('.part03_fail-zone').hide();
             $('.part03_fail-zone-2').show();
 
