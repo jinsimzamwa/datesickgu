@@ -148,7 +148,7 @@ function animatePerson() {
 
     $('.splash-effect').show().addClass('active');
 
-    $('.part_2_layer1').css('background-image', 'url(../images/game/part_2_layer1_fail.png)');
+    $('.part_2_layer1').css('background-image', 'url(./images/game/part_2_layer1_fail.png)');
 
     failImage.one('animationend', function () {
       $('.container-inner').fadeOut(600, function () {
