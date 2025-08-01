@@ -25,14 +25,14 @@ $(function () {
 
       inputDetected = false;
 
-      // 이동 애니메이션 적용
       $('.part_4_layer1').addClass('move-diagonal');
-
-      // 클릭 유도 애니메이션 적용
       $('.part_4_layer5').addClass('pulsate');
 
       successTimeoutId = setTimeout(() => {
         if (!inputDetected && !gameEnded) {
+
+          sfxManager.play('success', 0.8);
+
           gameEnded = true;
 
           const $success = $('.success-game');
@@ -56,6 +56,9 @@ $(function () {
   // 실패 클릭 조건: part_4_layer5 클릭 시
   $('.part_4_layer5').on('click', function () {
     if (successTimeoutId && !inputDetected && !gameEnded) {
+
+      sfxManager.play('fail', 0.6);
+      
       inputDetected = true;
       gameEnded = true;
       clearTimeout(successTimeoutId);
@@ -78,4 +81,9 @@ $(function () {
       });
     }
   });
+
+  $('.ok_btn').on('mouseenter', function() {
+    sfxManager.play('hover', 0.8); 
+  });
+
 });

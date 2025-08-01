@@ -9,7 +9,6 @@ $(function () {
   $('.success-game, .fail-game').hide();
   $('.start-game').hide();
 
-  // ✅ 1단계 OK 버튼 클릭
   $('.ok_btn').off('click.part03').on('click.part03', function () {
     inputDetected = true;
     $('.part03-modal').fadeOut();
@@ -25,12 +24,10 @@ $(function () {
 
       $('.part_3_layer2').addClass('upward');
 
-      // ✅ 1단계 성공 타이머
       successTimeoutId = setTimeout(() => {
         if (!inputDetected && !gameEnded) {
-          gameEnded = true; // 🔒 바로 잠금
+          gameEnded = true;
 
-          // 1 → 2단계 진입
           $('.part_3_layer1, .part_3_layer2').fadeOut(100, function () {
             $('.part03_game').css('background-image', 'url(../images/game/part_3_bg2.png)');
             $('.part03_fail-zone').hide();
@@ -39,7 +36,6 @@ $(function () {
             $('.part_3_layer3, .part_3_layer4').hide().fadeIn(100);
             $('.part_3_layer4').addClass('upward2');
 
-            // 2단계 성공/실패 판정 시작
             triggerStage2();
           });
         }
@@ -47,14 +43,15 @@ $(function () {
     }, 800);
   });
 
-  // ✅ 1단계 실패
   $('.part03_fail-zone').off('click.part03').on('click.part03', function () {
     if (successTimeoutId && !inputDetected && !gameEnded) {
       inputDetected = true;
-      gameEnded = true; // 🔒 바로 잠금
+      gameEnded = true;
       clearTimeout(successTimeoutId);
 
       $('.part_3_layer2').addClass('paused');
+
+      sfxManager.play('fail', 0.6);
 
       const $fail = $('.fail-game');
       $fail.show().removeClass('kaboom');
@@ -73,27 +70,24 @@ $(function () {
 
   let stage2Started = false;
 
-  // ✅ 2단계 로직
   function triggerStage2() {
     if (stage2Started) return;
     
     stage2Started = true;
     let stage2Ended = false;
 
-    // 2단계 성공 타이머
     const timer2 = setTimeout(() => {
       if (!stage2Ended) {
-        stage2Ended = true; // 🔒 바로 잠금
+        stage2Ended = true; 
         handleStage2Success();
       }
     }, 3000);
 
-    // 2단계 실패
     $('.part03_fail-zone-2')
-      .off('click.stage2') // 중복 등록 방지
+      .off('click.stage2')
       .one('click.stage2', function () {
         if (!stage2Ended) {
-          stage2Ended = true; // 🔒 바로 잠금
+          stage2Ended = true;
           clearTimeout(timer2);
           handleStage2Fail();
         }
@@ -101,6 +95,9 @@ $(function () {
   }
 
   function handleStage2Success() {
+
+    sfxManager.play('success', 0.8);
+
     const $success = $('.success-game');
     $success.show().removeClass('kaboom');
     void $success[0].offsetWidth;
@@ -116,6 +113,9 @@ $(function () {
   }
 
   function handleStage2Fail() {
+
+    sfxManager.play('fail', 0.6);
+    
     $('.part_3_layer4').addClass('paused2');
 
     const $fail = $('.fail-game');
@@ -131,4 +131,9 @@ $(function () {
       });
     });
   }
+
+  $('.ok_btn').on('mouseenter', function() {
+    sfxManager.play('hover', 0.8); 
+  });
+
 });

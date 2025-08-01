@@ -125,6 +125,8 @@ function animatePerson() {
   hitbox.stop(true, true);
 
   if (isSuccess) {
+    sfxManager.play('success', 0.8);
+
     successImage.show().removeClass('kaboom');
     void successImage[0].offsetWidth;
     successImage.addClass('kaboom');
@@ -137,6 +139,9 @@ function animatePerson() {
       });
     });
   } else {
+
+    sfxManager.play('fail', 0.6);
+    
     failImage.show().removeClass('kaboom');
     void failImage[0].offsetWidth;
     failImage.addClass('kaboom');
@@ -178,13 +183,22 @@ function animatePerson() {
   });
 
   leftBtn.on('click', () => {
+    sfxManager.play('click', 0.8); 
+
     if (gameEnded) return;
     carState.offsetX += 40;
   });
 
   rightBtn.on('click', () => {
+    sfxManager.play('click', 0.8); 
+    
     if (gameEnded) return;
     carState.offsetX -= 40;
   });
+
+  $('.ok_btn').on('mouseenter', function() {
+    sfxManager.play('hover', 0.8); 
+  });
+
 
 });

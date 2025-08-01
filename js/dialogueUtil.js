@@ -44,7 +44,7 @@ function initDialogue({ sectionSelector, script }) {
 
     characters.forEach(char => {
       const $char = $section.find(`.character.${char.position}`);
-      const imgSrc = `../images/stand/${char.name}_${char.expression}.png`;
+      const imgSrc = `/images/stand/${char.name}_${char.expression}.png`;
 
       const adjust = (characterAdjustments[char.name]?.[char.expression] ||
                       characterAdjustments[char.name]?.['default'] || 
@@ -97,7 +97,7 @@ function initDialogue({ sectionSelector, script }) {
       const seen = JSON.parse(localStorage.getItem('seenEndings') || '[]');
       const all = ['end01', 'end02', 'end03', 'end04', 'end05'];
       const seenAll = all.every(id => seen.includes(id));
-      finalNext = seenAll ? './game/part05_story_true.html' : './game/part05_story_true.html';
+      finalNext = seenAll ? './game/part05_story_true.html' : './game/part05_story.html';
     }
 
     $('.container-inner').fadeOut(600, function () {
@@ -128,7 +128,7 @@ function initDialogue({ sectionSelector, script }) {
 
   $section.fadeOut(400, function () {
     $section
-      .css('background-image', 'url(../images/background/' + line.bgChange + '.png)')
+      .css('background-image', 'url(/images/background/' + line.bgChange + '.png)')
       .css({ backgroundPositionX: '0%' })
       .fadeIn(100)
       .promise()
