@@ -1,3 +1,6 @@
+window.basePath = location.hostname.includes('github.io') ? '/datesickgu' : '';
+window.asset = path => `${basePath}${path}`;
+
 function attachGameEvents() {
   $('#start').on('click', function () {
     $('.container-inner').load('./game/intro.html');

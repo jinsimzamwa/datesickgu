@@ -1,18 +1,11 @@
 @charset "utf-8";
 
-/* @font-face {
-    font-family: 'Katuri';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/Katuri.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-} */
-
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
 
 @font-face {
   font-family: 'Keinan Pop';
-  src: url('/fonts/keinan-pop.ttf') format('truetype');
+  src: url('../fonts/keinan-pop.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -45,7 +38,6 @@ label, button{cursor:pointer;}
 body{
 	color:#222;
 	font-size:12px;
-	/* font-size:0.8em; */
 	line-height:1.2;
 	font-family:"Noto Sans JP","Noto Sans KR",돋움,굴림;
 }
@@ -58,13 +50,10 @@ body{
 
 .text-hide{display:none;}
 
-/* 스크린리더가 읽을 수 있어 접근성이 향상됨 */
 .sr-only{
 	position: absolute;
 	left: -9999px
 }
-
- /* .clearfix{*zoom:1;} */
 
 .clearfix:after{
     display: block;

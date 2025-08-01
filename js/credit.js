@@ -1,3 +1,14 @@
+document.querySelector('.credit-logo').src = asset('/images/header2.png');
+
+document.querySelector('.img1').src = asset('/images/credit/bonus1.png');
+document.querySelector('.img2').src = asset('/images/credit/bonus2.png');
+document.querySelector('.img3').src = asset('/images/credit/bonus3.png');
+document.querySelector('.img4').src = asset('/images/credit/bonus4.png');
+document.querySelector('.img5').src = asset('/images/credit/bonus5.png');
+document.querySelector('.img6').src = asset('/images/credit/bonus6.png');
+
+document.querySelector('.final-img').src = asset('/images/credit/credit_end.png');
+
 $(function () {
   let step = 0;
   let scrollStarted = false;
