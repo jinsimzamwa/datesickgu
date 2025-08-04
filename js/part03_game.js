@@ -13,6 +13,8 @@ $(function () {
     inputDetected = true;
     $('.part03-modal').fadeOut();
 
+    $('.part03_game').addClass('cursor-road');
+
     $('.start-game').show().removeClass('kaboom');
     void $('.start-game')[0].offsetWidth;
     $('.start-game').addClass('kaboom');
@@ -28,7 +30,7 @@ $(function () {
         if (!inputDetected && !gameEnded) {
           gameEnded = true;
 
-          $('.part_3_layer1, .part_3_layer2').fadeOut(100, function () {
+          $('.part_3_layer1, .part_3_layer2, .part_3_target').fadeOut(100, function () {
             $('.part03_game').css('background-image', 'url(./images/game/part_3_bg2.png)');
             $('.part03_fail-zone').hide();
             $('.part03_fail-zone-2').show();

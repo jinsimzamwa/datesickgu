@@ -1,6 +1,6 @@
 const characterAdjustments = {
   ichiro: {
-    default: { scale: 1.35, x: 0, y: -54 },
+    default: { scale: 1.5, x: 0, y: -27 },
     angry:   { scale: 1, x: 0, y: 0 },
   },
   kuko: {
@@ -81,7 +81,6 @@ function initDialogue({ sectionSelector, script }) {
 
   const line = script[index];
 
-  // ✅ 엔딩 분기 처리
   if (index === script.length - 1 && line.next) {
     $('.dialogue-box').hide();
 
@@ -114,6 +113,27 @@ function initDialogue({ sectionSelector, script }) {
   if (line.bgTrueEnd) {
     bgmManager.play('trueEnd', true, false);
     bgmManager.fadeIn(0.7, 4000);
+  }
+  if (line.endingHint) {
+    let seen = JSON.parse(localStorage.getItem('seenEndings') || '[]');
+
+    const endingDescriptions = {
+      end01: '성대하게 물이 튀게 만든다거나, ',
+      end02: '의자를 부숴서 좋은 분위기를 엉망으로 만든다거나, ',
+      end03: '가라아게를 먹여주기 직전에 방해한다거나, ',
+      end04: '인형을 뽑지 못하게 만들어 분위기를 불편하게 만든다거나'
+    };
+
+    const allEndings = Object.keys(endingDescriptions);
+
+    const unseen = allEndings.filter(e => !seen.includes(e));
+
+    if (unseen.length > 0) {
+      const descriptions = unseen.map(e => endingDescriptions[e]).join('\n');
+      line.text = `${descriptions}\n...그런 일들을 아직 보지 못했잖아?`;
+    } else {
+      line.text = `이 데이트를 다시 한번 지켜보면 다른 이야기를 볼 수 있을지도 몰라.`;
+    }
   }
 
   if (line.bgChange) {

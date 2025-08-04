@@ -182,16 +182,28 @@ function animatePerson() {
     }, 800);
   });
 
+  function pressEffect($btn) {
+  $btn.css({
+    transform: 'scale(0.9)',
+    transition: 'transform 0.1s ease'
+  });
+  setTimeout(() => {
+    $btn.css({
+      transform: 'scale(1)'
+    });
+  }, 100);
+}
+
   leftBtn.on('click', () => {
     sfxManager.play('click', 0.8); 
-
+    pressEffect(leftBtn);
     if (gameEnded) return;
     carState.offsetX += 40;
   });
 
   rightBtn.on('click', () => {
     sfxManager.play('click', 0.8); 
-    
+    pressEffect(rightBtn);
     if (gameEnded) return;
     carState.offsetX -= 40;
   });

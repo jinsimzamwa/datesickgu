@@ -5,6 +5,27 @@
     <div id="jakurai_sd"></div>
     <div id="saburo_sd"></div>
 
-    <button type="button" id="start">START</button>
-    <button type="button" id="credit">CREDIT</button>
+    <button type="button" id="start"></button>
+    <button type="button" id="credit"></button>
+
+    <button type="button" id="reset"></button>
+
+    <button type="button" id="kor"></button>
+    <button type="button" id="jpn"></button>
+
+      <div id="resetModal" class="modal" style="display:none;">
+      <div class="modal-bg"></div>
+      <div class="modal-content">
+        <img src="./images/ui/modal_bg.png" class="modal-bg-image" />
+        <p class="modal-text">엔딩기록을 삭제하시겠습니까?</p>
+        <div class="modal-buttons">
+          <button id="resetOk" class="modal-btn ok">
+            <img src="./images/ui/ok.png" />
+          </button>
+          <button id="resetCancel" class="modal-btn cancel">
+            <img src="./images/ui/cancel.png" />
+          </button>
+        </div>
+      </div>
+    </div>
 </section>

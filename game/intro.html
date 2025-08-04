@@ -1,14 +1,8 @@
 <section class="intro">
-    <div class="sprite-container">
-    
-    </div>
-
     <div class="controls">
-        <!-- <button id="prevBtn">◀</button>
-        <button id="nextBtn">▶</button> -->
-        <button id="skipBtn">SKIP</button>
+        <button id="skipBtn"></button>
     </div>
-    
+	<div class="sprite-container"></div>
 </section>
 
 <script>
@@ -80,42 +74,15 @@
 				}
 		});
 
-			// $('#prevBtn').click(function () {
-			// 	if (i > 0) {
-			// 		i--;
-
-			// 		//화면 새로그리기 조정
-			// 		if(i == 10) i = 9; 
-			// 		else if(i == 24) i = 23; 
-			// 		else if(i == 39) i = 38; 
-			// 		else if(i == 54) i = 53; 
-					
-			// 		const prevClass = classes[i];
-			// 		const prevPrefix = getPrefix(prevClass);
-
-			// 		if (currentPrefix !== prevPrefix) {
-			// 			const indices = getIndicesWithPrefix(prevPrefix);
-			// 			const visibleCount = indices.indexOf(i) + 1;
-			// 			renderSeries(prevPrefix, visibleCount);
-			// 		} else {
-			// 			$('.sprite-container div').last().remove();
-			// 		}
-			// 	}
-			// });
 
 			$('#skipBtn').click(function () {
-				// while (i < classes.length) {
-				// 	$('#nextBtn').click();
-				// }
+
 				bgmManager.play('intro2', true, false);
 				bgmManager.fadeIn(0.7, 2000);
 				
 				$('.container-inner').css('opacity', 0).load('./game/part01_story.html', function () {
 						$('.container-inner').animate({ opacity: 1 }, 800);
-					});
-					// $('.container-inner').css('opacity', 0).load('./game/part05_story.html', function () {
-					// 	$('.container-inner').animate({ opacity: 1 }, 800);
-					// });
+				});
 			});
   });
 </script>
