@@ -193,7 +193,7 @@ const part04_fail = [
       { name: 'ichiro', position: 'center', expression: 'default' },
     ],
     speaker: '山田一郎',
-    text: '저 녀석은 이치니랑 사귀기엔 형편없는 놈이야. 그건 명백한 사실이라 생각했어. 하지만.'
+    text: '저 녀석은 이치형과 사귀기엔 형편없는 놈이야. 그건 명백한 사실이라 생각했어. 하지만.'
   },
   {
     characters: [
@@ -207,7 +207,7 @@ const part04_fail = [
       { name: 'ichiro', position: 'center', expression: 'default' },
     ],
     speaker: '山田一郎',
-    text: '모르겠어. 하지만...난 이치니가 저런 표정 짓는걸 원하진 않았어.'
+    text: '모르겠어. 하지만...난 이치형이 저런 표정 짓는걸 원하진 않았어.'
   },
   {
     characters: [
@@ -333,7 +333,7 @@ const part04_fail = [
       { name: 'ichiro', position: 'center', expression: 'default' },
     ],
     speaker: '山田一郎',
-    text: '이치니...'
+    text: '이치형...'
   },
   {
     next: './game/end04.html'

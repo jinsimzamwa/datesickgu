@@ -5,7 +5,7 @@ const part02_story = [
       { name: 'kuko', position: 'right', expression: 'default' },
     ],
     speaker: '波羅夷 空却',
-    text: '어딜 그렇게 찾아보는거냐.'
+    text: '어딜 그렇게 두리번거리는거냐.'
   },
   {
     characters: [
@@ -60,7 +60,7 @@ const part02_story = [
       { name: 'saburo', position: 'center', expression: 'default' },
     ],
     speaker: '山田三郎',
-    text: '감히 이치니랑 소근소근 즐겁게 대화하다니...'
+    text: '감히 이치형과 소근소근 즐겁게 대화하다니...'
   },
   {
     characters: [
@@ -68,6 +68,13 @@ const part02_story = [
     ],
     speaker: '天国 獄',
     text: '평범하게 사이좋은 연인이잖아'
+  },
+    {
+    characters: [
+      { name: 'saburo', position: 'center', expression: 'default' },
+    ],
+    speaker: '山田三郎',
+    text: '저런 놈이랑 이치형이 연인인게 문제인거라고!'
   },
   {
     characters: [
@@ -112,7 +119,7 @@ const part02_story = [
       { name: 'hitoya', position: 'right', expression: 'default' },
     ],
     speaker: '天谷奴 零',
-    text: '저기서 밟아버리면 저녀석들에게 화려하게 튀겠지?'
+    text: '저길 밟아주면, 타이밍에 따라선 저녀석들에게 딱 좋게 물이 튀길지도 모르지~?'
   },
   {
     characters: [

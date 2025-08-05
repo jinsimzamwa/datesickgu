@@ -255,7 +255,7 @@ const part03_story = [
       { name: 'kuko', position: 'right', expression: 'default' },
     ],
     speaker: '山田一郎',
-    text: '아 덜어달라는게 아니라... 실은 그으...',
+    text: '덜어달라는게 아니라... 실은 그으...',
   },
   {
     characters: [
@@ -329,7 +329,7 @@ const part03_story = [
       { name: 'saburo', position: 'center', expression: 'default' }
     ],
     speaker: '山田三郎',
-    text: '젠장, 이치니가 눈치채지 못하는 선에서 방해해야만해! 저런 난잡한 행동, 난 용납 못해!',
+    text: '젠장, 이치형이 눈치채지 못하는 선에서 방해해야만해! 저런 난잡한 행동, 난 용납 못해!',
   },
   {
     characters: [

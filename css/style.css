@@ -396,7 +396,7 @@ section.page>.howto>.txt>p>.neoburi{
 
 .intro .bg-03_03 {
     width: 128px; height: 172px;
-    background: url(../images/intro/03.png) -969px -748px;
+    background: url(../images/intro/03.png) -841px -748px;
     left: 603px;
     top: 80px;
 }
@@ -410,14 +410,14 @@ section.page>.howto>.txt>p>.neoburi{
 
 .intro .bg-03_05 {
     width: 130px; height: 195px;
-    background: url(../images/intro/03.png) -723px -748px;
+    background: url(../images/intro/03.png) -574px -748px;
     left: 781px;
     top: 327px;
 }
 
 .intro .bg-03_06 {
     width: 149px; height: 211px;
-    background: url(../images/intro/03.png) -438px -748px;
+    background: url(../images/intro/03.png) -978px -393px;
     left: 577px;
     top: 271px;
     z-index: 10;
@@ -425,7 +425,7 @@ section.page>.howto>.txt>p>.neoburi{
 
 .intro .bg-03_07 {
     width: 134px; height: 164px;
-    background: url(../images/intro/03.png) -1205px -0;
+    background: url(../images/intro/03.png) -969px -748px;
     left: 700px;
     top: 546px;
 }
@@ -446,14 +446,14 @@ section.page>.howto>.txt>p>.neoburi{
 
 .intro .bg-03_10 {
     width: 136px; height: 204px;
-    background: url(../images/intro/03.png) -587px -748px;
+    background: url(../images/intro/03.png) -438px -748px;
     left: 89px;
     top: 25px;
 }
 
 .intro .bg-03_11 {
     width: 120px; height: 181px;
-    background: url(../images/intro/03.png) -1205px -164px;
+    background: url(../images/intro/03.png) -1321px -0;
     left: 15px;
     top: 236px;
 }
@@ -466,22 +466,30 @@ section.page>.howto>.txt>p>.neoburi{
 }
 
 .intro .bg-03_13 {
-    width: 223px; height: 284px;
-    background: url(../images/intro/03.png) -822px -393px;
-    left: 379px;
+    width: 137px; height: 179px;
+    background: url(../images/intro/03.png) -704px -748px;
+    left: 490px;
     top: 421px;
+    z-index: 10;
 }
 
 .intro .bg-03_14 {
-    width: 156px; height: 257px;
-    background: url(../images/intro/03.png) -1045px -393px;
-    left: 134px;
-    top: 398px;
+    width: 116px; height: 187px;
+    background: url(../images/intro/03.png) -1321px -181px;
+    left: 389px;
+    top: 530px;
 }
 
 .intro .bg-03_15 {
+    width: 156px; height: 257px;
+    background: url(../images/intro/03.png) -822px -393px;
+    left: 140px;
+    top: 411px;
+}
+
+.intro .bg-03_16 {
     width: 116px; height: 193px;
-    background: url(../images/intro/03.png) -853px -748px;
+    background: url(../images/intro/03.png) -1205px -0;
     left: 8px;
     top: 512px;
 }
@@ -862,13 +870,12 @@ section.page>.howto>.txt>p>.neoburi{
 .part04-modal img.part04-modal { display: block; width: 600px; height: auto; }
 
 .ok_btn {
-  position: absolute;
-  top: 54px;
-  left: -94px;
-  z-index: 1100;
-
-  height: auto;
-  cursor: pointer;
+    position: absolute;
+    top: 61px;
+    left: -129px;
+    z-index: 1100;
+    height: auto;
+    cursor: pointer;
 }
 
 .ok_btn:hover {
@@ -1133,11 +1140,11 @@ section.page>.howto>.txt>p>.neoburi{
 }
 .part_3_layer1 {
   position: absolute;
-  width: 764px;
+  width: 836px;
   height: 699px;
-  right: 180px;
+  right: 109px;
   bottom: 0px;
-  background-image: url(../images/game/part_3_layer1.png);
+  background-image: url(../images/game/part_3_layer1.gif);
   background-size: cover;
   overflow: hidden;
 }
@@ -1147,7 +1154,7 @@ section.page>.howto>.txt>p>.neoburi{
   height: 301px;
   top: 197px;
   left: 529px;
-  background-image: url(../images/game/part_3_layer2.png);
+  background-image: url(../images/game/part_3_layer2.gif);
   background-size: cover;
   overflow: hidden;
 }
@@ -1271,8 +1278,8 @@ section.page>.howto>.txt>p>.neoburi{
 }
 .part_4_layer1 {
  position: absolute;
-  width: 90px;
-  height: 365px;
+  width: 98px;
+  height: 374px;
   top: -26px;
   left: 272px;
   background-image: url(../images/game/part_4_layer1.png);
@@ -1306,7 +1313,7 @@ section.page>.howto>.txt>p>.neoburi{
   height: 311px;
   bottom: -47px;
   left: -52px;
-  background-image: url(../images/game/part_4_layer4.png);
+  background-image: url(../images/game/part_4_layer4.gif);
   background-size: cover;
   overflow: hidden;
   z-index: 120;

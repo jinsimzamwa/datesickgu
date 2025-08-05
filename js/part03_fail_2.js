@@ -50,7 +50,7 @@ const part03_fail_2 = [
     characters: [
       { name: 'saburo', position: 'center', expression: 'default' },
     ],
-    speaker: '山田三郎',
+    speaker: '山田一郎',
     text: '아마구니 씨가 왜... 어라, 사부로? 쟈쿠라이 씨도...?'
   },
  {
@@ -65,13 +65,13 @@ const part03_fail_2 = [
       { name: 'hitoya', position: 'center', expression: 'default' },
     ],
     speaker: '天国 獄',
-    text: '아차, 이치니...'
+    text: '아차, 이치형...'
   },
   {
     characters: [
       { name: 'kuko', position: 'center', expression: 'default' }
     ],
-    speaker: '波羅夷 空却',
+    speaker: '山田一郎',
     text: '다들 왜 여기에...'
   },
   {
@@ -139,7 +139,7 @@ const part03_fail_2 = [
       { name: 'hitoya', position: 'center', expression: 'default' },
     ],
     speaker: '天国 獄',
-    text: '(문제 없으니까 애면 애답게 굴어.'
+    text: '문제 없으니까 애면 애답게 굴어.'
   },
   {
     characters: [

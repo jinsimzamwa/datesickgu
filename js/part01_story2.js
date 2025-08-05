@@ -5,7 +5,7 @@ const part01_story2 = [
       { name: 'jakurai', position: 'right', expression: 'default'}
     ],
     speaker: '山田三郎',
-    text: '칫, 순진한 이치니를 꼬드기고 있었겠다!'
+    text: '칫, 순진한 이치형을 꼬드기고 있었겠다!'
   },
   {
     characters: [
@@ -13,14 +13,14 @@ const part01_story2 = [
       { name: 'jakurai', position: 'right', expression: 'default'}
     ],
     speaker: '神宮寺 寂雷',
-    text: '사부로 군, 이치로 군을 어떻게 보고 있는 건가요?'
+    text: '사부로 군, 이치로 군을 어떻게 인식하고 있는 건가요?'
   },
   {
     characters: [
       { name: 'saburo', position: 'center', expression: 'default' },
     ],
     speaker: '山田三郎',
-    text: '이치니에게 쓸데없는 짓 못하게 하겠어 하라이 쿠코!!'
+    text: '이치형에게 쓸데없는 짓 못하게 하겠어 하라이 쿠코!!'
   },
   {
     characters: [

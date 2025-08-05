@@ -46,7 +46,7 @@ const part03_success = [
   {
     characters: [
     ],
-    speaker: '職員',
+    speaker: '店員',
     text: '식사 나왔습니다.'
   },
   {

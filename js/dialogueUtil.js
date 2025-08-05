@@ -211,9 +211,8 @@ function initDialogue({ sectionSelector, script }) {
 
   showDialogueLine(currentIndex);
 
-  /** ⬇⬇⬇ 스킵 버튼 이벤트 연결 */
   $('.skipBtn').off('click.dialogueSkip').on('click.dialogueSkip', function () {
-    stopDialogue(); // 강제 종료
+    stopDialogue();
     const lastLine = script[script.length - 1];
     if (lastLine.next) {
       $('.container-inner').css('opacity', 0).load(lastLine.next, function () {
@@ -221,7 +220,7 @@ function initDialogue({ sectionSelector, script }) {
       });
     }
   });
-  /** ⬆⬆⬆ */
+
 }
 
 const allEndings = ['end01', 'end02', 'end03', 'end04', 'end05'];

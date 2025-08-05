@@ -79,7 +79,16 @@ const part02_fail = [
       { name: 'jakurai', position: 'right', expression: 'default' },
     ],
     speaker: '山田三郎',
-    text: '아차, 이치니...'
+    text: '아차, 이치형...'
+  },
+   {
+    characters: [
+      { name: 'ichiro', position: 'left', expression: 'default' },
+      { name: 'saburo', position: 'center', expression: 'default' },
+      { name: 'jakurai', position: 'right', expression: 'default' },
+    ],
+    speaker: '山田一郎',
+    text: '다들 왜 여기에...'
   },
   {
     characters: [

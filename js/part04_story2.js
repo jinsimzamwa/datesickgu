@@ -103,7 +103,7 @@ const part04_story2 = [
       { name: 'hitoya', position: 'center', expression: 'default' }
     ],
     speaker: '天国 獄',
-    text: '감히 이치니의 인형을 멋대로 뽑고, 가지려고 하다니... 믿을 수 없어!  막아야해!',
+    text: '감히 이치형의 인형을 멋대로 뽑고, 가지려고 하다니... 믿을 수 없어!  막아야해!',
   },
     {
     characters: [

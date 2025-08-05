@@ -48,7 +48,7 @@ const part01_fail = [
       { name: 'hitoya', position: 'center', expression: 'default' },
     ],
     speaker: '天国 獄',
-    text: '(이후론 괜한 일이 벌어지지 않도록 해야겠어.)',
+    text: '(이번엔 무사히 넘어갔지만, 괜한 일이 벌어지지 않도록 해야겠어.)',
   },
   {
     next: './game/part01_story2.html'

@@ -30,7 +30,7 @@ function attachGameEvents() {
   });
 
   $('#resetOk').on('click', function () {
-    localStorage.removeItem('seenEndings'); // 기록 삭제
+    localStorage.removeItem('seenEndings');
     $('#resetModal').fadeOut(200);
   });
 

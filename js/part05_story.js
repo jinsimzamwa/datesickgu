@@ -74,7 +74,7 @@ const part05_story = [
       { name: 'hitoya', position: 'center', expression: 'default' },
     ],
     speaker: '天国 獄',
-    text: '이치니가 먼저 집에 돌아가서 내가 없는 걸 보면 걱정할 거고...'
+    text: '이치형이 먼저 집에 돌아가서 내가 없는 걸 보면 걱정할 거고...'
   },
   {
     characters: [

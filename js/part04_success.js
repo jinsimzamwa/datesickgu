@@ -68,7 +68,7 @@ const part04_success = [
       { name: 'hitoya', position: 'center', expression: 'default' },
     ],
     speaker: '天国 獄',
-    text: '이치니가 저렇게 기대하고 즐거워하는 표정을 짓고 있는데, 어떻게 방해해...'
+    text: '이치형이 저렇게 기대하고 즐거워하는 표정을 짓고 있는데, 어떻게 방해해...'
   },
   {
     characters: [
@@ -82,7 +82,7 @@ const part04_success = [
       { name: 'hitoya', position: 'center', expression: 'default' },
     ],
     speaker: '天国 獄',
-    text: '이치니의 평범한 일상을 부수고 싶지 않았을 뿐이야.'
+    text: '이치형의 평범한 일상을 부수고 싶지 않았을 뿐이야.'
   },
   {
     characters: [

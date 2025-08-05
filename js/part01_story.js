@@ -92,7 +92,7 @@ const part01_story = [
       { name: 'hitoya', position: 'center', expression: 'default' }
     ],
     speaker: '天国 獄',
-    text: '(가만히 있는거야..)',
+    text: '(가만히 있는거야...)',
   },
   {
     next: './game/part01_game.html'

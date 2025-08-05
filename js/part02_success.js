@@ -79,7 +79,7 @@ const part02_success = [
       { name: 'saburo', position: 'center', expression: 'default' },
     ],
     speaker: '山田三郎',
-    text: '앗, 이치니가 골목으로 들어간다!'
+    text: '앗, 이치형이 가게로 들어간다!'
   },
   {
     characters: [

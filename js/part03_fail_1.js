@@ -23,7 +23,7 @@ const part03_fail_1 = [
       { name: 'ichiro', position: 'center', expression: 'default' },
     ],
     speaker: '山田一郎',
-    text: '쿠, 쿠코!? 갑자기 의자가 부서졌어...!'
+    text: '쿠, 쿠코!? 갑자기 의자가 부서졌어...!?'
   },
   {
     characters: [
@@ -37,7 +37,14 @@ const part03_fail_1 = [
       { name: 'kuko', position: 'center', expression: 'default' },
     ],
     speaker: '波羅夷 空却',
-    text: '뭐야... 엉? 히토야아?'
+    text: '뭐야...'
+  },
+    {
+    characters: [
+      { name: 'kuko', position: 'center', expression: 'default' },
+    ],
+    speaker: '波羅夷 空却',
+    text: '엉? 히토야아?'
   },
  {
     characters: [
@@ -58,7 +65,7 @@ const part03_fail_1 = [
       { name: 'saburo', position: 'center', expression: 'default' }
     ],
     speaker: '山田三郎',
-    text: '아차, 이치니...'
+    text: '아차, 이치형...'
   },
   {
     characters: [
