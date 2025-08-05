@@ -1,12 +1,22 @@
 <section class="intro">
     <div class="controls">
-        <button id="skipBtn"></button>
+        <button class="skipBtn"></button>
     </div>
 	<div class="sprite-container"></div>
 </section>
 
 <script>
     $(function () {
+
+		const seenEndings = JSON.parse(localStorage.getItem('seenEndings') || '[]');
+		const hasEnd05 = seenEndings.includes('end05');
+
+		if (hasEnd05) {
+			$('.skipBtn').show();
+		} else {
+			$('.skipBtn').hide();
+		}
+
 			const classes = ['bg-01_01', 'bg-01_02', 'bg-01_03', 'bg-01_04', 'bg-01_05', 'bg-01_06', 'bg-01_07', 'bg-01_08', 'bg-01_09', 'bg-01_10',
 											 'bg-02_01', 'bg-02_02', 'bg-02_03', 'bg-02_04', 'bg-02_05', 'bg-02_06', 'bg-02_07', 'bg-02_08', 'bg-02_09', 'bg-02_10', 'bg-02_11', 'bg-02_12', 'bg-02_13', 'bg-02_14',
 											 'bg-03_01', 'bg-03_02', 'bg-03_03', 'bg-03_04', 'bg-03_05', 'bg-03_06', 'bg-03_07', 'bg-03_08', 'bg-03_09', 'bg-03_10', 'bg-03_11', 'bg-03_12', 'bg-03_13', 'bg-03_14', 'bg-03_15',
@@ -45,14 +55,12 @@
 				currentPrefix = getPrefix(firstClass);
 				i = 1;
 			})();
-
-			// $('#nextBtn').click(function () {				
+			
 			$('.intro').click(function () {			
 				if (i < classes.length) {
 						const nextClass = classes[i];
 						const nextPrefix = getPrefix(nextClass);
 
-						console.log(nextClass)
 						if(nextClass === 'bg-02_01'){
 							bgmManager.play('intro2', true, false);
 							bgmManager.fadeIn(0.7, 2000);
@@ -75,14 +83,14 @@
 		});
 
 
-			$('#skipBtn').click(function () {
+		$('.skipBtn').click(function () {
 
-				bgmManager.play('intro2', true, false);
-				bgmManager.fadeIn(0.7, 2000);
-				
-				$('.container-inner').css('opacity', 0).load('./game/part01_story.html', function () {
-						$('.container-inner').animate({ opacity: 1 }, 800);
-				});
+			bgmManager.play('intro2', true, false);
+			bgmManager.fadeIn(0.7, 2000);
+			
+			$('.container-inner').css('opacity', 0).load('./game/part01_story.html', function () {
+					$('.container-inner').animate({ opacity: 1 }, 800);
 			});
+		});
   });
 </script>

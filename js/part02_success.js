@@ -115,6 +115,25 @@ const part02_success = [
 ];
 
 $(function () {
+  const seenEndings = JSON.parse(localStorage.getItem('seenEndings') || '[]');
+  const hasEnd05 = seenEndings.includes('end05');
+
+  if (hasEnd05) {
+    $('.skipBtn').show();
+  } else {
+    $('.skipBtn').hide();
+  }
+
   initDialogue({ sectionSelector: '.part02_success', script: part02_success });
 });
 
+
+$('.skipBtn').click(function () {
+
+    const lastLine = part02_success[part02_success.length - 1];
+    if (lastLine.next) {
+        $('.container-inner').css('opacity', 0).load(lastLine.next, function () {
+            $('.container-inner').animate({ opacity: 1 }, 800);
+        });
+    }
+});

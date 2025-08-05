@@ -80,8 +80,25 @@ const part01_story2 = [
 
 
 $(function () {
+  const seenEndings = JSON.parse(localStorage.getItem('seenEndings') || '[]');
+		const hasEnd05 = seenEndings.includes('end05');
+
+		if (hasEnd05) {
+			$('.skipBtn').show();
+		} else {
+			$('.skipBtn').hide();
+		}
+    
   initDialogue({ sectionSelector: '.part01_story2', script: part01_story2 });
   bgmManager.play('story', true, false);
   bgmManager.fadeIn(0.7, 2000);
 });
 
+$('.skipBtn').click(function () {
+    const lastLine = part01_story2[part01_story2.length - 1];
+    if (lastLine.next) {
+        $('.container-inner').css('opacity', 0).load(lastLine.next, function () {
+            $('.container-inner').animate({ opacity: 1 }, 800);
+        });
+    }
+});

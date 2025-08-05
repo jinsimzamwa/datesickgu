@@ -125,6 +125,35 @@ const part04_success = [
 ];
 
 $(function () {
+  const seenEndings = JSON.parse(localStorage.getItem('seenEndings') || '[]');
+		const hasEnd05 = seenEndings.includes('end05');
+
+		if (hasEnd05) {
+			$('.skipBtn').show();
+		} else {
+			$('.skipBtn').hide();
+		}
+
   initDialogue({ sectionSelector: '.part04_success', script: part04_success });
 });
 
+$('.skipBtn').click(function () {
+  const lastLine = part04_success[part04_success.length - 1];
+
+  if (lastLine.next) {
+    let finalNext = lastLine.next;
+
+    if (finalNext === 'finalNext') {
+      const seen = JSON.parse(localStorage.getItem('seenEndings') || '[]');
+      const all = ['end01', 'end02', 'end03', 'end04', 'end05'];
+      const seenAll = all.every(id => seen.includes(id));
+      finalNext = seenAll
+        ? './game/part05_story_true.html'
+        : './game/part05_story.html';
+    }
+
+    $('.container-inner').css('opacity', 0).load(finalNext, function () {
+      $('.container-inner').animate({ opacity: 1 }, 800);
+    });
+  }
+});

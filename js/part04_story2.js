@@ -217,6 +217,23 @@ const part04_story2 = [
 
 
 $(function () {
+    const seenEndings = JSON.parse(localStorage.getItem('seenEndings') || '[]');
+		const hasEnd05 = seenEndings.includes('end05');
+
+		if (hasEnd05) {
+			$('.skipBtn').show();
+		} else {
+			$('.skipBtn').hide();
+		}
+    
   initDialogue({ sectionSelector: '.part04_story2', script: part04_story2 });
 });
 
+$('.skipBtn').click(function () {
+    const lastLine = part04_story2[part04_story2.length - 1];
+    if (lastLine.next) {
+        $('.container-inner').css('opacity', 0).load(lastLine.next, function () {
+            $('.container-inner').animate({ opacity: 1 }, 800);
+        });
+    }
+});

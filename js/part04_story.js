@@ -113,8 +113,25 @@ const part04_story = [
 
 
 $(function () {
+    const seenEndings = JSON.parse(localStorage.getItem('seenEndings') || '[]');
+		const hasEnd05 = seenEndings.includes('end05');
+
+		if (hasEnd05) {
+			$('.skipBtn').show();
+		} else {
+			$('.skipBtn').hide();
+		}
+    
   bgmManager.play('story3', true, false);
   bgmManager.fadeIn(0.7, 2000);
   initDialogue({ sectionSelector: '.part04_story', script: part04_story });
 });
 
+$('.skipBtn').click(function () {
+    const lastLine = part04_story[part04_story.length - 1];
+    if (lastLine.next) {
+        $('.container-inner').css('opacity', 0).load(lastLine.next, function () {
+            $('.container-inner').animate({ opacity: 1 }, 800);
+        });
+    }
+});

@@ -1,4 +1,13 @@
 $(function () {
+  const seenEndings = JSON.parse(localStorage.getItem('seenEndings') || '[]');
+  const hasEnd05 = seenEndings.includes('end05');
+
+  if (hasEnd05) {
+    $('.skipBtn').show();
+  } else {
+    $('.skipBtn').hide();
+  }
+
   const car = $('.part_2_layer2');
   const overlay = $('.game-overlay');
   const modal = $('.part02-modal');
@@ -31,6 +40,32 @@ $(function () {
 
   let animationId;
   let gameEnded = false;
+  let successTimer;
+
+  /** ⬇⬇⬇ 스킵용: 강제 종료 후 성공 처리 */
+  function skipGame() {
+    if (gameEnded) return;
+    clearTimeout(successTimer);
+    cancelAnimationFrame(animationId);
+    car.stop(true, true);
+    hitbox.stop(true, true);
+    gameEnded = true;
+
+    // 바로 성공 화면
+    sfxManager.play('success', 0.8);
+    successImage.show().removeClass('kaboom');
+    void successImage[0].offsetWidth;
+    successImage.addClass('kaboom');
+
+    successImage.one('animationend', function () {
+      $('.container-inner').fadeOut(600, function () {
+        $('.container-inner').load('./game/part02_success.html', function () {
+          $('.container-inner').fadeIn(800);
+        });
+      });
+    });
+  }
+  /** ⬆⬆⬆ */
 
   function checkCollision() {
     const hitboxRect = $('.car-hitbox')[0].getBoundingClientRect();
@@ -61,7 +96,7 @@ $(function () {
     });
 
     const hitboxTop = currentTop + 100;
-    const hitboxRight = currentRight + 100; 
+    const hitboxRight = currentRight + 100;
 
     hitbox.css({
       top: `${hitboxTop}px`,
@@ -69,44 +104,43 @@ $(function () {
     });
   }
 
-function animatePerson() {
-  const person = $('.part_2_layer1');
+  function animatePerson() {
+    const person = $('.part_2_layer1');
 
-  let personTop = -116;
-  let personLeft = 242;
+    let personTop = -116;
+    let personLeft = 242;
 
-  let bounceFrame = 0;
-  let frameCounter = 0;
+    let bounceFrame = 0;
+    let frameCounter = 0;
 
+    const bounceCycle = [
+      0, -0.5, -1.2, -2.0, -2.6, -3.0, -2.6, -2.0, -1.2, -0.5,
+      0, 0.5, 1.2, 2.0, 2.6, 3.0, 2.6, 2.0, 1.2, 0.5
+    ];
 
-  const bounceCycle = [
-    0, -0.5, -1.2, -2.0, -2.6, -3.0, -2.6, -2.0, -1.2, -0.5,
-    0, 0.5, 1.2, 2.0, 2.6, 3.0, 2.6, 2.0, 1.2, 0.5
-  ];
+    function updatePersonPosition() {
+      if (gameEnded) return;
 
-  function updatePersonPosition() {
-    if (gameEnded) return;
+      personTop += 0.5;
+      personLeft -= 0.8;
 
-    personTop += 0.5;
-    personLeft -= 0.8;
+      if (frameCounter % 3 === 0) {
+        bounceFrame++;
+      }
+      frameCounter++;
 
-    if (frameCounter % 3 === 0) {
-      bounceFrame++;
+      const bounceOffset = bounceCycle[bounceFrame % bounceCycle.length];
+
+      person.css({
+        top: `${personTop + bounceOffset}px`,
+        left: `${personLeft}px`
+      });
+
+      requestAnimationFrame(updatePersonPosition);
     }
-    frameCounter++;
 
-    const bounceOffset = bounceCycle[bounceFrame % bounceCycle.length];
-
-    person.css({
-      top: `${personTop + bounceOffset}px`,
-      left: `${personLeft}px`
-    });
-
-    requestAnimationFrame(updatePersonPosition);
+    updatePersonPosition();
   }
-
-  updatePersonPosition();
-}
 
   function animateCar() {
     if (gameEnded) return;
@@ -117,48 +151,47 @@ function animatePerson() {
   }
 
   function endGame(isSuccess) {
-  if (gameEnded) return;
-  gameEnded = true;
+    if (gameEnded) return;
+    gameEnded = true;
 
-  cancelAnimationFrame(animationId);
-  car.stop(true, true); 
-  hitbox.stop(true, true);
+    cancelAnimationFrame(animationId);
+    car.stop(true, true);
+    hitbox.stop(true, true);
 
-  if (isSuccess) {
-    sfxManager.play('success', 0.8);
+    if (isSuccess) {
+      sfxManager.play('success', 0.8);
 
-    successImage.show().removeClass('kaboom');
-    void successImage[0].offsetWidth;
-    successImage.addClass('kaboom');
+      successImage.show().removeClass('kaboom');
+      void successImage[0].offsetWidth;
+      successImage.addClass('kaboom');
 
-    successImage.one('animationend', function () {
-      $('.container-inner').fadeOut(600, function () {
-        $('.container-inner').load('./game/part02_success.html', function () {
-          $('.container-inner').fadeIn(800);
+      successImage.one('animationend', function () {
+        $('.container-inner').fadeOut(600, function () {
+          $('.container-inner').load('./game/part02_success.html', function () {
+            $('.container-inner').fadeIn(800);
+          });
         });
       });
-    });
-  } else {
+    } else {
+      sfxManager.play('fail', 0.6);
 
-    sfxManager.play('fail', 0.6);
-    
-    failImage.show().removeClass('kaboom');
-    void failImage[0].offsetWidth;
-    failImage.addClass('kaboom');
+      failImage.show().removeClass('kaboom');
+      void failImage[0].offsetWidth;
+      failImage.addClass('kaboom');
 
-    $('.splash-effect').show().addClass('active');
+      $('.splash-effect').show().addClass('active');
 
-    $('.part_2_layer1').css('background-image', 'url(./images/game/part_2_layer1_fail.png)');
+      $('.part_2_layer1').css('background-image', 'url(./images/game/part_2_layer1_fail.png)');
 
-    failImage.one('animationend', function () {
-      $('.container-inner').fadeOut(600, function () {
-        $('.container-inner').load('./game/part02_fail.html', function () {
-          $('.container-inner').fadeIn(800);
+      failImage.one('animationend', function () {
+        $('.container-inner').fadeOut(600, function () {
+          $('.container-inner').load('./game/part02_fail.html', function () {
+            $('.container-inner').fadeIn(800);
+          });
         });
       });
-    });
+    }
   }
-}
 
   okBtn.on('click', function () {
     modal.fadeOut();
@@ -176,40 +209,44 @@ function animatePerson() {
       animateCar();
       animatePerson();
 
-      setTimeout(() => {
-        endGame(true); // 성공 처리
+      successTimer = setTimeout(() => {
+        endGame(true);
       }, 9000);
     }, 800);
   });
 
   function pressEffect($btn) {
-  $btn.css({
-    transform: 'scale(0.9)',
-    transition: 'transform 0.1s ease'
-  });
-  setTimeout(() => {
     $btn.css({
-      transform: 'scale(1)'
+      transform: 'scale(0.9)',
+      transition: 'transform 0.1s ease'
     });
-  }, 100);
-}
+    setTimeout(() => {
+      $btn.css({
+        transform: 'scale(1)'
+      });
+    }, 100);
+  }
 
   leftBtn.on('click', () => {
-    sfxManager.play('click', 0.8); 
+    sfxManager.play('click', 0.8);
     pressEffect(leftBtn);
     if (gameEnded) return;
     carState.offsetX += 40;
   });
 
   rightBtn.on('click', () => {
-    sfxManager.play('click', 0.8); 
+    sfxManager.play('click', 0.8);
     pressEffect(rightBtn);
     if (gameEnded) return;
     carState.offsetX -= 40;
   });
 
-  $('.ok_btn').on('mouseenter', function() {
-    sfxManager.play('hover', 0.8); 
+  $('.ok_btn').on('mouseenter', function () {
+    sfxManager.play('hover', 0.8);
+  });
+
+  $('.skipBtn').off('click.part02Skip').on('click.part02Skip', function () {
+    skipGame();
   });
 
 

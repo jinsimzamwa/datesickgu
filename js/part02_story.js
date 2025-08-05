@@ -168,3 +168,20 @@ $(function () {
   initDialogue({ sectionSelector: '.part02_story', script: part02_story });
 });
 
+$('.skipBtn').click(function () {
+  const seenEndings = JSON.parse(localStorage.getItem('seenEndings') || '[]');
+		const hasEnd05 = seenEndings.includes('end05');
+
+		if (hasEnd05) {
+			$('.skipBtn').show();
+		} else {
+			$('.skipBtn').hide();
+		}
+    
+    const lastLine = part02_story[part02_story.length - 1];
+    if (lastLine.next) {
+        $('.container-inner').css('opacity', 0).load(lastLine.next, function () {
+            $('.container-inner').animate({ opacity: 1 }, 800);
+        });
+    }
+});

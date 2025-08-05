@@ -195,3 +195,20 @@ $(function () {
   initDialogue({ sectionSelector: '.part03_fail_2', script: part03_fail_2 });
 });
 
+$('.skipBtn').click(function () {
+  const seenEndings = JSON.parse(localStorage.getItem('seenEndings') || '[]');
+		const hasEnd05 = seenEndings.includes('end05');
+
+		if (hasEnd05) {
+			$('.skipBtn').show();
+		} else {
+			$('.skipBtn').hide();
+		}
+    
+    const lastLine = part03_fail_2[part03_fail_2.length - 1];
+    if (lastLine.next) {
+        $('.container-inner').css('opacity', 0).load(lastLine.next, function () {
+            $('.container-inner').animate({ opacity: 1 }, 800);
+        });
+    }
+});

@@ -56,6 +56,24 @@ const part01_fail = [
 ];
 
 $(function () {
+  const seenEndings = JSON.parse(localStorage.getItem('seenEndings') || '[]');
+  const hasEnd05 = seenEndings.includes('end05');
+
+  if (hasEnd05) {
+    $('.skipBtn').show();
+  } else {
+    $('.skipBtn').hide();
+  }
+
   initDialogue({ sectionSelector: '.part01_fail', script: part01_fail });
 });
 
+
+$('.skipBtn').click(function () {
+    const lastLine = part01_fail[part01_fail.length - 1];
+    if (lastLine.next) {
+        $('.container-inner').css('opacity', 0).load(lastLine.next, function () {
+            $('.container-inner').animate({ opacity: 1 }, 800);
+        });
+    }
+});
