@@ -1,7 +1,7 @@
 const part05_story_true = [
   {
     characters: [
-      { name: 'jakurai', position: 'center', expression: 'default' },
+      { name: 'jakurai', position: 'center', expression: 'smile' },
     ],
     speaker: {
       kor: '진구지 쟈쿠라이',
@@ -27,7 +27,7 @@ const part05_story_true = [
   },
   {
     characters: [
-      { name: 'saburo', position: 'center', expression: 'default' },
+      { name: 'saburo', position: 'center', expression: 'wakan2' },
     ],
     speaker: {
       kor: '야마다 사부로',
@@ -40,7 +40,7 @@ const part05_story_true = [
   },
   {
     characters: [
-      { name: 'jakurai', position: 'center', expression: 'default' },
+      { name: 'jakurai', position: 'center', expression: 'smile' },
     ],
     speaker: {
       kor: '진구지 쟈쿠라이',
@@ -53,8 +53,8 @@ const part05_story_true = [
   },
   {
     characters: [
-      { name: 'hitoya', position: 'left', expression: 'default' },
-      { name: 'saburo', position: 'right', expression: 'default' },
+      { name: 'hitoya', position: 'left', expression: 'eyes' },
+      { name: 'saburo', position: 'right', expression: 'wakan2' },
     ],
     speaker: {
       kor: '아마구니 히토야',
@@ -68,7 +68,7 @@ const part05_story_true = [
   {
     characters: [
       { name: 'hitoya', position: 'left', expression: 'default' },
-      { name: 'saburo', position: 'right', expression: 'default' },
+      { name: 'saburo', position: 'right', expression: 'wakan2' },
     ],
     speaker: {
       kor: '아마구니 히토야',
@@ -95,7 +95,7 @@ const part05_story_true = [
   },
   {
     characters: [
-      { name: 'hitoya', position: 'left', expression: 'default' },
+      { name: 'hitoya', position: 'left', expression: 'hut' },
       { name: 'saburo', position: 'right', expression: 'default' },
     ],
     speaker: {
@@ -109,7 +109,7 @@ const part05_story_true = [
   },
   {
     characters: [
-      { name: 'hitoya', position: 'left', expression: 'default' },
+      { name: 'hitoya', position: 'left', expression: 'hut' },
       { name: 'saburo', position: 'right', expression: 'default' },
     ],
     speaker: {
@@ -124,7 +124,7 @@ const part05_story_true = [
   {
     characters: [
       { name: 'hitoya', position: 'left', expression: 'default' },
-      { name: 'saburo', position: 'right', expression: 'default' },
+      { name: 'saburo', position: 'right', expression: 'ang1' },
     ],
     speaker: {
       kor: '야마다 사부로',
@@ -144,7 +144,20 @@ const part05_story_true = [
       jpn: '山田三郎'
     },
     text: {
-      kor: '(사부로가 웃는 표정이면 좋겠어...)',
+      kor: '…',
+      jpn: '…'
+    }
+  },
+  {
+    characters: [
+      { name: 'saburo', position: 'center', expression: 'happy' },
+    ],
+    speaker: {
+      kor: '야마다 사부로',
+      jpn: '山田三郎'
+    },
+    text: {
+      kor: '…',
       jpn: '…'
     }
   },

@@ -82,7 +82,7 @@ const part04_success = [
   },
   {
     characters: [
-      { name: 'saburo', position: 'center', expression: 'default' },
+      { name: 'saburo', position: 'center', expression: 'ang2' },
     ],
     speaker: {
       kor: '야마다 사부로',
@@ -108,7 +108,7 @@ const part04_success = [
   },
   {
     characters: [
-      { name: 'saburo', position: 'center', expression: 'default' },
+      { name: 'saburo', position: 'center', expression: 'ang2' },
     ],
     speaker: {
       kor: '야마다 사부로',
@@ -134,7 +134,7 @@ const part04_success = [
   },
   {
     characters: [
-      { name: 'saburo', position: 'center', expression: 'default' },
+      { name: 'saburo', position: 'center', expression: 'wakan2' },
     ],
     speaker: {
       kor: '야마다 사부로',
@@ -147,7 +147,7 @@ const part04_success = [
   },
   {
     characters: [
-      { name: 'saburo', position: 'center', expression: 'default' },
+      { name: 'saburo', position: 'center', expression: 'wakan' },
     ],
     speaker: {
       kor: '야마다 사부로',
@@ -160,7 +160,7 @@ const part04_success = [
   },
   {
     characters: [
-      { name: 'saburo', position: 'center', expression: 'default' },
+      { name: 'saburo', position: 'center', expression: 'simu' },
     ],
     speaker: {
       kor: '야마다 사부로',
@@ -173,7 +173,7 @@ const part04_success = [
   },
   {
     characters: [
-      { name: 'hitoya', position: 'center', expression: 'default' },
+      { name: 'hitoya', position: 'center', expression: 'haa' },
     ],
     speaker: {
       kor: '아마구니 히토야',
@@ -186,7 +186,7 @@ const part04_success = [
   },
   {
     characters: [
-      { name: 'jakurai', position: 'center', expression: 'default' },
+      { name: 'jakurai', position: 'center', expression: 'smile' },
     ],
     speaker: {
       kor: '진구지 쟈쿠라이',
@@ -212,7 +212,7 @@ const part04_success = [
   },
   {
     characters: [
-      { name: 'hitoya', position: 'center', expression: 'default' },
+      { name: 'hitoya', position: 'center', expression: 'hut' },
     ],
     speaker: {
       kor: '아마구니 히토야',

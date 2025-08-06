@@ -51,7 +51,7 @@ const part03_fail_2 = [
   },
   {
     characters: [
-      { name: 'saburo', position: 'center', expression: 'default' },
+      { name: 'saburo', position: 'center', expression: 'yata' },
     ],
     speaker: {
       kor: '야마다 사부로',
@@ -103,7 +103,7 @@ const part03_fail_2 = [
   },
   {
     characters: [
-      { name: 'saburo', position: 'center', expression: 'default' },
+      { name: 'ichiro', position: 'center', expression: 'default' },
     ],
     speaker: {
       kor: '야마다 이치로',
@@ -129,7 +129,7 @@ const part03_fail_2 = [
   },
   {
     characters: [
-      { name: 'saburo', position: 'center', expression: 'default' },
+      { name: 'saburo', position: 'center', expression: 'at' },
     ],
     speaker: {
       kor: '야마다 사부로',
@@ -155,7 +155,7 @@ const part03_fail_2 = [
   },
   {
     characters: [
-      { name: 'jakurai', position: 'center', expression: 'default' },
+      { name: 'jakurai', position: 'center', expression: 'at' },
     ],
     speaker: {
       kor: '진구지 쟈쿠라이',
@@ -168,7 +168,7 @@ const part03_fail_2 = [
   }, 
   {
     characters: [
-      { name: 'rei', position: 'center', expression: 'default' }
+      { name: 'rei', position: 'center', expression: 'laugh' }
     ],
     speaker: {
       kor: '아마야도 레이',
@@ -209,7 +209,7 @@ const part03_fail_2 = [
   },
   {
     characters: [
-      { name: 'jakurai', position: 'center', expression: 'default' }
+      { name: 'jakurai', position: 'center', expression: 'at' }
     ],
     speaker: {
       kor: '진구지 쟈쿠라이',
@@ -263,7 +263,7 @@ const part03_fail_2 = [
   },
   {
     characters: [
-      { name: 'hitoya', position: 'center', expression: 'default' },
+      { name: 'hitoya', position: 'center', expression: 'haa' },
     ],
     speaker: {
       kor: '아마구니 히토야',
@@ -276,7 +276,7 @@ const part03_fail_2 = [
   },
   {
     characters: [
-      { name: 'jakurai', position: 'center', expression: 'default' },
+      { name: 'jakurai', position: 'center', expression: 'at' },
     ],
     speaker: {
       kor: '진구지 쟈쿠라이',
@@ -289,7 +289,7 @@ const part03_fail_2 = [
   },
   {
     characters: [
-      { name: 'hitoya', position: 'center', expression: 'default' },
+      { name: 'hitoya', position: 'center', expression: 'haaa' },
     ],
     speaker: {
       kor: '아마구니 히토야',

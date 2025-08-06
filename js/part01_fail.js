@@ -14,7 +14,7 @@ const part01_fail = [
   },
   {
     characters: [
-      { name: 'hitoya', position: 'center', expression: 'default' },
+      { name: 'hitoya', position: 'center', expression: 'surp' },
     ],
     speaker: {
       kor: '아마구니 히토야',
@@ -28,7 +28,7 @@ const part01_fail = [
   {
     characters: [
       { name: 'jakurai', position: 'left', expression: 'default' },
-      { name: 'hitoya', position: 'right', expression: 'default' }
+      { name: 'hitoya', position: 'right', expression: 'surp' }
     ],
     speaker: {
       kor: '진구지 쟈쿠라이',
@@ -42,7 +42,7 @@ const part01_fail = [
   {
     characters: [
       { name: 'jakurai', position: 'left', expression: 'default' },
-      { name: 'hitoya', position: 'right', expression: 'default' }
+      { name: 'hitoya', position: 'right', expression: 'surp' }
     ],
     speaker: {
       kor: '아마구니 히토야',
@@ -55,7 +55,7 @@ const part01_fail = [
   },
   {
     characters: [
-      { name: 'rei', position: 'center', expression: 'default' },
+      { name: 'rei', position: 'center', expression: 'laugh' },
     ],
     speaker: {
       kor: '아마야도 레이',
@@ -68,7 +68,7 @@ const part01_fail = [
   },
   {
     characters: [
-      { name: 'hitoya', position: 'center', expression: 'default' },
+      { name: 'hitoya', position: 'center', expression: 'haa' },
     ],
     speaker: {
       kor: '아마구니 히토야',

@@ -14,7 +14,7 @@ const part01_story = [
   },
   {
     characters: [
-      { name: 'hitoya', position: 'center', expression: 'default' },
+      { name: 'hitoya', position: 'center', expression: 'haa' },
     ],
     speaker: {
       kor: '아마구니 히토야',
@@ -40,7 +40,7 @@ const part01_story = [
   },
   {
     characters: [
-      { name: 'hitoya', position: 'center', expression: 'default' },
+      { name: 'hitoya', position: 'center', expression: 'eyes' },
     ],
     speaker: {
       kor: '아마구니 히토야',
@@ -61,7 +61,7 @@ const part01_story = [
   },
   {
     characters: [
-      { name: 'hitoya', position: 'center', expression: 'default' },
+      { name: 'hitoya', position: 'center', expression: 'huu' },
     ],
     speaker: {
       kor: '아마구니 히토야',
@@ -71,7 +71,7 @@ const part01_story = [
   },
   {
     characters: [
-      { name: 'hitoya', position: 'center', expression: 'default' },
+      { name: 'hitoya', position: 'center', expression: 'surp' },
     ],
     speaker: {
       kor: '아마구니 히토야',
@@ -98,7 +98,7 @@ const part01_story = [
   },
   {
     characters: [
-      { name: 'hitoya', position: 'left', expression: 'default' },
+      { name: 'hitoya', position: 'left', expression: 'eyes' },
       { name: 'jakurai', position: 'right', expression: 'default' }
     ],
     speaker: {
@@ -138,7 +138,7 @@ const part01_story = [
   },
   {
     characters: [
-      { name: 'hitoya', position: 'center', expression: 'default' },
+      { name: 'hitoya', position: 'center', expression: 'eyes' },
     ],
     speaker: {
       kor: '아마구니 히토야',
@@ -152,7 +152,7 @@ const part01_story = [
   ,
   {
     characters: [
-      { name: 'hitoya', position: 'center', expression: 'default' }
+      { name: 'hitoya', position: 'center', expression: 'eyes' }
     ],
     speaker: {
       kor: '아마구니 히토야',

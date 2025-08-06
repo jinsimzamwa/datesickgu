@@ -49,6 +49,7 @@ $(function () {
         const pos = bgPositions[className] || '0 0';
         $('.sprite-container').append(
             `<div class="${className}" style="background-image: url(/datesickgu/images/intro/${imgFile}); background-position: ${pos};"></div>`
+            //`<div class="${className}" style="background-image: url(../images/intro/${imgFile}); background-position: ${pos};"></div>`
         );
     }
 
@@ -90,7 +91,7 @@ $(function () {
     $('.skipBtn').click(function () {
         bgmManager.play('intro2', true, false);
         bgmManager.fadeIn(0.7, 2000);
-        $('.container-inner').css('opacity', 0).load('./game/part02_game.html', function () {
+        $('.container-inner').css('opacity', 0).load('./game/part01_story.html', function () {
             $('.container-inner').animate({ opacity: 1 }, 800);
         });
     });

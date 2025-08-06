@@ -1,7 +1,7 @@
 const part02_success = [
   {
     characters: [
-      { name: 'hitoya', position: 'center', expression: 'default' },
+      { name: 'hitoya', position: 'center', expression: 'hut' },
     ],
     speaker: {
       kor: '아마구니 히토야',
@@ -14,7 +14,7 @@ const part02_success = [
   },
   {
     characters: [
-      { name: 'saburo', position: 'left', expression: 'default' },
+      { name: 'saburo', position: 'left', expression: 'ang1' },
       { name: 'rei', position: 'right', expression: 'default' }
     ],
     speaker: {
@@ -28,7 +28,7 @@ const part02_success = [
   },
   {
     characters: [
-      { name: 'saburo', position: 'left', expression: 'default' },
+      { name: 'saburo', position: 'left', expression: 'ang1' },
       { name: 'rei', position: 'right', expression: 'default' }
     ],
     speaker: {
@@ -42,7 +42,7 @@ const part02_success = [
   },
   {
     characters: [
-      { name: 'hitoya', position: 'center', expression: 'default' },
+      { name: 'hitoya', position: 'center', expression: 'haa' },
     ],
     speaker: {
       kor: '아마구니 히토야',
@@ -55,7 +55,7 @@ const part02_success = [
   },
   {
     characters: [
-      { name: 'hitoya', position: 'center', expression: 'default' },
+      { name: 'hitoya', position: 'center', expression: 'haa' },
     ],
     speaker: {
       kor: '아마구니 히토야',
@@ -68,7 +68,7 @@ const part02_success = [
   },
   {
     characters: [
-      { name: 'hitoya', position: 'center', expression: 'default' },
+      { name: 'hitoya', position: 'center', expression: 'haaa' },
     ],
     speaker: {
       kor: '아마구니 히토야',
@@ -81,7 +81,7 @@ const part02_success = [
   },
   {
     characters: [
-      { name: 'saburo', position: 'center', expression: 'default' },
+      { name: 'saburo', position: 'center', expression: 'ang1' },
     ],
     speaker: {
       kor: '야마다 사부로',
@@ -122,7 +122,7 @@ const part02_success = [
   },
   {
     characters: [
-      { name: 'hitoya', position: 'left', expression: 'default' },
+      { name: 'hitoya', position: 'left', expression: 'haa' },
       { name: 'jakurai', position: 'right', expression: 'default' }
     ],
     speaker: {
@@ -136,7 +136,7 @@ const part02_success = [
   },
   {
     characters: [
-      { name: 'saburo', position: 'center', expression: 'default' },
+      { name: 'saburo', position: 'center', expression: 'at' },
     ],
     speaker: {
       kor: '야마다 사부로',
@@ -175,7 +175,7 @@ const part02_success = [
   },
   {
     characters: [
-      { name: 'rei', position: 'center', expression: 'default' },
+      { name: 'rei', position: 'center', expression: 'laugh' },
     ],
     speaker: {
       kor: '아마야도 레이',
@@ -188,7 +188,7 @@ const part02_success = [
   },
   {
     characters: [
-      { name: 'hitoya', position: 'center', expression: 'default' },
+      { name: 'hitoya', position: 'center', expression: 'surp' },
     ],
     speaker: {
       kor: '아마구니 히토야',

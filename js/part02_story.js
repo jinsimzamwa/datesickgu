@@ -99,7 +99,7 @@ const part02_story = [
   },
   {
     characters: [
-      { name: 'saburo', position: 'center', expression: 'default' },
+      { name: 'saburo', position: 'center', expression: 'ang2' },
     ],
     speaker: {
       kor: '야마다 사부로',
@@ -125,7 +125,7 @@ const part02_story = [
   },
   {
     characters: [
-      { name: 'saburo', position: 'center', expression: 'default' },
+      { name: 'saburo', position: 'center', expression: 'ang1' },
     ],
     speaker: {
       kor: '야마다 사부로',
@@ -138,7 +138,7 @@ const part02_story = [
   },
   {
     characters: [
-      { name: 'hitoya', position: 'center', expression: 'default' },
+      { name: 'hitoya', position: 'center', expression: 'haa' },
     ],
     speaker: {
       kor: '아마구니 히토야',
@@ -164,7 +164,7 @@ const part02_story = [
   },
   {
     characters: [
-      { name: 'hitoya', position: 'center', expression: 'default' },
+      { name: 'hitoya', position: 'center', expression: 'haaa' },
     ],
     speaker: {
       kor: '아마구니 히토야',
@@ -205,7 +205,7 @@ const part02_story = [
   },
   {
     characters: [
-      { name: 'rei', position: 'left', expression: 'default' },
+      { name: 'rei', position: 'left', expression: 'laugh' },
       { name: 'hitoya', position: 'right', expression: 'default' },
     ],
     speaker: {
@@ -219,7 +219,7 @@ const part02_story = [
   },
   {
     characters: [
-      { name: 'saburo', position: 'center', expression: 'default' },
+      { name: 'saburo', position: 'center', expression: 'yata' },
     ],
     speaker: {
       kor: '야마다 사부로',
@@ -232,7 +232,7 @@ const part02_story = [
   },
   {
     characters: [
-      { name: 'hitoya', position: 'center', expression: 'default' },
+      { name: 'hitoya', position: 'center', expression: 'haa' },
     ],
     speaker: {
       kor: '아마구니 히토야',
@@ -245,8 +245,8 @@ const part02_story = [
   },
   {
     characters: [
-      { name: 'saburo', position: 'left', expression: 'default' },
-      { name: 'hitoya', position: 'right', expression: 'default' },
+      { name: 'saburo', position: 'left', expression: 'yata' },
+      { name: 'hitoya', position: 'right', expression: 'haa' },
     ],
     speaker: {
       kor: '야마다 사부로',
@@ -259,8 +259,8 @@ const part02_story = [
   },
   {
     characters: [
-      { name: 'saburo', position: 'left', expression: 'default' },
-      { name: 'hitoya', position: 'right', expression: 'default' },
+      { name: 'saburo', position: 'left', expression: 'yata' },
+      { name: 'hitoya', position: 'right', expression: 'haaa' },
     ],
     speaker: {
       kor: '아마구니 히토야',
@@ -286,7 +286,7 @@ const part02_story = [
   },
   {
     characters: [
-      { name: 'hitoya', position: 'center', expression: 'default' }
+      { name: 'hitoya', position: 'center', expression: 'haaa' }
     ],
     speaker: {
       kor: '아마구니 히토야',

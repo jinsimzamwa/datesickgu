@@ -417,14 +417,14 @@ const part05_story = [
   },
   {
     characters: [
-      { name: 'saburo', position: 'center', expression: 'default' },
+      { name: 'saburo', position: 'center', expression: 'happy' },
     ],
     speaker: {
       kor: '야마다 사부로',
       jpn: '山田三郎'
     },
     text: {
-      kor: '(사부로가 웃는 표정이면 좋겠어...)',
+      kor: '…',
       jpn: '…'
     }
   },

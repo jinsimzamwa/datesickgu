@@ -1,7 +1,7 @@
 const part01_success = [
   {
     characters: [
-      { name: 'hitoya', position: 'center', expression: 'default' },
+      { name: 'hitoya', position: 'center', expression: 'eyes' },
     ],
     speaker: {
       kor: '아마구니 히토야',
@@ -14,7 +14,7 @@ const part01_success = [
   },
   {
     characters: [
-      { name: 'hitoya', position: 'center', expression: 'default' },
+      { name: 'hitoya', position: 'center', expression: 'haa' },
     ],
     speaker: {
       kor: '아마구니 히토야',
@@ -55,7 +55,7 @@ const part01_success = [
   },
   {
     characters: [
-      { name: 'hitoya', position: 'center', expression: 'default' },
+      { name: 'hitoya', position: 'center', expression: 'surp' },
     ],
     speaker: {
       kor: '아마구니 히토야',
@@ -68,7 +68,7 @@ const part01_success = [
   },
   {
     characters: [
-      { name: 'rei', position: 'center', expression: 'default' },
+      { name: 'rei', position: 'center', expression: 'laugh' },
     ],
     speaker: {
       kor: '아마야도 레이',

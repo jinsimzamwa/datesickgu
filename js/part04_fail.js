@@ -270,7 +270,7 @@ const part04_fail = [
   },
   {
     characters: [
-      { name: 'saburo', position: 'center', expression: 'default' },
+      { name: 'saburo', position: 'center', expression: 'yata' },
     ],
     speaker: {
       kor: '야마다 사부로',
@@ -309,7 +309,7 @@ const part04_fail = [
   },
   {
     characters: [
-      { name: 'saburo', position: 'center', expression: 'default' },
+      { name: 'saburo', position: 'center', expression: 'yata' },
     ],
     speaker: {
       kor: '야마다 사부로',
@@ -335,7 +335,7 @@ const part04_fail = [
   },
   {
     characters: [
-      { name: 'saburo', position: 'center', expression: 'default' },
+      { name: 'saburo', position: 'center', expression: 'wakan' },
     ],
     speaker: {
       kor: '야마다 사부로',
@@ -348,7 +348,7 @@ const part04_fail = [
   },
   {
     characters: [
-      { name: 'saburo', position: 'center', expression: 'default' },
+      { name: 'saburo', position: 'center', expression: 'wakan' },
     ],
     speaker: {
       kor: '야마다 사부로',
@@ -361,7 +361,7 @@ const part04_fail = [
   },
   {
     characters: [
-      { name: 'saburo', position: 'center', expression: 'default' },
+      { name: 'saburo', position: 'center', expression: 'wakan2' },
     ],
     speaker: {
       kor: '야마다 사부로',
@@ -374,7 +374,7 @@ const part04_fail = [
   },
   {
     characters: [
-      { name: 'saburo', position: 'center', expression: 'default' },
+      { name: 'saburo', position: 'center', expression: 'wakan' },
     ],
     speaker: {
       kor: '야마다 사부로',
@@ -608,7 +608,7 @@ const part04_fail = [
   },
   {
     characters: [
-      { name: 'saburo', position: 'center', expression: 'default' },
+      { name: 'saburo', position: 'center', expression: 'simu' },
     ],
     speaker: {
       kor: '야마다 사부로',

@@ -41,7 +41,7 @@ const part02_fail = [
   },
   {
     characters: [
-      { name: 'saburo', position: 'center', expression: 'default' },
+      { name: 'saburo', position: 'center', expression: 'yata' },
     ],
     speaker: {
       kor: '야마다 사부로',
@@ -54,7 +54,7 @@ const part02_fail = [
   },
   {
     characters: [
-      { name: 'rei', position: 'center', expression: 'default' }
+      { name: 'rei', position: 'center', expression: 'laugh' }
     ],
     speaker: {
       kor: '아마야도 레이',
@@ -67,7 +67,7 @@ const part02_fail = [
   },
   {
     characters: [
-      { name: 'hitoya', position: 'center', expression: 'default' },
+      { name: 'hitoya', position: 'center', expression: 'haa' },
     ],
     speaker: {
       kor: '아마구니 히토야',
@@ -135,7 +135,7 @@ const part02_fail = [
   {
     characters: [
       { name: 'ichiro', position: 'left', expression: 'default' },
-      { name: 'saburo', position: 'center', expression: 'default' },
+      { name: 'saburo', position: 'center', expression: 'at' },
       { name: 'jakurai', position: 'right', expression: 'default' },
     ],
     speaker: {
@@ -150,7 +150,7 @@ const part02_fail = [
   {
     characters: [
       { name: 'ichiro', position: 'left', expression: 'default' },
-      { name: 'saburo', position: 'center', expression: 'default' },
+      { name: 'saburo', position: 'center', expression: 'at' },
       { name: 'jakurai', position: 'right', expression: 'default' },
     ],
     speaker: {
@@ -165,7 +165,7 @@ const part02_fail = [
   {
     characters: [
       { name: 'ichiro', position: 'left', expression: 'default' },
-      { name: 'saburo', position: 'center', expression: 'default' },
+      { name: 'saburo', position: 'center', expression: 'at' },
       { name: 'jakurai', position: 'right', expression: 'default' },
     ],
     speaker: {
@@ -179,7 +179,7 @@ const part02_fail = [
   },
   {
     characters: [
-      { name: 'rei', position: 'center', expression: 'default' }
+      { name: 'rei', position: 'center', expression: 'laugh' }
     ],
     speaker: {
       kor: '아마야도 레이',
@@ -220,7 +220,7 @@ const part02_fail = [
   },
   {
     characters: [
-      { name: 'jakurai', position: 'center', expression: 'default' }
+      { name: 'jakurai', position: 'center', expression: 'at' }
     ],
     speaker: {
       kor: '진구지 쟈쿠라이',
@@ -261,7 +261,7 @@ const part02_fail = [
   },
   {
     characters: [
-      { name: 'hitoya', position: 'center', expression: 'default' },
+      { name: 'hitoya', position: 'center', expression: 'surp' },
     ],
     speaker: {
       kor: '아마구니 히토야',

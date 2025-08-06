@@ -1,7 +1,7 @@
 const part05_story2 = [
   {
     characters: [
-      { name: 'rei', position: 'center', expression: 'default' },
+      { name: 'rei', position: 'center', expression: 'sunoff' },
     ],
     speaker: {
       kor: '아마야도 레이',
@@ -14,7 +14,7 @@ const part05_story2 = [
   },
   {
     characters: [
-      { name: 'rei', position: 'center', expression: 'default' },
+      { name: 'rei', position: 'center', expression: 'sunoff' },
     ],
     speaker: {
       kor: '아마야도 레이',
@@ -27,7 +27,7 @@ const part05_story2 = [
   },
   {
     characters: [
-      { name: 'rei', position: 'center', expression: 'default' },
+      { name: 'rei', position: 'center', expression: 'sunoff' },
     ],
     speaker: {
       kor: '아마야도 레이',
@@ -40,7 +40,7 @@ const part05_story2 = [
   },
   {
     characters: [
-      { name: 'rei', position: 'center', expression: 'default' },
+      { name: 'rei', position: 'center', expression: 'sunoff' },
     ],
     speaker: {
       kor: '아마야도 레이',
@@ -53,7 +53,7 @@ const part05_story2 = [
   },
   {
     characters: [
-      { name: 'rei', position: 'center', expression: 'default' },
+      { name: 'rei', position: 'center', expression: 'sunoff' },
     ],
     speaker: {
       kor: '아마야도 레이',
@@ -67,7 +67,7 @@ const part05_story2 = [
   },
   {
     characters: [
-      { name: 'rei', position: 'center', expression: 'default' },
+      { name: 'rei', position: 'center', expression: 'sunoff' },
     ],
     speaker: {
       kor: '아마야도 레이',
@@ -80,7 +80,7 @@ const part05_story2 = [
   },
   {
     characters: [
-      { name: 'rei', position: 'center', expression: 'default' },
+      { name: 'rei', position: 'center', expression: 'sunoff' },
     ],
     speaker: {
       kor: '아마야도 레이',
@@ -93,7 +93,7 @@ const part05_story2 = [
   },
   {
     characters: [
-      { name: 'rei', position: 'center', expression: 'default' },
+      { name: 'rei', position: 'center', expression: 'sunoff' },
     ],
     speaker: {
       kor: '아마야도 레이',
@@ -128,7 +128,7 @@ const part05_story2 = [
   },
   {
     characters: [
-      { name: 'rei', position: 'center', expression: 'default' },
+      { name: 'rei', position: 'center', expression: 'sunoff' },
     ],
     speaker: {
       kor: '아마야도 레이',
@@ -141,7 +141,7 @@ const part05_story2 = [
   },
   {
     characters: [
-      { name: 'rei', position: 'center', expression: 'default' },
+      { name: 'rei', position: 'center', expression: 'sunoff' },
     ],
     speaker: {
       kor: '아마야도 레이',

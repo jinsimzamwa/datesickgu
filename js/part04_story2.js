@@ -193,7 +193,7 @@ const part04_story2 = [
   {
     characters: [
       { name: 'rei', position: 'left', expression: 'default' },
-      { name: 'saburo', position: 'right', expression: 'default' }
+      { name: 'saburo', position: 'right', expression: 'ang2' }
     ],
     speaker: {
       kor: '야마다 사부로',
@@ -206,7 +206,7 @@ const part04_story2 = [
   },
   {
     characters: [
-      { name: 'hitoya', position: 'center', expression: 'default' }
+      { name: 'hitoya', position: 'center', expression: 'haa' }
     ],
     speaker: {
       kor: '아마구니 히토야',
@@ -233,7 +233,7 @@ const part04_story2 = [
   {
     characters: [
       { name: 'rei', position: 'left', expression: 'default' },
-      { name: 'saburo', position: 'right', expression: 'default' }
+      { name: 'saburo', position: 'right', expression: 'at' }
     ],
     speaker: {
       kor: '아마야도 레이',
@@ -246,8 +246,8 @@ const part04_story2 = [
   },
   {
     characters: [
-      { name: 'rei', position: 'left', expression: 'default' },
-      { name: 'saburo', position: 'right', expression: 'default' }
+      { name: 'rei', position: 'left', expression: 'laugh' },
+      { name: 'saburo', position: 'right', expression: 'at' }
     ],
     speaker: {
       kor: '아마야도 레이',
@@ -261,7 +261,7 @@ const part04_story2 = [
   {
     characters: [
       { name: 'rei', position: 'left', expression: 'default' },
-      { name: 'saburo', position: 'right', expression: 'default' }
+      { name: 'saburo', position: 'right', expression: 'ang2' }
     ],
     speaker: {
       kor: '야마다 사부로',
@@ -274,10 +274,10 @@ const part04_story2 = [
   },
   {
     characters: [
-      { name: 'jakurai', position: 'center', expression: 'default' }
+      { name: 'jakurai', position: 'center', expression: 'idle' }
     ],
     speaker: {
-      kor: '진구지 쟈쿠라이',
+      kor: '神宮寺 寂雷',
       jpn: '神宮寺 寂雷'
     },
     text: {
@@ -287,10 +287,10 @@ const part04_story2 = [
   },
   {
     characters: [
-      { name: 'jakurai', position: 'center', expression: 'default' }
+      { name: 'jakurai', position: 'center', expression: 'idle' }
     ],
     speaker: {
-      kor: '진구지 쟈쿠라이',
+      kor: '神宮寺 寂雷',
       jpn: '神宮寺 寂雷'
     },
     text: {
@@ -300,7 +300,7 @@ const part04_story2 = [
   },
   {
     characters: [
-      { name: 'saburo', position: 'center', expression: 'default' }
+      { name: 'saburo', position: 'center', expression: 'yata' }
     ],
     speaker: {
       kor: '야마다 사부로',
@@ -313,7 +313,7 @@ const part04_story2 = [
   },
   {
     characters: [
-      { name: 'saburo', position: 'center', expression: 'default' }
+      { name: 'saburo', position: 'center', expression: 'yata' }
     ],
     speaker: {
       kor: '야마다 사부로',
@@ -326,7 +326,7 @@ const part04_story2 = [
   },
   {
     characters: [
-      { name: 'hitoya', position: 'left', expression: 'default' },
+      { name: 'hitoya', position: 'left', expression: 'haaa' },
       { name: 'rei', position: 'right', expression: 'default' },
     ],
     speaker: {
@@ -340,8 +340,8 @@ const part04_story2 = [
   },
   {
     characters: [
-      { name: 'hitoya', position: 'left', expression: 'default' },
-      { name: 'rei', position: 'right', expression: 'default' },
+      { name: 'hitoya', position: 'left', expression: 'haaa' },
+      { name: 'rei', position: 'right', expression: 'laugh' },
     ],
     speaker: {
       kor: '아마야도 레이',
@@ -354,7 +354,7 @@ const part04_story2 = [
   },
   {
     characters: [
-      { name: 'hitoya', position: 'left', expression: 'default' },
+      { name: 'hitoya', position: 'left', expression: 'haaa' },
       { name: 'rei', position: 'right', expression: 'default' },
     ],
     speaker: {
@@ -368,8 +368,8 @@ const part04_story2 = [
   },
   {
     characters: [
-      { name: 'hitoya', position: 'left', expression: 'default' },
-      { name: 'rei', position: 'right', expression: 'default' },
+      { name: 'hitoya', position: 'left', expression: 'haaa' },
+      { name: 'rei', position: 'right', expression: 'laugh' },
     ],
     speaker: {
       kor: '아마야도 레이',
@@ -382,7 +382,7 @@ const part04_story2 = [
   },
   {
     characters: [
-      { name: 'saburo', position: 'center', expression: 'default' }
+      { name: 'saburo', position: 'center', expression: 'ang1' }
     ],
     speaker: {
       kor: '야마다 사부로',
@@ -395,7 +395,7 @@ const part04_story2 = [
   },
   {
     characters: [
-      { name: 'hitoya', position: 'center', expression: 'default' }
+      { name: 'hitoya', position: 'center', expression: 'haa' }
     ],
     speaker: {
       kor: '아마구니 히토야',

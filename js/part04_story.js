@@ -2,7 +2,7 @@ const part04_story = [
   {
     characters: [
       { name: 'jakurai', position: 'left', expression: 'default' },
-      { name: 'hitoya', position: 'center', expression: 'default' },
+      { name: 'hitoya', position: 'center', expression: 'haa' },
       { name: 'rei', position: 'right', expression: 'default' },
     ],
     speaker: {
@@ -16,8 +16,8 @@ const part04_story = [
   },
   {
     characters: [
-      { name: 'jakurai', position: 'left', expression: 'default' },
-      { name: 'hitoya', position: 'center', expression: 'default' },
+      { name: 'jakurai', position: 'left', expression: 'smile' },
+      { name: 'hitoya', position: 'center', expression: 'haa' },
       { name: 'rei', position: 'right', expression: 'default' },
     ],
     speaker: {
@@ -31,9 +31,9 @@ const part04_story = [
   },
   {
     characters: [
-      { name: 'jakurai', position: 'left', expression: 'default' },
-      { name: 'hitoya', position: 'center', expression: 'default' },
-      { name: 'rei', position: 'right', expression: 'default' },
+      { name: 'jakurai', position: 'left', expression: 'smile' },
+      { name: 'hitoya', position: 'center', expression: 'haa' },
+      { name: 'rei', position: 'right', expression: 'laugh' },
     ],
     speaker: {
       kor: '아마야도 레이',
@@ -46,9 +46,9 @@ const part04_story = [
   },
   {
     characters: [
-      { name: 'jakurai', position: 'left', expression: 'default' },
+      { name: 'jakurai', position: 'left', expression: 'smile' },
       { name: 'hitoya', position: 'center', expression: 'default' },
-      { name: 'rei', position: 'right', expression: 'default' },
+      { name: 'rei', position: 'right', expression: 'laugh' },
     ],
     speaker: {
       kor: '아마구니 히토야',
@@ -61,9 +61,9 @@ const part04_story = [
   },
   {
     characters: [
-      { name: 'jakurai', position: 'left', expression: 'default' },
-      { name: 'hitoya', position: 'center', expression: 'default' },
-      { name: 'rei', position: 'right', expression: 'default' },
+      { name: 'jakurai', position: 'left', expression: 'smile' },
+      { name: 'hitoya', position: 'center', expression: 'eyes' },
+      { name: 'rei', position: 'right', expression: 'laugh' },
     ],
     speaker: {
       kor: '아마구니 히토야',
@@ -131,7 +131,7 @@ const part04_story = [
   },
   {
     characters: [
-      { name: 'rei', position: 'center', expression: 'default' },
+      { name: 'rei', position: 'center', expression: 'laugh' },
     ],
     speaker: {
       kor: '아마야도 레이',
@@ -157,8 +157,8 @@ const part04_story = [
   },
   {
     characters: [
-      { name: 'rei', position: 'left', expression: 'default' },
-      { name: 'hitoya', position: 'right', expression: 'default' },
+      { name: 'rei', position: 'left', expression: 'laugh' },
+      { name: 'hitoya', position: 'right', expression: 'haa' },
     ],
     speaker: {
       kor: '아마구니 히토야',
@@ -171,7 +171,7 @@ const part04_story = [
   },
   {
     characters: [
-      { name: 'rei', position: 'left', expression: 'default' },
+      { name: 'rei', position: 'left', expression: 'laugh' },
       { name: 'hitoya', position: 'right', expression: 'default' },
     ],
     speaker: {
@@ -185,8 +185,8 @@ const part04_story = [
   },
   {
     characters: [
-      { name: 'rei', position: 'left', expression: 'default' },
-      { name: 'hitoya', position: 'right', expression: 'default' },
+      { name: 'rei', position: 'left', expression: 'laugh' },
+      { name: 'hitoya', position: 'right', expression: 'haaa' },
     ],
     speaker: {
       kor: '아마구니 히토야',

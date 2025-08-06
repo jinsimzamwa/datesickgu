@@ -40,8 +40,8 @@ const part03_success = [
   },
   {
     characters: [
-      { name: 'saburo', position: 'left', expression: 'default' },
-      { name: 'jakurai', position: 'right', expression: 'default' }
+      { name: 'saburo', position: 'left', expression: 'ang2' },
+      { name: 'jakurai', position: 'right', expression: 'idle' }
     ],
     speaker: {
       kor: '야마다 사부로',
@@ -54,8 +54,8 @@ const part03_success = [
   },
   {
     characters: [
-      { name: 'saburo', position: 'left', expression: 'default' },
-      { name: 'jakurai', position: 'right', expression: 'default' }
+      { name: 'saburo', position: 'left', expression: 'ang2' },
+      { name: 'jakurai', position: 'right', expression: 'at' }
     ],
     speaker: {
       kor: '진구지 쟈쿠라이',
@@ -106,7 +106,7 @@ const part03_success = [
   },
   {
     characters: [
-      { name: 'jakurai', position: 'center', expression: 'default' }
+      { name: 'jakurai', position: 'center', expression: 'smile' }
     ],
     speaker: {
       kor: '진구지 쟈쿠라이',
@@ -119,7 +119,7 @@ const part03_success = [
   },
   {
     characters: [
-      { name: 'hitoya', position: 'center', expression: 'default' },
+      { name: 'hitoya', position: 'center', expression: 'haa' },
     ],
     speaker: {
       kor: '아마구니 히토야',
@@ -132,7 +132,7 @@ const part03_success = [
   },
   {
     characters: [
-      { name: 'rei', position: 'center', expression: 'default' },
+      { name: 'rei', position: 'center', expression: 'laugh' },
     ],
     speaker: {
       kor: '아마야도 레이',
@@ -145,7 +145,7 @@ const part03_success = [
   },
   {
     characters: [
-      { name: 'hitoya', position: 'center', expression: 'default' },
+      { name: 'hitoya', position: 'center', expression: 'haaa' },
     ],
     speaker: {
       kor: '아마구니 히토야',
@@ -158,7 +158,7 @@ const part03_success = [
   },
   {
     characters: [
-      { name: 'saburo', position: 'center', expression: 'default' },
+      { name: 'saburo', position: 'center', expression: 'ang2' },
     ],
     speaker: {
       kor: '야마다 사부로',
