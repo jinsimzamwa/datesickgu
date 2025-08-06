@@ -339,7 +339,7 @@ const part05_story = [
       { name: 'kuko', position: 'right', expression: 'default' },
     ],
     speaker: {
-      kor: 'いちくう',
+      kor: '이치쿠코',
       jpn: 'いちくう'
     },
     text: {

@@ -122,7 +122,7 @@ $(function () {
     function updatePersonPosition() {
       if (gameEnded) return;
 
-      personTop += 0.5;
+      personTop += 0.3;
       personLeft -= 0.8;
 
       if (frameCounter % 3 === 0) {

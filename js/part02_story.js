@@ -306,9 +306,7 @@ const part02_story = [
 
 $(function () {
   initDialogue({ sectionSelector: '.part02_story', script: part02_story });
-});
 
-$('.skipBtn').click(function () {
   const seenEndings = JSON.parse(localStorage.getItem('seenEndings') || '[]');
 		const hasEnd05 = seenEndings.includes('end05');
 
@@ -317,7 +315,9 @@ $('.skipBtn').click(function () {
 		} else {
 			$('.skipBtn').hide();
 		}
-    
+});
+
+$('.skipBtn').click(function () {
     const lastLine = part02_story[part02_story.length - 1];
     if (lastLine.next) {
         $('.container-inner').css('opacity', 0).load(lastLine.next, function () {

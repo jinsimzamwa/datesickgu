@@ -83,7 +83,7 @@ const part03_success = [
     characters: [
     ],
     speaker: {
-      kor: '店員',
+      kor: '점원',
       jpn: '店員',
     },
     text: {

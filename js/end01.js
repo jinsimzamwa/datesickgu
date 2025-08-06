@@ -22,6 +22,8 @@ $(function () {
   $('.go-title').on('click', function () {
     $('.container-inner').fadeOut(600, function () {
       $('.container-inner').load('./game/main.html', function () {
+        bgmManager.play('intro', true, false);
+        bgmManager.fadeIn(0.7, 2000);
         $('.container-inner').fadeIn(800);
         attachGameEvents();
       });
