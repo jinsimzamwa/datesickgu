@@ -2,12 +2,16 @@ $(function () {
 
   const seenEndings = JSON.parse(localStorage.getItem('seenEndings') || '[]');
   const hasEnd05 = seenEndings.includes('end05');
+  let startSequenceRunning = false;
 
   if (hasEnd05) {
     $('.skipBtn').show();
   } else {
     $('.skipBtn').hide();
   }
+
+  let currentLang = localStorage.getItem('lang') || 'jpn';
+  updatePart01ModalImage(currentLang);
 
   $('.game-overlay').fadeIn();
   $('.part01-modal').fadeIn();
@@ -44,6 +48,7 @@ $(function () {
 }
 
   $('.ok_btn').on('click', function () {
+    if (startSequenceRunning) return;
     inputDetected = true;
 
     $('.part01-modal').fadeOut();
@@ -103,4 +108,13 @@ $(function () {
   $('.ok_btn').on('mouseenter', function() {
     sfxManager.play('hover', 0.8); 
   });
+
+  function updatePart01ModalImage(lang) {
+    const $modalImg = $('.part01-modal img[alt="modal"]');
+    if (lang === 'kor') {
+      $modalImg.attr('src', './images/ui/modal_1.png');
+    } else {
+      $modalImg.attr('src', './images/ui/modal_1_JP.png');
+    }
+  }
 });

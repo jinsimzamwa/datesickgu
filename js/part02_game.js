@@ -1,12 +1,16 @@
 $(function () {
   const seenEndings = JSON.parse(localStorage.getItem('seenEndings') || '[]');
   const hasEnd05 = seenEndings.includes('end05');
+   let startSequenceRunning = false;
 
   if (hasEnd05) {
     $('.skipBtn').show();
   } else {
     $('.skipBtn').hide();
   }
+
+  let currentLang = localStorage.getItem('lang') || 'jpn';
+  updatePart01ModalImage(currentLang);
 
   const car = $('.part_2_layer2');
   const overlay = $('.game-overlay');
@@ -42,7 +46,6 @@ $(function () {
   let gameEnded = false;
   let successTimer;
 
-  /** ⬇⬇⬇ 스킵용: 강제 종료 후 성공 처리 */
   function skipGame() {
     if (gameEnded) return;
     clearTimeout(successTimer);
@@ -51,7 +54,6 @@ $(function () {
     hitbox.stop(true, true);
     gameEnded = true;
 
-    // 바로 성공 화면
     sfxManager.play('success', 0.8);
     successImage.show().removeClass('kaboom');
     void successImage[0].offsetWidth;
@@ -65,7 +67,6 @@ $(function () {
       });
     });
   }
-  /** ⬆⬆⬆ */
 
   function checkCollision() {
     const hitboxRect = $('.car-hitbox')[0].getBoundingClientRect();
@@ -194,6 +195,7 @@ $(function () {
   }
 
   okBtn.on('click', function () {
+    if (startSequenceRunning) return;
     modal.fadeOut();
     startImage.show().removeClass('kaboom');
     void startImage[0].offsetWidth;
@@ -249,5 +251,12 @@ $(function () {
     skipGame();
   });
 
-
+  function updatePart01ModalImage(lang) {
+    const $modalImg = $('.part02-modal img[alt="modal"]');
+    if (lang === 'kor') {
+      $modalImg.attr('src', './images/ui/modal_2.png');
+    } else {
+      $modalImg.attr('src', './images/ui/modal_2_JP.png');
+    }
+  }
 });

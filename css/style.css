@@ -1,22 +1,28 @@
 @charset "utf-8";
 
+img{
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+}
 body{
     background-color: #fffde2;
-    user-select: none;         /* 텍스트 선택 방지 */
-    -webkit-user-select: none; /* Safari/Chrome */
-    -ms-user-select: none;     /* IE/Edge */
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
 }
 #wrap{
     width: 1100px;
     margin: 0 auto;
 }
-::selection{color: #fff;background-color: #74c5b6;}
-/* header>h1{
-    height: 200px;
-    font-size: 50px;
-    line-height: 200px;
-    text-align: center;
-} */
 
 header{
     width: 911px;
@@ -27,14 +33,14 @@ header{
 }
 header>h1{text-indent: -9999px;}
 
-section.page{
+.attention{
     margin-bottom: 80px;
 }
-section.page>article{
+article{
     width: 1100px;
     margin: 0 auto;
 }
-section.page>article>h2{
+article>h2{
     width: 250px;
     height: 65px;
     margin: 20px auto;
@@ -43,45 +49,19 @@ section.page>article>h2{
     font-weight: 500;
     text-align: center;
     text-shadow: 1px 1px 1px #999;
-    background-color: #74c5b5;
+    background-color: #bf3a3a;
     border-radius: 15px;
 }
-section.page>article>.txt{
+article>.txt{
     width: 1100px;
 }
 
-/* 게임스토리 */
-section.page>.story>.txt{
-    display: flex;
-    align-items: center;
-    height: 940px;
-    background-image: url(../images/bg_story.png);
-    background-repeat: no-repeat;
-}
-section.page>.story>.txt>img{
-    display: block;
-    margin: 0 60px 0 120px;
-}
-section.page>.story>.txt>p>span{
-    display: block;
-    margin-bottom: 32px;
-    font-size: 30px;
-    text-align: center;
-}
-section.page>.story>.txt>p>.catchphrase{
-    font-size: 42px;
-}
-section.page>.story>.txt>p>.porori{
-    margin-bottom: 60px;
-}
-
-/* 게임방법 */
-section.page>.howto>.txt{
+.attention>.txt{
     position: relative;
     height: 550px;
-    background-image: url(../images/bg_howtoway.png);
+    background-image: url(../images/attention.png);
 }
-section.page>.howto>.txt>p{
+.attention>.txt>p{
     position: absolute;
     left: 100px;
     top: 16px;
@@ -90,15 +70,14 @@ section.page>.howto>.txt>p{
     font-size: 26px;
     text-align: center;
 }
-section.page>.howto>.txt>p>span{
+.attention>.txt>p>span{
     display: block;
-    margin-top: 45px;
-}
-section.page>.howto>.txt>p>.neoburi{
-    font-size: 42px;
+    margin-top: 24px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
-/* 타이틀화면 */
+
 .game{
     overflow: hidden;
     position: relative;
@@ -180,7 +159,6 @@ section.page>.howto>.txt>p>.neoburi{
 }
 
 
-/* 인트로 화면 */
 .intro{
     overflow: hidden;
     position: relative;
@@ -676,8 +654,6 @@ section.page>.howto>.txt>p>.neoburi{
     font-size: 16px;
 }
 
-
-/* 대화 화면 */
 .part01_story, .part01_success, .part01_fail, .part01_story2 {
   position: relative;
   width: 100%;
@@ -695,7 +671,7 @@ section.page>.howto>.txt>p>.neoburi{
   justify-content: center; 
   align-items: flex-end;
   bottom: 0;
-  gap: 40px;  /* 캐릭터 간격 */
+  gap: 40px;
 }
 
 .standing-area.char-count-2 {
@@ -727,14 +703,13 @@ section.page>.howto>.txt>p>.neoburi{
   width: 1100px; 
   height: 276px; 
   color: #fff;
-  padding: 41px 73px 31px 60px; /* 이미지에 따라 텍스트 영역 보정 */
+  padding: 41px 73px 31px 60px;
   box-sizing: border-box;
   font-size: 20px;
   display: flex;
   flex-direction: column;
-  /*justify-content: flex-end;*/
 
-   overflow: hidden; /* 중요: 인디케이터 넘치지 않게 */
+   overflow: hidden;
 }
 
 .name-box {
@@ -765,7 +740,7 @@ section.page>.howto>.txt>p>.neoburi{
   position: absolute;
   height: 100%;
   width: 100%;
-  top: 21px;
+  top: 22px;
   left: 0px;
   font-size: 26px;
   line-height: 37px;
@@ -774,7 +749,7 @@ section.page>.howto>.txt>p>.neoburi{
 .text-text {
   font-size: 23px;
   color: #fff;
-  padding: 0 12px; /* 텍스트 영역 조절 */
+  padding: 0 12px;
   text-align: center;
   line-height: normal;
   text-align: left;
@@ -895,8 +870,6 @@ section.page>.howto>.txt>p>.neoburi{
 .success-game { width: 757px; }
 .fail-game { width: 492px; }
     
-
-/* part0 걷는 모션*/
 @keyframes walkRightBouncy {
   0% {
     right: 0px;
@@ -1152,8 +1125,8 @@ section.page>.howto>.txt>p>.neoburi{
   position: absolute;
   width: 329px;
   height: 301px;
-  top: 197px;
-  left: 529px;
+  top: 248px;
+  left: 567px;
   background-image: url(../images/game/part_3_layer2.gif);
   background-size: cover;
   overflow: hidden;
@@ -1185,11 +1158,10 @@ section.page>.howto>.txt>p>.neoburi{
     transform: translate(0, 0);
   }
   100% {
-    transform: translate(-64px, -34px);
+    transform: translate(-57px, -68px);
   }
 }
 
-/* 실패 트리거 */
 .part03_fail-zone {
   position: absolute;
   bottom: 0;
@@ -1448,10 +1420,6 @@ section.page>.howto>.txt>p>.neoburi{
   text-align: center;
 }
 
-.end-modal img {
-  width: 100%;
-}
-
 .end-buttons {
   position: absolute;
   bottom: 20px;
@@ -1461,13 +1429,27 @@ section.page>.howto>.txt>p>.neoburi{
 }
 
 .end-buttons button {
-  background: white;
+  position: absolute;
   border: none;
-  padding: 10px 20px;
   font-size: 18px;
   cursor: pointer;
-  border-radius: 8px;
 }
+
+  .go-title{
+    width: 236px;
+    position: absolute;
+    top: -75px;
+    right: -7px;
+  }
+  .continue-game{
+    width: 236px;
+    position: absolute;
+    top: -77px;
+    left: 55px;
+  }
+
+  .continue-game:hover {  transform: scale(1.05); }
+  .go-title:hover {  transform: scale(1.05); }
 
 .game #start{
     background: url(../images/main/start_btn.png) no-repeat;
@@ -1572,7 +1554,7 @@ section.page>.howto>.txt>p>.neoburi{
 #start:hover,
 #credit:hover,
 #kor:hover,
-#kor:hover,
+#jpn:hover,
 #reset:hover {
   transform: rotate(-20deg) scale(1.05);
 }
@@ -1598,7 +1580,7 @@ section.page>.howto>.txt>p>.neoburi{
 }
 
 .skipBtn:hover {
-  transform: scale(1.05) translateY(-3px);
+  transform: scale(1.05) translateY(3px);
 }
 
 .modal-btn:hover {
@@ -1703,7 +1685,7 @@ footer{
 }
 footer>span{
     display: block;
-    margin-bottom: 14px;
+    margin-bottom: 3px;
     text-align: center;
 }
 footer>address{
@@ -1780,8 +1762,8 @@ footer>address{
 
 .credit-scroll {
   position: relative;
-  height: 2000px; /* 적당히 고정 높이 */
-  overflow: hidden; /* 스크롤 영역 숨기기 */
+  height: 2000px;
+  overflow: hidden;
   margin-top: 30px;
   width: 100%;
   text-align: center;
@@ -1790,7 +1772,7 @@ footer>address{
 .scroll-content {
   position: relative;
   top: 350px;
-  transition: top 4s ease-in-out; /* 부드러운 이동 */
+  transition: top 4s ease-in-out; 
 }
 
 .credit-center {

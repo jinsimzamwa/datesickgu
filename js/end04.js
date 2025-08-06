@@ -1,6 +1,18 @@
 $(function () {
 
-  let hasClicked = false;
+  const lang = localStorage.getItem('lang') || 'jpn';
+
+  const endTitles = {
+    kor: 'END 04 누이는 직접 뽑은 녀석이 가장 정이 간다',
+    jpn: 'END 04 ぬいぐるみは自分で取ったヤツが一番愛おしい'
+  };
+
+  $('.end04 .end-text').text(endTitles[lang]);
+
+  const modalImg = (lang === 'jpn')
+    ? './images/ui/end_modal_JP.png'
+    : './images/ui/end_modal.png';
+  $('.end04 .end-modal > img').attr('src', modalImg);
 
   $(document).on('click', '.end04', function (e) {
     if ($(e.target).closest('.end-modal').length) return;

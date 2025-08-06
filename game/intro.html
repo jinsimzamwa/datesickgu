@@ -2,95 +2,97 @@
     <div class="controls">
         <button class="skipBtn"></button>
     </div>
-	<div class="sprite-container"></div>
+    <div class="sprite-container"></div>
 </section>
 
 <script>
-    $(function () {
+$(function () {
+    const seenEndings = JSON.parse(localStorage.getItem('seenEndings') || '[]');
+    const hasEnd05 = seenEndings.includes('end05');
+    if (hasEnd05) $('.skipBtn').show();
+    else $('.skipBtn').hide();
 
-		const seenEndings = JSON.parse(localStorage.getItem('seenEndings') || '[]');
-		const hasEnd05 = seenEndings.includes('end05');
+    const classes = [
+        'bg-01_01', 'bg-01_02', 'bg-01_03', 'bg-01_04', 'bg-01_05', 'bg-01_06', 'bg-01_07', 'bg-01_08', 'bg-01_09', 'bg-01_10',
+        'bg-02_01', 'bg-02_02', 'bg-02_03', 'bg-02_04', 'bg-02_05', 'bg-02_06', 'bg-02_07', 'bg-02_08', 'bg-02_09', 'bg-02_10', 'bg-02_11', 'bg-02_12', 'bg-02_13', 'bg-02_14',
+        'bg-03_01', 'bg-03_02', 'bg-03_03', 'bg-03_04', 'bg-03_05', 'bg-03_06', 'bg-03_07', 'bg-03_08', 'bg-03_09', 'bg-03_10', 'bg-03_11', 'bg-03_12', 'bg-03_13', 'bg-03_14', 'bg-03_15', 'bg-03_16',
+        'bg-04_01', 'bg-04_02', 'bg-04_03', 'bg-04_04', 'bg-04_05', 'bg-04_06', 'bg-04_07', 'bg-04_08', 'bg-04_09', 'bg-04_10', 'bg-04_11', 'bg-04_12', 'bg-04_13', 'bg-04_14', 'bg-04_15', 'bg-04_16',
+        'bg-05_01', 'bg-05_02', 'bg-05_03', 'bg-05_04', 'bg-05_05', 'bg-05_06', 'bg-05_07', 'bg-05_08'
+    ];
 
-		if (hasEnd05) {
-			$('.skipBtn').show();
-		} else {
-			$('.skipBtn').hide();
-		}
+    const lang = localStorage.getItem('lang') || 'kor';
+    const useJP = (lang === 'jpn');
 
-			const classes = ['bg-01_01', 'bg-01_02', 'bg-01_03', 'bg-01_04', 'bg-01_05', 'bg-01_06', 'bg-01_07', 'bg-01_08', 'bg-01_09', 'bg-01_10',
-							'bg-02_01', 'bg-02_02', 'bg-02_03', 'bg-02_04', 'bg-02_05', 'bg-02_06', 'bg-02_07', 'bg-02_08', 'bg-02_09', 'bg-02_10', 'bg-02_11', 'bg-02_12', 'bg-02_13', 'bg-02_14',
-							'bg-03_01', 'bg-03_02', 'bg-03_03', 'bg-03_04', 'bg-03_05', 'bg-03_06', 'bg-03_07', 'bg-03_08', 'bg-03_09', 'bg-03_10', 'bg-03_11', 'bg-03_12', 'bg-03_13', 'bg-03_14', 'bg-03_15', 'bg-03_16',
-							'bg-04_01', 'bg-04_02', 'bg-04_03', 'bg-04_04', 'bg-04_05', 'bg-04_06', 'bg-04_07', 'bg-04_08', 'bg-04_09', 'bg-04_10', 'bg-04_11', 'bg-04_12', 'bg-04_13', 'bg-04_14', 'bg-04_15', 'bg-04_16',
-							'bg-05_01', 'bg-05_02', 'bg-05_03', 'bg-05_04', 'bg-05_05', 'bg-05_06', 'bg-05_07', 'bg-05_08'
-			];
+    const bgPositions = {
+        'bg-01_01': '-195px -653px', 'bg-01_02': '-0 -653px', 'bg-01_03': '-314px -354px', 'bg-01_04': '-323px -1019px',
+        'bg-01_05': '-314px -0', 'bg-01_06': '-195px -1019px', 'bg-01_07': '-395px -853px', 'bg-01_08': '-0 -0',
+        'bg-01_09': '-395px -653px', 'bg-01_10': '-532px -653px',
+        'bg-02_01': '-0 -640px', 'bg-02_02': '-724px -1011px', 'bg-02_03': '-724px -0', 'bg-02_04': '-0 -0',
+        'bg-02_05': '-483px -640px', 'bg-02_06': '-724px -465px', 'bg-02_07': '-437px -991px', 'bg-02_08': '-0 -286px',
+        'bg-02_09': '-511px -286px', 'bg-02_10': '-256px -991px', 'bg-02_11': '-724px -664px', 'bg-02_12': '-256px -640px',
+        'bg-02_13': '-724px -837px', 'bg-02_14': '-724px -257px',
+        'bg-03_01': '-386px -393px', 'bg-03_02': '-222px -748px', 'bg-03_03': '-841px -748px', 'bg-03_04': '-0 -393px',
+        'bg-03_05': '-574px -748px', 'bg-03_06': '-978px -393px', 'bg-03_07': '-969px -748px', 'bg-03_08': '-0 -0',
+        'bg-03_09': '-0 -748px', 'bg-03_10': '-438px -748px', 'bg-03_11': '-1321px -0', 'bg-03_12': '-581px -0',
+        'bg-03_13': '-704px -748px', 'bg-03_14': '-1321px -181px', 'bg-03_15': '-822px -393px', 'bg-03_16': '-1205px -0',
+        'bg-04_01': '-750px -336px', 'bg-04_02': '-674px -635px', 'bg-04_03': '-0 -948px', 'bg-04_04': '-750px -0',
+        'bg-04_05': '-531px -635px', 'bg-04_06': '-0 -0', 'bg-04_07': '-1071px -418px', 'bg-04_08': '-478px -346px',
+        'bg-04_09': '-0 -635px', 'bg-04_10': '-0 -346px', 'bg-04_11': '-1071px -216px', 'bg-04_12': '-1071px -0',
+        'bg-04_13': '-378px -635px', 'bg-04_14': '-228px -635px', 'bg-04_15': '-1071px -708px', 'bg-04_16': '-1071px -560px',
+        'bg-05_01': '-687px -0', 'bg-05_02': '-135px -667px', 'bg-05_03': '-0 -667px', 'bg-05_04': '-650px -667px',
+        'bg-05_05': '-0 -0', 'bg-05_06': '-538px -667px', 'bg-05_07': '-270px -667px', 'bg-05_08': '-395px -667px'
+    };
 
-			let i = 0;
-			let currentPrefix = '';
+    function appendSprite(className) {
+        const prefix = className.split('_')[0];
+        const imgFile = useJP ? prefix.replace('bg-', '') + '_JP.png' : prefix.replace('bg-', '') + '.png';
+        const pos = bgPositions[className] || '0 0';
+        $('.sprite-container').append(
+            `<div class="${className}" style="background-image: url(../images/intro/${imgFile}); background-position: ${pos};"></div>`
+        );
+    }
 
-			function getPrefix(className) {
-				return className.split('_')[0];
-			}
+    let i = 0;
+    let currentPrefix = '';
 
-			function getIndicesWithPrefix(prefix) {
-				return classes.reduce((acc, cls, index) => {
-					if (getPrefix(cls) === prefix) acc.push(index);
-					return acc;
-				}, []);
-			}
+    (function initFirstImage() {
+        appendSprite(classes[0]);
+        currentPrefix = classes[0].split('_')[0];
+        i = 1;
+    })();
 
-			function renderSeries(prefix, visibleCount = Infinity) {
-				$('.sprite-container').empty();
-				const indices = getIndicesWithPrefix(prefix);
+    $('.intro').click(function () {
+        if (i >= classes.length) {
+            $('.container-inner').css('opacity', 0).load('./game/part01_story.html', function () {
+                $('.container-inner').animate({ opacity: 1 }, 800);
+            });
+            return;
+        }
 
-				for (let j = 0; j < indices.length && j < visibleCount; j++) {
-					const idx = indices[j];
-					$('.sprite-container').append(`<div class="${classes[idx]}"></div>`);
-				}
-				currentPrefix = prefix;
-			}
+        const nextClass = classes[i];
+        const nextPrefix = nextClass.split('_')[0];
 
-			(function initFirstImage() {
-				const firstClass = classes[0];
-				$('.sprite-container').append(`<div class="${firstClass}"></div>`);
-				currentPrefix = getPrefix(firstClass);
-				i = 1;
-			})();
-			
-			$('.intro').click(function () {			
-				if (i < classes.length) {
-						const nextClass = classes[i];
-						const nextPrefix = getPrefix(nextClass);
+        if (nextClass === 'bg-02_01') {
+            bgmManager.play('intro2', true, false);
+            bgmManager.fadeIn(0.7, 2000);
+        }
 
-						if(nextClass === 'bg-02_01'){
-							bgmManager.play('intro2', true, false);
-							bgmManager.fadeIn(0.7, 2000);
-						}
-						if (currentPrefix !== nextPrefix) {
-								$('.sprite-container').empty();
-								currentPrefix = nextPrefix;
+        if (currentPrefix !== nextPrefix) {
+            $('.sprite-container').empty();
+            currentPrefix = nextPrefix;
+            i = classes.findIndex(c => c.startsWith(currentPrefix));
+        }
 
-								const indices = getIndicesWithPrefix(nextPrefix);
-								i = indices[0];
-						}
+        appendSprite(classes[i]);
+        i++;
+    });
 
-						$('.sprite-container').append(`<div class="${classes[i]}"></div>`);
-						i++;
-				} else {
-					$('.container-inner').css('opacity', 0).load('./game/part01_story.html', function () {
-						$('.container-inner').animate({ opacity: 1 }, 800);
-					});
-				}
-		});
-
-
-		$('.skipBtn').click(function () {
-
-			bgmManager.play('intro2', true, false);
-			bgmManager.fadeIn(0.7, 2000);
-			
-			$('.container-inner').css('opacity', 0).load('./game/part01_story.html', function () {
-					$('.container-inner').animate({ opacity: 1 }, 800);
-			});
-		});
-  });
+    $('.skipBtn').click(function () {
+        bgmManager.play('intro2', true, false);
+        bgmManager.fadeIn(0.7, 2000);
+        $('.container-inner').css('opacity', 0).load('./game/part01_game.html', function () {
+            $('.container-inner').animate({ opacity: 1 }, 800);
+        });
+    });
+});
 </script>

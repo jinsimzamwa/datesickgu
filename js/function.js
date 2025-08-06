@@ -1,24 +1,34 @@
-preloadImages([
-  '/images/header2.png',
-  '/images/credit/bonus1.png',
-  '/images/credit/bonus2.png',
-  '/images/credit/bonus3.png',
-  '/images/credit/bonus4.png',
-  '/images/credit/bonus5.png',
-  '/images/credit/bonus6.png',
-  '/images/credit/credit_end.png'
-]);
+function preloadImages(urls) {
+  urls.forEach(url => {
+    const img = new Image();
+    img.src = url;
+  });
+}
 
-
-
+$(function () {
+  preloadImages([
+    './images/stand/rei_default.png',
+    './images/stand/rei_angry.png',
+    './images/background/station.png',
+    './images/ui/start.png',
+    './images/ui/success.png',
+    './images/ui/fail.png',
+    './images/part3/layer2.png'
+  ]);
+});
 
 function attachGameEvents() {
+
+  let currentLang = localStorage.getItem('lang') || 'jpn';
+  updateLangUI(currentLang);
+  updateResetModalText(currentLang);
+
   $('#start').on('click', function () {
     $('.container-inner').load('./game/intro.html');
   });
 
   $('#credit').on('click', function () {
-     $('.container-inner').load('./game/credit.html');
+    $('.container-inner').load('./game/credit.html');
   });
 
   $('#start, #credit').on('mouseenter', function() {
@@ -26,6 +36,7 @@ function attachGameEvents() {
   });
 
   $('#reset').on('click', function () {
+    updateResetModalText(currentLang);
     $('#resetModal').fadeIn(200);
   });
 
@@ -39,16 +50,35 @@ function attachGameEvents() {
   });
 
   $('#kor').on('click', function () {
-      alert("준비중입니다.")
-      // $('#kor').addClass('selected');
-      // $('#jpn').removeClass('selected');
+    currentLang = 'kor';
+    localStorage.setItem('lang', currentLang);
+    updateLangUI(currentLang);
+    updateResetModalText(currentLang);
   });
 
   $('#jpn').on('click', function () {
-      $('#jpn').addClass('selected');
-      $('#kor').removeClass('selected');
+    currentLang = 'jpn';
+    localStorage.setItem('lang', currentLang);
+    updateLangUI(currentLang);
+    updateResetModalText(currentLang);
   });
 
-  $('#jpn').addClass('selected');
+  function updateLangUI(lang) {
+    if (lang === 'kor') {
+      $('#kor').addClass('selected');
+      $('#jpn').removeClass('selected');
+    } else {
+      $('#jpn').addClass('selected');
+      $('#kor').removeClass('selected');
+    }
+  }
+
+  function updateResetModalText(lang) {
+    if (lang === 'kor') {
+      $('#resetModal .modal-text').text('엔딩기록을 삭제하시겠습니까?');
+    } else if (lang === 'jpn') {
+      $('#resetModal .modal-text').text('エンディング記録を削除しますか？');
+    }
+  }
 }
 

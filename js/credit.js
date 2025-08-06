@@ -30,7 +30,6 @@ $(function () {
     const all = ['end01', 'end02', 'end03', 'end04', 'end05', 'end06'];
     const seenAll = all.every(id => seen.includes(id));
   
-    // 보너스 이미지 조건적 표시
     if (seenAll && $(`.img${n}`).length) {
       $(`.img${n}`).addClass('show-img');
     }

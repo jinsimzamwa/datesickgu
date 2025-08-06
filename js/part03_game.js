@@ -2,12 +2,16 @@ $(function () {
 
   const seenEndings = JSON.parse(localStorage.getItem('seenEndings') || '[]');
   const hasEnd05 = seenEndings.includes('end05');
+  let startSequenceRunning = false;
 
   if (hasEnd05) {
     $('.skipBtn').show();
   } else {
     $('.skipBtn').hide();
   }
+
+  let currentLang = localStorage.getItem('lang') || 'jpn';
+  updatePart03ModalImage(currentLang);
 
   $('.game-overlay').fadeIn();
   $('.part03-modal').fadeIn();
@@ -18,6 +22,8 @@ $(function () {
   let stage2Started = false;
   let stage2Ended = false;
   let stage2TimerId;
+
+  $('<img/>')[0].src = './images/game/part_3_bg2.png';
 
   function triggerFinalSuccess() {
     if (gameEnded) return;
@@ -40,6 +46,9 @@ $(function () {
   }
 
   $('.ok_btn').off('click.part03').on('click.part03', function () {
+    if (startSequenceRunning) return;
+    startSequenceRunning = true;
+
     inputDetected = true;
     $('.part03-modal').fadeOut();
 
@@ -61,16 +70,15 @@ $(function () {
           gameEnded = true;
           stage2Started = true;
 
-          $('.part_3_layer1, .part_3_layer2, .part_3_target').fadeOut(100, function () {
-            $('.part03_game').css('background-image', 'url(./images/game/part_3_bg2.png)');
-            $('.part03_fail-zone').hide();
-            $('.part03_fail-zone-2').show();
+          $('.part_3_layer1, .part_3_layer2, .part_3_target').hide();
+          $('.part03_game').css('background-image', 'url(./images/game/part_3_bg2.png)');
+          $('.part03_fail-zone').hide();
+          $('.part03_fail-zone-2').show();
 
-            $('.part_3_layer3, .part_3_layer4').hide().fadeIn(100);
-            $('.part_3_layer4').addClass('upward2');
+          $('.part_3_layer3, .part_3_layer4').show();
+          $('.part_3_layer4').addClass('upward2');
 
-            triggerStage2();
-          });
+          triggerStage2();
         }
       }, 3000);
     }, 800);
@@ -166,26 +174,34 @@ $(function () {
 
   $('.skipBtn').off('click.part03skip').on('click.part03skip', function () {
 
-  clearTimeout(successTimeoutId);
-  clearTimeout(stage2TimerId);
+    clearTimeout(successTimeoutId);
+    clearTimeout(stage2TimerId);
 
-  $('.part03_fail-zone').off('click.part03');
-  $('.part03_fail-zone-2').off('click.stage2');
+    $('.part03_fail-zone').off('click.part03');
+    $('.part03_fail-zone-2').off('click.stage2');
 
-  $('.part03-modal, .game-overlay, .start-game').hide();
+    $('.part03-modal, .game-overlay, .start-game').hide();
 
-  if (stage2Started) {
-    $('.part_3_layer4').addClass('paused2');
-    stage2Ended = true;
-    handleStage2Success();
-  } else {
-    $('.part_3_layer2').addClass('paused');
-    triggerFinalSuccess();
-  }
-});
+    if (stage2Started) {
+      $('.part_3_layer4').addClass('paused2');
+      stage2Ended = true;
+      handleStage2Success();
+    } else {
+      $('.part_3_layer2').addClass('paused');
+      triggerFinalSuccess();
+    }
+  });
 
   $('.ok_btn').on('mouseenter', function () {
     sfxManager.play('hover', 0.8);
   });
 
+  function updatePart03ModalImage(lang) {
+    const $modalImg = $('.part03-modal img[alt="modal"]');
+    if (lang === 'kor') {
+      $modalImg.attr('src', './images/ui/modal_3.png');
+    } else {
+      $modalImg.attr('src', './images/ui/modal_3_JP.png');
+    }
+  }
 });

@@ -2,250 +2,455 @@ const part03_fail_1 = [
   {
     characters: [
     ],
-    speaker: '',
-    text: '(슝...)'
+    speaker: {
+      kor: '',
+      jpn: '',
+    },
+    text: {
+      kor: '(슝...)',
+      jpn: '（シュッ……）',
+    },
   },
   {
     characters: [
     ],
-    speaker: '',
-    text: '(쾅!!!!!!!!!!!!!!)'
+    speaker: {
+      kor: '',
+      jpn: '',
+    },
+    text: {
+      kor: '(쾅!!!!!!!!!!!!!!)',
+      jpn: '（ドカァァァァン！！！！！！）',
+    },
   },
   {
     characters: [
       { name: 'kuko', position: 'center', expression: 'default' },
     ],
-    speaker: '波羅夷 空却',
-    text: '아파!!!!!'
+    speaker: {
+      kor: '하라이 쿠코',
+      jpn: '波羅夷 空却',
+    },
+    text: {
+      kor: '아파!!!!!',
+      jpn: 'いてぇぇぇぇ！！！！',
+    },
   },
   {
     characters: [
       { name: 'ichiro', position: 'center', expression: 'default' },
     ],
-    speaker: '山田一郎',
-    text: '쿠, 쿠코!? 갑자기 의자가 부서졌어...!?'
+    speaker: {
+      kor: '야마다 이치로',
+      jpn: '山田一郎',
+    },
+    text: {
+      kor: '쿠, 쿠코!? 갑자기 의자가 부서졌어...!?',
+      jpn: 'く、空却！？急に椅子が壊れた……！？',
+    },
   },
   {
     characters: [
       { name: 'jakurai', position: 'center', expression: 'default' },
     ],
-    speaker: '神宮寺 寂雷',
-    text: '...이런, 너무 간만이라 힘조절을...'
+    speaker: {
+      kor: '진구지 쟈쿠라이',
+      jpn: '神宮寺 寂雷',
+    },
+    text: {
+      kor: '...이런, 너무 간만이라 힘조절을...',
+      jpn: '久しぶりすぎて力の調節が···',
+    },
   },
   {
     characters: [
       { name: 'kuko', position: 'center', expression: 'default' },
     ],
-    speaker: '波羅夷 空却',
-    text: '뭐야...'
+    speaker: {
+      kor: '하라이 쿠코',
+      jpn: '波羅夷 空却',
+    },
+    text: {
+      kor: '뭐야...',
+      jpn: '何奴だ！',
+    },
   },
-    {
+  {
     characters: [
       { name: 'kuko', position: 'center', expression: 'default' },
     ],
-    speaker: '波羅夷 空却',
-    text: '엉? 히토야아?'
+    speaker: {
+      kor: '하라이 쿠코',
+      jpn: '波羅夷 空却',
+    },
+    text: {
+      kor: '엉? 히토야아?',
+      jpn: '……って、獄？',
+    },
   },
- {
+  {
     characters: [
       { name: 'ichiro', position: 'center', expression: 'default' },
     ],
-    speaker: '山田一郎',
-    text: '아마구니 씨가 왜... 어라, 사부로? 쟈쿠라이 씨도...?',
+    speaker: {
+      kor: '야마다 이치로',
+      jpn: '山田一郎',
+    },
+    text: {
+      kor: '아마구니 씨가 왜... 어라, 사부로? 쟈쿠라이 씨도...?',
+      jpn: '天国さんがなんで……って、三郎？寂雷さんも……？',
+    },
   },
   {
     characters: [
       { name: 'rei', position: 'center', expression: 'default' },
     ],
-    speaker: '天谷奴 零',
-    text: '파파는 안보이는거냐?'
+    speaker: {
+      kor: '아마야도 레이',
+      jpn: '天谷奴 零',
+    },
+    text: {
+      kor: '파파는 안보이는거냐?',
+      jpn: 'パパは見えないのかな〜？',
+    },
   },
   {
     characters: [
       { name: 'saburo', position: 'center', expression: 'default' }
     ],
-    speaker: '山田三郎',
-    text: '아차, 이치형...'
+    speaker: {
+      kor: '야마다 사부로',
+      jpn: '山田三郎',
+    },
+    text: {
+      kor: '아차, 이치형...',
+      jpn: 'い、一兄…',
+    },
   },
   {
     characters: [
       { name: 'ichiro', position: 'center', expression: 'default' },
     ],
-    speaker: '山田一郎',
-    text: '다들 왜 여기에...'
+    speaker: {
+      kor: '야마다 이치로',
+      jpn: '山田一郎',
+    },
+    text: {
+      kor: '다들 왜 여기에...',
+      jpn: 'みんな、なんでここに…',
+    },
   }, 
   {
     characters: [
       { name: 'jakurai', position: 'center', expression: 'default' },
     ],
-    speaker: '神宮寺 寂雷',
-    text: '미안합니다, 쿠코 군. 장난이 과했던 것 같아요.'
+    speaker: {
+      kor: '진구지 쟈쿠라이',
+      jpn: '神宮寺 寂雷',
+    },
+    text: {
+      kor: '미안합니다, 쿠코 군. 장난이 과했던 것 같아요.',
+      jpn: 'ごめんなさい、波羅夷くん。 いたずらがいきすぎたようです。',
+    },
   },
- {
+  {
     characters: [
       { name: 'saburo', position: 'center', expression: 'default' }
     ],
-    speaker: '山田三郎',
-    text: '바보, 그걸 말하면!',
+    speaker: {
+      kor: '야마다 사부로',
+      jpn: '山田三郎',
+    },
+    text: {
+      kor: '바보, 그걸 말하면!',
+      jpn: 'ばか、それを言ったら！',
+    },
   },
   {
     characters: [
       { name: 'kuko', position: 'center', expression: 'default' },
     ],
-    speaker: '波羅夷 空却',
-    text: '뭐야, 쟈쿠라이. 네가 한거냐?'
+    speaker: {
+      kor: '하라이 쿠코',
+      jpn: '波羅夷 空却',
+    },
+    text: {
+      kor: '뭐야, 쟈쿠라이. 네가 한거냐?',
+      jpn: 'んだよ、寂雷。お前がやったのか？',
+    },
   },
   {
     characters: [
       { name: 'hitoya', position: 'center', expression: 'default' },
     ],
-    speaker: '天国 獄',
-    text: '하아... 이렇게 될 줄 알았다고.'
+    speaker: {
+      kor: '아마구니 히토야',
+      jpn: '天国 獄',
+    },
+    text: {
+      kor: '하아... 이렇게 될 줄 알았다고.',
+      jpn: 'はぁ……こうなる気がしてたよ。',
+    },
   },
   {
     characters: [
       { name: 'jakurai', position: 'center', expression: 'default' },
     ],
-    speaker: '神宮寺 寂雷',
-    text: '다치진 않았습니까?',
+    speaker: {
+      kor: '진구지 쟈쿠라이',
+      jpn: '神宮寺 寂雷',
+    },
+    text: {
+      kor: '다치진 않았습니까?',
+      jpn: '怪我はしていませんか？',
+    },
   },
   {
     characters: [
       { name: 'kuko', position: 'center', expression: 'default' },
     ],
-    speaker: '波羅夷 空却',
-    text: '별 거 아니었으니까.'
+    speaker: {
+      kor: '하라이 쿠코',
+      jpn: '波羅夷 空却',
+    },
+    text: {
+      kor: '별 거 아니었으니까.',
+      jpn: '平気、大したことなかったから。',
+    },
   },
   {
     characters: [
       { name: 'ichiro', position: 'center', expression: 'default' },
     ],
-    speaker: '山田一郎',
-    text: '... 아니야, 이런건 검사를 받아보는 편이 좋아.'
+    speaker: {
+      kor: '야마다 이치로',
+      jpn: '山田一郎',
+    },
+    text: {
+      kor: '... 아니야, 이런건 검사를 받아보는 편이 좋아.',
+      jpn: '……いや、こういうのは診てもらった方がいいよ。',
+    },
   },
- {
+  {
     characters: [
       { name: 'hitoya', position: 'center', expression: 'default' },
     ],
-    speaker: '天国 獄',
-    text: '그래. 괜한 고집 부리지 마라.',
+    speaker: {
+      kor: '아마구니 히토야',
+      jpn: '天国 獄',
+    },
+    text: {
+      kor: '그래. 괜한 고집 부리지 마라.',
+      jpn: 'そうだ。変に意地張るな。',
+    },
   },
   {
     characters: [
       { name: 'kuko', position: 'center', expression: 'default' },
     ],
-    speaker: '波羅夷 空却',
-    text: '귀찮은데.. 쳇, 알겠다고.'
+    speaker: {
+      kor: '하라이 쿠코',
+      jpn: '波羅夷 空却',
+    },
+    text: {
+      kor: '귀찮은데.. 쳇, 알겠다고.',
+      jpn: 'めんどくせーけど……チッ、わかったよ。',
+    },
   },
   {
     characters: [
       { name: 'ichiro', position: 'left', expression: 'default' },
       { name: 'kuko', position: 'right', expression: 'default' }
     ],
-    speaker: '波羅夷 空却',
-    text: '미안하게 됐다 이치로. 오늘 데이트는 여기서 끝이다!'
+    speaker: {
+      kor: '하라이 쿠코',
+      jpn: '波羅夷 空却',
+    },
+    text: {
+      kor: '미안하게 됐다 이치로. 오늘 데이트는 여기서 끝이다!',
+      jpn: 'わりぃな、一郎ぉ。今日のデートはここで終了だ！',
+    },
   },
   {
     characters: [
       { name: 'ichiro', position: 'left', expression: 'default' },
       { name: 'kuko', position: 'right', expression: 'default' }
     ],
-    speaker: '山田一郎',
-    text: '당연하지! 신경쓰지마.'
+    speaker: {
+      kor: '야마다 이치로',
+      jpn: '山田一郎',
+    },
+    text: {
+      kor: '당연하지! 신경쓰지마.',
+      jpn: '当然だろ！気にすんな。',
+    },
   },
   {
     characters: [
       { name: 'ichiro', position: 'left', expression: 'default' },
       { name: 'kuko', position: 'right', expression: 'default' }
     ],
-    speaker: '波羅夷 空却',
-    text: '네 동생도 있겠다, 너도 돌아가.'
+    speaker: {
+      kor: '하라이 쿠코',
+      jpn: '波羅夷 空却',
+    },
+    text: {
+      kor: '네 동생도 있겠다, 너도 돌아가.',
+      jpn: '弟も来てんだしさ、オメーも帰っとけって。',
+    },
   },
   {
     characters: [
       { name: 'ichiro', position: 'left', expression: 'default' },
       { name: 'kuko', position: 'right', expression: 'default' }
     ],
-    speaker: '山田一郎',
-    text: '아니, 나도 갈게...!'
+    speaker: {
+      kor: '야마다 이치로',
+      jpn: '山田一郎',
+    },
+    text: {
+      kor: '아니, 나도 갈게...!',
+      jpn: 'いや、俺も一緒に……！',
+    },
   },
   {
     characters: [
       { name: 'ichiro', position: 'left', expression: 'default' },
       { name: 'kuko', position: 'right', expression: 'default' }
     ],
-    speaker: '波羅夷 空却',
-    text: '어차피 소승은 병원 다녀오면 나고야 돌아가야 할 시간일거다.'
+    speaker: {
+      kor: '하라이 쿠코',
+      jpn: '波羅夷 空却',
+    },
+    text: {
+      kor: '어차피 소승은 병원 다녀오면 나고야 돌아가야 할 시간일거다.',
+      jpn: 'どうせ拙僧は、診察終わったらナゴヤ戻んなきゃなんねだろ。',
+    },
   },
   {
     characters: [
       { name: 'ichiro', position: 'left', expression: 'default' },
       { name: 'kuko', position: 'right', expression: 'default' }
     ],
-    speaker: '波羅夷 空却',
-    text: '이런 일로 시간 낭비하면 아깝잖냐.'
+    speaker: {
+      kor: '하라이 쿠코',
+      jpn: '波羅夷 空却',
+    },
+    text: {
+      kor: '이런 일로 시간 낭비하면 아깝잖냐.',
+      jpn: 'こんなことで時間無駄にすんの、もったいねーだろ？',
+    },
   },
   {
     characters: [
       { name: 'ichiro', position: 'left', expression: 'default' },
       { name: 'kuko', position: 'right', expression: 'default' }
     ],
-    speaker: '波羅夷 空却',
-    text: '잠깐 쿠코.. 시간낭비라니...'
+    speaker: {
+      kor: '하라이 쿠코',
+      jpn: '波羅夷 空却',
+    },
+    text: {
+      kor: '잠깐 쿠코.. 시간낭비라니...',
+      jpn: '待てよ空却……時間の無駄って……',
+    },
   },
   {
     characters: [
       { name: 'saburo', position: 'center', expression: 'default' },
     ],
-    speaker: '山田三郎',
-    text: ' !'
+    speaker: {
+      kor: '야마다 사부로',
+      jpn: '山田三郎',
+    },
+    text: {
+      kor: ' !',
+      jpn: ' !',
+    },
   },
   {
     characters: [
       { name: 'rei', position: 'center', expression: 'default' },
     ],
-    speaker: '天谷奴 零',
-    text: '왠지 시시하구만~'
+    speaker: {
+      kor: '아마야도 레이',
+      jpn: '天谷奴 零',
+    },
+    text: {
+      kor: '왠지 시시하구만~',
+      jpn: 'なんかつまんないな〜。',
+    },
   },
   {
     characters: [
       { name: 'hitoya', position: 'center', expression: 'default' },
     ],
-    speaker: '天国 獄',
-    text: '하아, 이런 건 취향 아니야.'
+    speaker: {
+      kor: '아마구니 히토야',
+      jpn: '天国 獄',
+    },
+    text: {
+      kor: '하아, 이런 건 취향 아니야.',
+      jpn: 'はぁ、こういうのは趣味じゃねーんだよ。',
+    },
   },
   {
     characters: [
       { name: 'kuko', position: 'center', expression: 'default' },
     ],
-    speaker: '波羅夷 空却',
-    text: '아~ 걷기 힘들어. 히토야아! 태워줘.'
+    speaker: {
+      kor: '하라이 쿠코',
+      jpn: '波羅夷 空却',
+    },
+    text: {
+      kor: '아~ 걷기 힘들어. 히토야아! 태워줘.',
+      jpn: 'あ~歩くのも大変だ。 獄ぁ！ 乗せて。',
+    },
   },
   {
     characters: [
       { name: 'hitoya', position: 'center', expression: 'default' },
     ],
-    speaker: '天国 獄',
-    text: '...오늘은 봐준다. 밑에 차 있으니까 사고친 놈이랑 다친 놈 다 따라와.'
+    speaker: {
+      kor: '아마구니 히토야',
+      jpn: '天国 獄',
+    },
+    text: {
+      kor: '...오늘은 봐준다. 밑에 차 있으니까 사고친 놈이랑 다친 놈 다 따라와.',
+      jpn: '……今日は見逃してやる。下に車あるから、やらかしたやつもケガしたやつも全員乗れ。',
+    },
   },
   {
     characters: [
       { name: 'kuko', position: 'center', expression: 'default' },
     ],
-    speaker: '波羅夷 空却',
-    text: '잘 지내라고, 이치로오!'
+    speaker: {
+      kor: '하라이 쿠코',
+      jpn: '波羅夷 空却',
+    },
+    text: {
+      kor: '잘 지내라고, 이치로오!',
+      jpn: '元気でな、一郎ぉ！',
+    },
   },
   {
     characters: [
       { name: 'ichiro', position: 'center', expression: 'default' },
     ],
-    speaker: '山田一郎',
-    text: '...그래.'
+    speaker: {
+      kor: '야마다 이치로',
+      jpn: '山田一郎',
+    },
+    text: {
+      kor: '...그래.',
+      jpn: '……ああ。',
+    },
   },
   {
     next: './game/end02.html'
   }
 ];
+
 
 $(function () {
   const seenEndings = JSON.parse(localStorage.getItem('seenEndings') || '[]');

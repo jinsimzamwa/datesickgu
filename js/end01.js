@@ -1,6 +1,18 @@
 $(function () {
 
-  let hasClicked = false;
+  const lang = localStorage.getItem('lang') || 'jpn';
+
+  const endTitles = {
+    kor: 'END 01 데이트하는데 군식구가 너무 많아',
+    jpn: 'END 01 デートに絡んでくる邪魔者が多すぎる'
+  };
+
+  $('.end01 .end-text').text(endTitles[lang]);
+
+  const modalImg = (lang === 'jpn')
+    ? './images/ui/end_modal_JP.png'
+    : './images/ui/end_modal.png';
+  $('.end01 .end-modal > img').attr('src', modalImg);
 
   $(document).on('click', '.end01', function (e) {
     if ($(e.target).closest('.end-modal').length) return;
