@@ -48,7 +48,7 @@ $(function () {
         const imgFile = useJP ? prefix.replace('bg-', '') + '_JP.png' : prefix.replace('bg-', '') + '.png';
         const pos = bgPositions[className] || '0 0';
         $('.sprite-container').append(
-            `<div class="${className}" style="background-image: url(../images/intro/${imgFile}); background-position: ${pos};"></div>`
+            `<div class="${className}" style="background-image: url(./images/intro/${imgFile}); background-position: ${pos};"></div>`
         );
     }
 

@@ -636,7 +636,7 @@ article>.txt{
 
 .intro .bg-05_08 {
     width: 143px; height: 194px;
-    background: url(./images/intro/05.png) -395px -667px;
+    background: url(../images/intro/05.png) -395px -667px;
     left: 97px;
     top: 480px;
 }
