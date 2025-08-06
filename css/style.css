@@ -2,7 +2,6 @@
 
 button, .btn, img {
   touch-action: manipulation; 
-  -webkit-user-select: none;  
 }
 html, body {
   touch-action: manipulation;
