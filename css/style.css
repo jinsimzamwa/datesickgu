@@ -1,5 +1,13 @@
 @charset "utf-8";
 
+button, .btn, img {
+  touch-action: manipulation; 
+  -webkit-user-select: none;  
+}
+html, body {
+  touch-action: manipulation;
+}
+
 img{
     user-select: none;
     -webkit-user-select: none;
@@ -728,7 +736,7 @@ article>.txt{
     top: 1px;
     left: 0px;
     font-size: 33px;
-    font-family: 'Keinan Pop', sans-serif;
+    font-family: 'Keinan Pop', 'Katuri', sans-serif;
 }
 
 .text-box {

@@ -159,15 +159,6 @@ const part05_story2 = [
 
 
 $(function () {
-  const seenEndings = JSON.parse(localStorage.getItem('seenEndings') || '[]');
-		const hasEnd05 = seenEndings.includes('end05');
-
-		if (hasEnd05) {
-			$('.skipBtn').show();
-		} else {
-			$('.skipBtn').hide();
-		}
-
   bgmManager.fadeOut(0, 1000);
   initDialogue({ sectionSelector: '.part05_story2', script: part05_story2 });
 });

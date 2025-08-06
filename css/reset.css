@@ -10,6 +10,13 @@
   font-style: normal;
 }
 
+@font-face {
+    font-family: 'Katuri';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/Katuri.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html, body{width:100%; height:100%;}
 
 html,body,div,span,h1,h2,h3,h4,h5,h6,
