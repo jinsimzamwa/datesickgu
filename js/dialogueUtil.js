@@ -27,7 +27,7 @@ function initDialogue({ sectionSelector, script }) {
   }
 
   function getLineText(line) {
-    const lang = localStorage.getItem('lang') || 'kor';
+    const lang = localStorage.getItem('lang') || 'jpn';
     let baseText = (typeof line.text === 'object') ? line.text[lang] : line.text;
 
     if (line.endingHint) {
@@ -70,7 +70,7 @@ function initDialogue({ sectionSelector, script }) {
   }
 
   function getSpeaker(line) {
-    const lang = localStorage.getItem('lang') || 'kor';
+    const lang = localStorage.getItem('lang') || 'jpn';
     return (typeof line.speaker === 'object') ? line.speaker[lang] : line.speaker;
   }
 
