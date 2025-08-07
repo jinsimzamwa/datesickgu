@@ -242,7 +242,13 @@ $(function () {
   initDialogue({ sectionSelector: '.part04_success', script: part04_success });
 });
 
+let isTransitioning = false;
+
 $('.skipBtn').click(function () {
+
+  if (isTransitioning) return;
+  isTransitioning = true;
+
   const lastLine = part04_success[part04_success.length - 1];
 
   if (lastLine.next) {
