@@ -2,21 +2,21 @@ const part04_story2 = [
   {
     characters: [
       { name: 'ichiro', position: 'left', expression: 'default' },
-      { name: 'kuko', position: 'right', expression: 'default' },
+      { name: 'kuko', position: 'right', expression: 'ee' },
     ],
     speaker: {
       kor: '하라이 쿠코',
       jpn: '波羅夷 空却'
     },
     text: {
-      kor: '이치로오! 이것 봐!',
+      kor: '이치로오! 이거 봐라!',
       jpn: '一郎ぉ！これ！'
     }
   },
   {
     characters: [
       { name: 'ichiro', position: 'left', expression: 'default' },
-      { name: 'kuko', position: 'right', expression: 'default' },
+      { name: 'kuko', position: 'right', expression: 'ee' },
     ],
     speaker: {
       kor: '야마다 이치로',
@@ -69,7 +69,7 @@ const part04_story2 = [
   },
   {
     characters: [
-      { name: 'kuko', position: 'center', expression: 'default' }
+      { name: 'kuko', position: 'center', expression: 'ee' }
     ],
     speaker: {
       kor: '하라이 쿠코',
@@ -82,7 +82,7 @@ const part04_story2 = [
   },
   {
     characters: [
-      { name: 'kuko', position: 'center', expression: 'default' }
+      { name: 'kuko', position: 'center', expression: 'ee' }
     ],
     speaker: {
       kor: '하라이 쿠코',
@@ -95,7 +95,7 @@ const part04_story2 = [
   },
   {
     characters: [
-      { name: 'ichiro', position: 'center', expression: 'default' }
+      { name: 'ichiro', position: 'center', expression: 'smile' }
     ],
     speaker: {
       kor: '야마다 이치로',
@@ -108,8 +108,8 @@ const part04_story2 = [
   },
   {
     characters: [
-      { name: 'ichiro', position: 'left', expression: 'default' },
-      { name: 'kuko', position: 'right', expression: 'default' },
+      { name: 'ichiro', position: 'left', expression: 'smile' },
+      { name: 'kuko', position: 'right', expression: 'hya' },
     ],
     speaker: {
       kor: '하라이 쿠코',
@@ -123,7 +123,7 @@ const part04_story2 = [
   {
     characters: [
       { name: 'ichiro', position: 'left', expression: 'default' },
-      { name: 'kuko', position: 'right', expression: 'default' },
+      { name: 'kuko', position: 'right', expression: 'hya' },
     ],
     speaker: {
       kor: '야마다 이치로',
@@ -137,7 +137,7 @@ const part04_story2 = [
   {
     characters: [
       { name: 'ichiro', position: 'left', expression: 'default' },
-      { name: 'kuko', position: 'right', expression: 'default' },
+      { name: 'kuko', position: 'right', expression: 'hat' },
     ],
     speaker: {
       kor: '하라이 쿠코',
@@ -150,7 +150,7 @@ const part04_story2 = [
   },
   {
     characters: [
-      { name: 'ichiro', position: 'left', expression: 'default' },
+      { name: 'ichiro', position: 'left', expression: 'miso' },
       { name: 'kuko', position: 'right', expression: 'default' },
     ],
     speaker: {
@@ -165,7 +165,7 @@ const part04_story2 = [
   {
     characters: [
       { name: 'ichiro', position: 'left', expression: 'default' },
-      { name: 'kuko', position: 'right', expression: 'default' },
+      { name: 'kuko', position: 'right', expression: 'hat' },
     ],
     speaker: {
       kor: '하라이 쿠코',

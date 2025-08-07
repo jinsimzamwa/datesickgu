@@ -50,7 +50,7 @@ $(function () {
 
     './images/game/part_3_bg.png',
     './images/game/part_3_bg2.png',
-    './images/stand/part_3_layer1.gif',
+    './images/game/part_3_layer1.gif',
     './images/game/part_3_layer2.gif',
     './images/game/part_3_layer3.png',
     './images/game/part_3_layer4.png',

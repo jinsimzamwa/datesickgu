@@ -1,7 +1,7 @@
 const part04_success = [
   {
     characters: [
-      { name: 'ichiro', position: 'center', expression: 'default' },
+      { name: 'ichiro', position: 'center', expression: 'waa' },
     ],
     speaker: {
       kor: '야마다 이치로',
@@ -14,7 +14,7 @@ const part04_success = [
   },
   {
     characters: [
-      { name: 'ichiro', position: 'center', expression: 'default' },
+      { name: 'ichiro', position: 'center', expression: 'gon' },
     ],
     speaker: {
       kor: '야마다 이치로',
@@ -28,7 +28,7 @@ const part04_success = [
   {
     characters: [
       { name: 'ichiro', position: 'left', expression: 'default' },
-      { name: 'kuko', position: 'right', expression: 'default' },
+      { name: 'kuko', position: 'right', expression: 'hya' },
     ],
     speaker: {
       kor: '하라이 쿠코',
@@ -42,7 +42,7 @@ const part04_success = [
   {
     characters: [
       { name: 'ichiro', position: 'left', expression: 'default' },
-      { name: 'kuko', position: 'right', expression: 'default' },
+      { name: 'kuko', position: 'right', expression: 'hya' },
     ],
     speaker: {
       kor: '하라이 쿠코',
@@ -55,8 +55,8 @@ const part04_success = [
   },
   {
     characters: [
-      { name: 'ichiro', position: 'left', expression: 'default' },
-      { name: 'kuko', position: 'right', expression: 'default' },
+      { name: 'ichiro', position: 'left', expression: 'miso2' },
+      { name: 'kuko', position: 'right', expression: 'hya' },
     ],
     speaker: {
       kor: '야마다 이치로',

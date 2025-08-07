@@ -25,7 +25,7 @@ const part03_fail_1 = [
   },
   {
     characters: [
-      { name: 'kuko', position: 'center', expression: 'default' },
+      { name: 'kuko', position: 'center', expression: 'waa' },
     ],
     speaker: {
       kor: '하라이 쿠코',
@@ -38,7 +38,7 @@ const part03_fail_1 = [
   },
   {
     characters: [
-      { name: 'ichiro', position: 'center', expression: 'default' },
+      { name: 'ichiro', position: 'center', expression: 'waa' },
     ],
     speaker: {
       kor: '야마다 이치로',
@@ -64,7 +64,7 @@ const part03_fail_1 = [
   },
   {
     characters: [
-      { name: 'kuko', position: 'center', expression: 'default' },
+      { name: 'kuko', position: 'center', expression: 'dare' },
     ],
     speaker: {
       kor: '하라이 쿠코',
@@ -77,7 +77,7 @@ const part03_fail_1 = [
   },
   {
     characters: [
-      { name: 'kuko', position: 'center', expression: 'default' },
+      { name: 'kuko', position: 'center', expression: 'ee' },
     ],
     speaker: {
       kor: '하라이 쿠코',
@@ -90,7 +90,7 @@ const part03_fail_1 = [
   },
   {
     characters: [
-      { name: 'ichiro', position: 'center', expression: 'default' },
+      { name: 'ichiro', position: 'center', expression: 'gon' },
     ],
     speaker: {
       kor: '야마다 이치로',
@@ -129,7 +129,7 @@ const part03_fail_1 = [
   },
   {
     characters: [
-      { name: 'ichiro', position: 'center', expression: 'default' },
+      { name: 'ichiro', position: 'center', expression: 'gon' },
     ],
     speaker: {
       kor: '야마다 이치로',
@@ -168,7 +168,7 @@ const part03_fail_1 = [
   },
   {
     characters: [
-      { name: 'kuko', position: 'center', expression: 'default' },
+      { name: 'kuko', position: 'center', expression: 'dare' },
     ],
     speaker: {
       kor: '하라이 쿠코',
@@ -207,7 +207,7 @@ const part03_fail_1 = [
   },
   {
     characters: [
-      { name: 'kuko', position: 'center', expression: 'default' },
+      { name: 'kuko', position: 'center', expression: 'ee' },
     ],
     speaker: {
       kor: '하라이 쿠코',
@@ -220,7 +220,7 @@ const part03_fail_1 = [
   },
   {
     characters: [
-      { name: 'ichiro', position: 'center', expression: 'default' },
+      { name: 'ichiro', position: 'center', expression: 'why' },
     ],
     speaker: {
       kor: '야마다 이치로',
@@ -246,7 +246,7 @@ const part03_fail_1 = [
   },
   {
     characters: [
-      { name: 'kuko', position: 'center', expression: 'default' },
+      { name: 'kuko', position: 'center', expression: 'men' },
     ],
     speaker: {
       kor: '하라이 쿠코',
@@ -260,7 +260,7 @@ const part03_fail_1 = [
   {
     characters: [
       { name: 'ichiro', position: 'left', expression: 'default' },
-      { name: 'kuko', position: 'right', expression: 'default' }
+      { name: 'kuko', position: 'right', expression: 'owa' }
     ],
     speaker: {
       kor: '하라이 쿠코',
@@ -274,7 +274,7 @@ const part03_fail_1 = [
   {
     characters: [
       { name: 'ichiro', position: 'left', expression: 'default' },
-      { name: 'kuko', position: 'right', expression: 'default' }
+      { name: 'kuko', position: 'right', expression: 'owa' }
     ],
     speaker: {
       kor: '야마다 이치로',
@@ -288,7 +288,7 @@ const part03_fail_1 = [
   {
     characters: [
       { name: 'ichiro', position: 'left', expression: 'default' },
-      { name: 'kuko', position: 'right', expression: 'default' }
+      { name: 'kuko', position: 'right', expression: 'owa' }
     ],
     speaker: {
       kor: '하라이 쿠코',
@@ -301,8 +301,8 @@ const part03_fail_1 = [
   },
   {
     characters: [
-      { name: 'ichiro', position: 'left', expression: 'default' },
-      { name: 'kuko', position: 'right', expression: 'default' }
+      { name: 'ichiro', position: 'left', expression: 'waa' },
+      { name: 'kuko', position: 'right', expression: 'owa' }
     ],
     speaker: {
       kor: '야마다 이치로',
@@ -315,8 +315,8 @@ const part03_fail_1 = [
   },
   {
     characters: [
-      { name: 'ichiro', position: 'left', expression: 'default' },
-      { name: 'kuko', position: 'right', expression: 'default' }
+      { name: 'ichiro', position: 'left', expression: 'waa' },
+      { name: 'kuko', position: 'right', expression: 'men' }
     ],
     speaker: {
       kor: '하라이 쿠코',
@@ -329,7 +329,7 @@ const part03_fail_1 = [
   },
   {
     characters: [
-      { name: 'ichiro', position: 'left', expression: 'default' },
+      { name: 'ichiro', position: 'left', expression: 'waa' },
       { name: 'kuko', position: 'right', expression: 'default' }
     ],
     speaker: {
@@ -343,12 +343,12 @@ const part03_fail_1 = [
   },
   {
     characters: [
-      { name: 'ichiro', position: 'left', expression: 'default' },
+      { name: 'ichiro', position: 'left', expression: 'gon' },
       { name: 'kuko', position: 'right', expression: 'default' }
     ],
     speaker: {
-      kor: '하라이 쿠코',
-      jpn: '波羅夷 空却',
+      kor: '야마다 이치로',
+      jpn: '山田一郎',
     },
     text: {
       kor: '잠깐 쿠코.. 시간낭비라니...',
@@ -396,7 +396,7 @@ const part03_fail_1 = [
   },
   {
     characters: [
-      { name: 'kuko', position: 'center', expression: 'default' },
+      { name: 'kuko', position: 'center', expression: 'men' },
     ],
     speaker: {
       kor: '하라이 쿠코',
@@ -422,7 +422,7 @@ const part03_fail_1 = [
   },
   {
     characters: [
-      { name: 'kuko', position: 'center', expression: 'default' },
+      { name: 'kuko', position: 'center', expression: 'hya' },
     ],
     speaker: {
       kor: '하라이 쿠코',
@@ -435,7 +435,7 @@ const part03_fail_1 = [
   },
   {
     characters: [
-      { name: 'ichiro', position: 'center', expression: 'default' },
+      { name: 'ichiro', position: 'center', expression: 'ok' },
     ],
     speaker: {
       kor: '야마다 이치로',

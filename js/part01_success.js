@@ -28,7 +28,7 @@ const part01_success = [
   {
     characters: [
       { name: 'ichiro', position: 'left', expression: 'default' },
-      { name: 'kuko', position: 'right', expression: 'default' }
+      { name: 'kuko', position: 'right', expression: 'hya' }
     ],
     speaker: {
       kor: '하라이 쿠코',

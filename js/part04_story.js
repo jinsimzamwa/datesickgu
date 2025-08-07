@@ -90,7 +90,7 @@ const part04_story = [
   {
     characters: [
       { name: 'ichiro', position: 'left', expression: 'default' },
-      { name: 'kuko', position: 'right', expression: 'default' },
+      { name: 'kuko', position: 'right', expression: 'hya' },
     ],
     speaker: {
       kor: '하라이 쿠코',
@@ -118,7 +118,7 @@ const part04_story = [
   {
     characters: [
       { name: 'ichiro', position: 'left', expression: 'default' },
-      { name: 'kuko', position: 'right', expression: 'default' },
+      { name: 'kuko', position: 'right', expression: 'hya' },
     ],
     speaker: {
       kor: '하라이 쿠코',

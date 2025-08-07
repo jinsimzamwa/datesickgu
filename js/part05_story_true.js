@@ -178,7 +178,7 @@ const part05_story_true = [
   {
     characters: [
       { name: 'ichiro', position: 'left', expression: 'default' },
-      { name: 'kuko', position: 'right', expression: 'default' },
+      { name: 'kuko', position: 'right', expression: 'hya' },
     ],
     speaker: {
       kor: '하라이 쿠코',
@@ -192,7 +192,7 @@ const part05_story_true = [
   {
     characters: [
       { name: 'ichiro', position: 'left', expression: 'default' },
-      { name: 'kuko', position: 'right', expression: 'default' },
+      { name: 'kuko', position: 'right', expression: 'hya' },
     ],
     speaker: {
       kor: '야마다 이치로',
@@ -206,7 +206,7 @@ const part05_story_true = [
   {
     characters: [
       { name: 'ichiro', position: 'left', expression: 'default' },
-      { name: 'kuko', position: 'right', expression: 'default' },
+      { name: 'kuko', position: 'right', expression: 'hya' },
     ],
     speaker: {
       kor: '야마다 이치로',
@@ -219,7 +219,7 @@ const part05_story_true = [
   },
   {
     characters: [
-      { name: 'kuko', position: 'center', expression: 'default' },
+      { name: 'kuko', position: 'center', expression: 'hya' },
     ],
     speaker: {
       kor: '하라이 쿠코',
@@ -232,7 +232,7 @@ const part05_story_true = [
   },
   {
     characters: [
-      { name: 'kuko', position: 'center', expression: 'default' },
+      { name: 'kuko', position: 'center', expression: 'hya' },
     ],
     speaker: {
       kor: '하라이 쿠코',
@@ -245,7 +245,7 @@ const part05_story_true = [
   },
   {
     characters: [
-      { name: 'ichiro', position: 'center', expression: 'default' },
+      { name: 'ichiro', position: 'center', expression: 'ok' },
     ],
     speaker: {
       kor: '야마다 이치로',
@@ -258,7 +258,7 @@ const part05_story_true = [
   },
   {
     characters: [
-      { name: 'kuko', position: 'center', expression: 'default' },
+      { name: 'kuko', position: 'center', expression: 'ee' },
     ],
     speaker: {
       kor: '하라이 쿠코',
@@ -271,7 +271,7 @@ const part05_story_true = [
   },
   {
     characters: [
-      { name: 'ichiro', position: 'center', expression: 'default' },
+      { name: 'ichiro', position: 'center', expression: 'why' },
     ],
     speaker: {
       kor: '야마다 이치로',
@@ -284,7 +284,7 @@ const part05_story_true = [
   },
   {
     characters: [
-      { name: 'ichiro', position: 'center', expression: 'default' },
+      { name: 'ichiro', position: 'center', expression: 'why' },
     ],
     speaker: {
       kor: '야마다 이치로',
@@ -297,7 +297,7 @@ const part05_story_true = [
   },
   {
     characters: [
-      { name: 'ichiro', position: 'center', expression: 'default' },
+      { name: 'ichiro', position: 'center', expression: 'ok' },
     ],
     speaker: {
       kor: '야마다 이치로',
@@ -310,7 +310,7 @@ const part05_story_true = [
   },
   {
     characters: [
-      { name: 'kuko', position: 'center', expression: 'default' },
+      { name: 'kuko', position: 'center', expression: 'owa' },
     ],
     speaker: {
       kor: '하라이 쿠코',
@@ -323,7 +323,7 @@ const part05_story_true = [
   },
   {
     characters: [
-      { name: 'kuko', position: 'center', expression: 'default' },
+      { name: 'kuko', position: 'center', expression: 'owa' },
     ],
     speaker: {
       kor: '하라이 쿠코',
@@ -336,7 +336,7 @@ const part05_story_true = [
   },
   {
     characters: [
-      { name: 'ichiro', position: 'center', expression: 'default' },
+      { name: 'ichiro', position: 'center', expression: 'ok' },
     ],
     speaker: {
       kor: '야마다 이치로',
@@ -349,7 +349,7 @@ const part05_story_true = [
   },
   {
     characters: [
-      { name: 'kuko', position: 'center', expression: 'default' },
+      { name: 'kuko', position: 'center', expression: 'burub' },
     ],
     speaker: {
       kor: '하라이 쿠코',
@@ -362,7 +362,7 @@ const part05_story_true = [
   },
   {
     characters: [
-      { name: 'ichiro', position: 'center', expression: 'default' },
+      { name: 'ichiro', position: 'center', expression: 'ok' },
     ],
     speaker: {
       kor: '야마다 이치로',
@@ -376,7 +376,7 @@ const part05_story_true = [
   },
   {
     characters: [
-      { name: 'ichiro', position: 'center', expression: 'default' },
+      { name: 'ichiro', position: 'center', expression: 'ok' },
     ],
     speaker: {
       kor: '야마다 이치로',
@@ -389,7 +389,7 @@ const part05_story_true = [
   },
   {
     characters: [
-      { name: 'ichiro', position: 'center', expression: 'default' },
+      { name: 'ichiro', position: 'center', expression: 'ok' },
     ],
     speaker: {
       kor: '야마다 이치로',
@@ -402,7 +402,7 @@ const part05_story_true = [
   },
   {
     characters: [
-      { name: 'kuko', position: 'center', expression: 'default' },
+      { name: 'kuko', position: 'center', expression: 'dare' },
     ],
     speaker: {
       kor: '하라이 쿠코',
@@ -415,7 +415,7 @@ const part05_story_true = [
   },
   {
     characters: [
-      { name: 'ichiro', position: 'center', expression: 'default' },
+      { name: 'ichiro', position: 'center', expression: 'ok' },
     ],
     speaker: {
       kor: '야마다 이치로',
@@ -428,7 +428,7 @@ const part05_story_true = [
   },
   {
     characters: [
-      { name: 'ichiro', position: 'center', expression: 'default' },
+      { name: 'ichiro', position: 'center', expression: 'ok' },
     ],
     speaker: {
       kor: '야마다 이치로',
@@ -441,7 +441,7 @@ const part05_story_true = [
   },
   {
     characters: [
-      { name: 'ichiro', position: 'center', expression: 'default' },
+      { name: 'ichiro', position: 'center', expression: 'ok' },
     ],
     speaker: {
       kor: '야마다 이치로',
@@ -454,7 +454,7 @@ const part05_story_true = [
   },
   {
     characters: [
-      { name: 'kuko', position: 'center', expression: 'default' },
+      { name: 'kuko', position: 'center', expression: 'owa' },
     ],
     speaker: {
       kor: '하라이 쿠코',
@@ -530,7 +530,7 @@ const part05_story_true = [
   },
   {
     characters: [
-      { name: 'kuko', position: 'center', expression: 'default' },
+      { name: 'kuko', position: 'center', expression: 'owa' },
     ],
     speaker: {
       kor: '하라이 쿠코',
@@ -544,7 +544,7 @@ const part05_story_true = [
   },
   {
     characters: [
-      { name: 'ichiro', position: 'center', expression: 'default' },
+      { name: 'ichiro', position: 'center', expression: 'gon' },
     ],
     speaker: {
       kor: '야마다 이치로',
@@ -557,7 +557,7 @@ const part05_story_true = [
   },
   {
     characters: [
-      { name: 'ichiro', position: 'center', expression: 'default' },
+      { name: 'ichiro', position: 'center', expression: 'ok' },
     ],
     speaker: {
       kor: '야마다 이치로',
@@ -570,7 +570,7 @@ const part05_story_true = [
   },
   {
     characters: [
-      { name: 'ichiro', position: 'center', expression: 'default' },
+      { name: 'ichiro', position: 'center', expression: 'ok' },
     ],
     speaker: {
       kor: '야마다 이치로',
@@ -583,7 +583,7 @@ const part05_story_true = [
   },
   {
     characters: [
-      { name: 'kuko', position: 'center', expression: 'default' },
+      { name: 'kuko', position: 'center', expression: 'owa' },
     ],
     speaker: {
       kor: '하라이 쿠코',
@@ -596,7 +596,7 @@ const part05_story_true = [
   },
   {
     characters: [
-      { name: 'kuko', position: 'center', expression: 'default' },
+      { name: 'kuko', position: 'center', expression: 'owa' },
     ],
     speaker: {
       kor: '하라이 쿠코',
@@ -609,7 +609,7 @@ const part05_story_true = [
   },
   {
     characters: [
-      { name: 'kuko', position: 'center', expression: 'default' },
+      { name: 'kuko', position: 'center', expression: 'owa' },
     ],
     speaker: {
       kor: '하라이 쿠코',
@@ -622,7 +622,7 @@ const part05_story_true = [
   },
   {
     characters: [
-      { name: 'kuko', position: 'center', expression: 'default' },
+      { name: 'kuko', position: 'center', expression: 'owa' },
     ],
     speaker: {
       kor: '하라이 쿠코',
@@ -635,7 +635,7 @@ const part05_story_true = [
   },
   {
     characters: [
-      { name: 'kuko', position: 'center', expression: 'default' },
+      { name: 'kuko', position: 'center', expression: 'owa' },
     ],
     speaker: {
       kor: '하라이 쿠코',
@@ -765,7 +765,7 @@ const part05_story_true = [
   },
   {
     characters: [
-      { name: 'kuko', position: 'center', expression: 'default' },
+      { name: 'kuko', position: 'center', expression: 'ee' },
     ],
     speaker: {
       kor: '하라이 쿠코',
@@ -817,7 +817,7 @@ const part05_story_true = [
   },
   {
     characters: [
-      { name: 'kuko', position: 'center', expression: 'default' },
+      { name: 'kuko', position: 'center', expression: 'hya' },
     ],
     speaker: {
       kor: '하라이 쿠코',
@@ -895,7 +895,7 @@ const part05_story_true = [
   },
   {
     characters: [
-      { name: 'kuko', position: 'center', expression: 'default' },
+      { name: 'kuko', position: 'center', expression: 'hya' },
     ],
     speaker: {
       kor: '하라이 쿠코',
@@ -921,7 +921,7 @@ const part05_story_true = [
   },
   {
     characters: [
-      { name: 'kuko', position: 'center', expression: 'default' },
+      { name: 'kuko', position: 'center', expression: 'hya' },
     ],
     speaker: {
       kor: '하라이 쿠코',
@@ -934,7 +934,7 @@ const part05_story_true = [
   },
   {
     characters: [
-      { name: 'ichiro', position: 'center', expression: 'default' },
+      { name: 'ichiro', position: 'center', expression: 'waa' },
     ],
     speaker: {
       kor: '야마다 이치로',
@@ -947,7 +947,7 @@ const part05_story_true = [
   },
   {
     characters: [
-      { name: 'kuko', position: 'center', expression: 'default' },
+      { name: 'kuko', position: 'center', expression: 'burub' },
     ],
     speaker: {
       kor: '하라이 쿠코',
@@ -960,7 +960,7 @@ const part05_story_true = [
   },
   {
     characters: [
-      { name: 'ichiro', position: 'center', expression: 'default' },
+      { name: 'ichiro', position: 'center', expression: 'gon' },
     ],
     speaker: {
       kor: '야마다 이치로',
@@ -999,7 +999,7 @@ const part05_story_true = [
   },
   {
     characters: [
-      { name: 'ichiro', position: 'center', expression: 'default' },
+      { name: 'ichiro', position: 'center', expression: 'smile' },
     ],
     speaker: {
       kor: '야마다 이치로',

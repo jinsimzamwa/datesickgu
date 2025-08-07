@@ -14,7 +14,7 @@ const part03_success = [
   },
   {
     characters: [
-      { name: 'ichiro', position: 'center', expression: 'default' },
+      { name: 'ichiro', position: 'center', expression: 'smile' },
     ],
     speaker: {
       kor: '야마다 이치로',
@@ -27,7 +27,7 @@ const part03_success = [
   },
   {
     characters: [
-      { name: 'kuko', position: 'center', expression: 'default' }
+      { name: 'kuko', position: 'center', expression: 'hya' }
     ],
     speaker: {
       kor: '하라이 쿠코',
