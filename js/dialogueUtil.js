@@ -75,48 +75,45 @@ function initDialogue({ sectionSelector, script }) {
   }
 
   function renderCharacters(characters) {
-    const $standingArea = $section.find('.standing-area');
-    $standingArea
-      .removeClass('char-count-1 char-count-2 char-count-3')
-      .addClass(`char-count-${characters.length}`);
+  const $standingArea = $section.find('.standing-area');
+  $standingArea
+    .removeClass('char-count-1 char-count-2 char-count-3')
+    .addClass(`char-count-${characters.length}`);
 
-    ['left', 'center', 'right'].forEach(pos => {
-      const $char = $section.find(`.character.${pos}`);
+  ['left', 'center', 'right'].forEach(pos => {
+    const $char = $section.find(`.character.${pos}`);
+    if (!characters.some(c => c.position === pos)) {
       $char.empty().css({ opacity: 0, transform: 'none' });
-    });
-
-    characters.forEach(char => {
-      const $char = $section.find(`.character.${char.position}`);
-      const imgSrc = `./images/stand/${char.name}_${char.expression}.png`;
-
-      const adjust = (characterAdjustments[char.name]?.[char.expression] ||
-                      characterAdjustments[char.name]?.['default'] || 
-                      { scale: 1, x: 0, y: 0 });
-
-      $char.html(`<img src="${imgSrc}" alt="${char.name}">`);
-      $char.css({
-        opacity: 1,
-        transform: `scale(${adjust.scale}) translate(${adjust.x}px, ${adjust.y}px)`
-      });
-    });
-
-    if (characters.length === 2 &&
-        characters.some(c => c.position === 'left') &&
-        characters.some(c => c.position === 'right')) {
-
-      const leftChar = characters.find(c => c.position === 'left');
-      const rightChar = characters.find(c => c.position === 'right');
-
-      const $left = $section.find('.character.left');
-      const $right = $section.find('.character.right');
-
-      const leftAdjust = characterAdjustments[leftChar.name]?.[leftChar.expression] || characterAdjustments[leftChar.name]?.default || { scale: 1, x: 0, y: 0 };
-      const rightAdjust = characterAdjustments[rightChar.name]?.[rightChar.expression] || characterAdjustments[rightChar.name]?.default || { scale: 1, x: 0, y: 0 };
-
-      $left.css('transform', `scale(${leftAdjust.scale}) translate(${leftAdjust.x + 50}px, ${leftAdjust.y}px)`);
-      $right.css('transform', `scale(${rightAdjust.scale}) translate(${rightAdjust.x - 50}px, ${rightAdjust.y}px)`);
     }
-  }
+  });
+
+  const isTwoCharLeftRight = characters.length === 2 &&
+    characters.some(c => c.position === 'left') &&
+    characters.some(c => c.position === 'right');
+
+  characters.forEach(char => {
+    const $char = $section.find(`.character.${char.position}`);
+    const imgSrc = `./images/stand/${char.name}_${char.expression}.png`;
+
+    const baseAdjust = characterAdjustments[char.name]?.[char.expression] || characterAdjustments[char.name]?.['default'] || { scale: 1, x: 0, y: 0 };
+
+    // 좌우 두 명일 때 x좌표 조정 (+50 / -50)
+    let adjustedX = baseAdjust.x;
+    if (isTwoCharLeftRight) {
+      if (char.position === 'left') adjustedX += 50;
+      if (char.position === 'right') adjustedX -= 50;
+    }
+
+    $char.html(`<img src="${imgSrc}" alt="${char.name}">`);
+    $char.css({
+      opacity: 1,
+      transform: `scale(${baseAdjust.scale}) translate(${adjustedX}px, ${baseAdjust.y}px)`
+    });
+  });
+}
+
+
+
 
   function showDialogueLine(index) {
     if (index >= script.length) return;
