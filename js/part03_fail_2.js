@@ -142,7 +142,7 @@ const part03_fail_2 = [
   },
   {
     characters: [
-      { name: 'kuko', position: 'center', expression: 'default' }
+      { name: 'ichiro', position: 'center', expression: 'gon' },
     ],
     speaker: {
       kor: '야마다 이치로',

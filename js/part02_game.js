@@ -140,11 +140,11 @@ $(function () {
     if (typeof animatePerson.frameCounter === 'undefined') animatePerson.frameCounter = 0;
 
     const bounceCycle = [
-      0, -0.5, -1.2, -2.0, -2.6, -3.0, -2.6, -2.0, -1.2, -0.5,
-      0, 0.5, 1.2, 2.0, 2.6, 3.0, 2.6, 2.0, 1.2, 0.5
+      0, -0.2, -0.4, -0.6, -0.8, -0.6, -0.4, -0.2,
+      0, 0.2, 0.4, 0.6, 0.8, 0.6, 0.4, 0.2
     ];
 
-    if (animatePerson.frameCounter % 3 === 0) {
+    if (animatePerson.frameCounter % 2 === 0) {
       animatePerson.bounceFrame++;
     }
     animatePerson.frameCounter++;
@@ -240,14 +240,14 @@ $(function () {
     sfxManager.play('click', 0.8);
     pressEffect(leftBtn);
     if (gameEnded) return;
-    carState.offsetX += 40;
+    carState.offsetX += 70;
   });
 
   rightBtn.on('click', () => {
     sfxManager.play('click', 0.8);
     pressEffect(rightBtn);
     if (gameEnded) return;
-    carState.offsetX -= 40;
+    carState.offsetX -= 70;
   });
 
   $('.ok_btn').on('mouseenter', function () {
