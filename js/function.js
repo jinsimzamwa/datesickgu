@@ -37,8 +37,38 @@ $(function () {
 
     './images/stand/ichiro_default.png',
 
-    './images/stand/rei_default.png',
+    './images/game/part_1_bg.png',
+    './images/game/part_1_layer0.png',
+    './images/game/part_1_layer1.png',
+    './images/game/part_1_layer2.png',
+
+    './images/game/part_2_bg.png',
+    './images/game/part_2_layer1.png',
+    './images/game/part_2_layer1_fail.png',
+    './images/game/part_2_layer2.png',
+    './images/game/part_2_splash.png',
+
+    './images/game/part_3_bg.png',
+    './images/game/part_3_bg2.png',
+    './images/stand/part_3_layer1.gif',
+    './images/game/part_3_layer2.gif',
+    './images/game/part_3_layer3.png',
+    './images/game/part_3_layer4.png',
+
+    './images/game/part_4_layer1.png',
+    './images/game/part_4_layer2.png',
+    './images/game/part_4_layer3.png',
+    './images/game/part_4_layer4.gif',
+    './images/game/part_4_layer5.png',
+
+    './images/background/car_road.png',
+    './images/background/gamecenter.png',
+    './images/background/ramenya.png',
+    './images/background/road.png',
     './images/background/station.png',
+    './images/background/end05.png',
+    './images/background/end06.png',
+
     './images/ui/start.png',
     './images/ui/success.png',
     './images/ui/fail.png',
