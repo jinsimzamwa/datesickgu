@@ -377,7 +377,11 @@ $(function () {
 
 $('.skipBtn').click(function () {
   
-  localStorage.setItem('seenEndings', JSON.stringify([ 'end03']));
+  let seen = JSON.parse(localStorage.getItem('seenEndings') || '[]');
+  if (!seen.includes('end03')) {
+    seen.push('end03');
+  }
+  localStorage.setItem('seenEndings', JSON.stringify(seen));
 
     const lastLine = part03_fail_2[part03_fail_2.length - 1];
     if (lastLine.next) {

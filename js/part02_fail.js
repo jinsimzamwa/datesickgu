@@ -349,7 +349,11 @@ $(function () {
 $('.skipBtn').click(function () {
     const lastLine = part02_fail[part02_fail.length - 1];
 
-    localStorage.setItem('seenEndings', JSON.stringify([ 'end01']));
+    let seen = JSON.parse(localStorage.getItem('seenEndings') || '[]');
+  if (!seen.includes('end01')) {
+    seen.push('end01');
+  }
+  localStorage.setItem('seenEndings', JSON.stringify(seen));
 
     if (lastLine.next) {
         $('.container-inner').css('opacity', 0).load(lastLine.next, function () {

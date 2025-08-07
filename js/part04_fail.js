@@ -639,7 +639,11 @@ $(function () {
 
 $('.skipBtn').click(function () {
 
-  localStorage.setItem('seenEndings', JSON.stringify([ 'end04']));
+  let seen = JSON.parse(localStorage.getItem('seenEndings') || '[]');
+  if (!seen.includes('end04')) {
+    seen.push('end04');
+  }
+  localStorage.setItem('seenEndings', JSON.stringify(seen));
 
     const lastLine = part04_fail[part04_fail.length - 1];
     if (lastLine.next) {
