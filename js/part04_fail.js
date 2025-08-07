@@ -638,6 +638,9 @@ $(function () {
 });
 
 $('.skipBtn').click(function () {
+
+  localStorage.setItem('seenEndings', JSON.stringify([ 'end04']));
+
     const lastLine = part04_fail[part04_fail.length - 1];
     if (lastLine.next) {
         $('.container-inner').css('opacity', 0).load(lastLine.next, function () {

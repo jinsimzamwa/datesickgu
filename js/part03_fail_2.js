@@ -372,11 +372,13 @@ $(function () {
 		} else {
 			$('.skipBtn').hide();
 		}
-    
+
 });
 
 $('.skipBtn').click(function () {
   
+  localStorage.setItem('seenEndings', JSON.stringify([ 'end03']));
+
     const lastLine = part03_fail_2[part03_fail_2.length - 1];
     if (lastLine.next) {
         $('.container-inner').css('opacity', 0).load(lastLine.next, function () {

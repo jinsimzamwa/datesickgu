@@ -466,6 +466,9 @@ $(function () {
 });
 
 $('.skipBtn').click(function () {
+
+  localStorage.setItem('seenEndings', JSON.stringify([ 'end02']));
+
     const lastLine = part03_fail_1[part03_fail_1.length - 1];
     if (lastLine.next) {
         $('.container-inner').css('opacity', 0).load(lastLine.next, function () {

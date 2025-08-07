@@ -348,6 +348,9 @@ $(function () {
 
 $('.skipBtn').click(function () {
     const lastLine = part02_fail[part02_fail.length - 1];
+
+    localStorage.setItem('seenEndings', JSON.stringify([ 'end01']));
+
     if (lastLine.next) {
         $('.container-inner').css('opacity', 0).load(lastLine.next, function () {
             $('.container-inner').animate({ opacity: 1 }, 800);
