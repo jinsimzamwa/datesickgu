@@ -1,7 +1,7 @@
 $(function () {
   const seenEndings = JSON.parse(localStorage.getItem('seenEndings') || '[]');
   const hasEnd05 = seenEndings.includes('end05');
-   let startSequenceRunning = false;
+  let startSequenceRunning = false;
 
   if (hasEnd05) {
     $('.skipBtn').show();
@@ -45,6 +45,8 @@ $(function () {
   let animationId;
   let gameEnded = false;
   let successTimer;
+  let lastTimeCar = null;
+  let lastTimePerson = null;
 
   function skipGame() {
     if (gameEnded) return;
@@ -84,9 +86,9 @@ $(function () {
     }
   }
 
-  function updateCarPosition() {
-    carState.top += movement.dy;
-    carState.right -= movement.dx;
+  function updateCarPosition(delta) {
+    carState.top += movement.dy * delta;
+    carState.right -= movement.dx * delta;
 
     const currentTop = carState.top;
     const currentRight = carState.right + carState.offsetX;
@@ -105,50 +107,56 @@ $(function () {
     });
   }
 
-  function animatePerson() {
+  function animateCar(timestamp) {
+    if (gameEnded) return;
+    if (!lastTimeCar) lastTimeCar = timestamp;
+
+    const delta = (timestamp - lastTimeCar) / 16.67; // 기준: 60fps
+    lastTimeCar = timestamp;
+
+    updateCarPosition(delta);
+    checkCollision();
+
+    animationId = requestAnimationFrame(animateCar);
+  }
+
+  function animatePerson(timestamp) {
+    if (gameEnded) return;
+    if (!lastTimePerson) lastTimePerson = timestamp;
+
+    const delta = (timestamp - lastTimePerson) / 16.67;
+    lastTimePerson = timestamp;
+
     const person = $('.part_2_layer1');
+    let personTop = parseFloat(person.css('top')) || -116;
+    let personLeft = parseFloat(person.css('left')) || 242;
 
-    let personTop = -116;
-    let personLeft = 242;
+    // 이동
+    personTop += 0.3 * delta;
+    personLeft -= 0.8 * delta;
 
-    let bounceFrame = 0;
-    let frameCounter = 0;
+    // 바운스
+    if (typeof animatePerson.bounceFrame === 'undefined') animatePerson.bounceFrame = 0;
+    if (typeof animatePerson.frameCounter === 'undefined') animatePerson.frameCounter = 0;
 
     const bounceCycle = [
       0, -0.5, -1.2, -2.0, -2.6, -3.0, -2.6, -2.0, -1.2, -0.5,
       0, 0.5, 1.2, 2.0, 2.6, 3.0, 2.6, 2.0, 1.2, 0.5
     ];
 
-    function updatePersonPosition() {
-      if (gameEnded) return;
-
-      personTop += 0.3;
-      personLeft -= 0.8;
-
-      if (frameCounter % 3 === 0) {
-        bounceFrame++;
-      }
-      frameCounter++;
-
-      const bounceOffset = bounceCycle[bounceFrame % bounceCycle.length];
-
-      person.css({
-        top: `${personTop + bounceOffset}px`,
-        left: `${personLeft}px`
-      });
-
-      requestAnimationFrame(updatePersonPosition);
+    if (animatePerson.frameCounter % 3 === 0) {
+      animatePerson.bounceFrame++;
     }
+    animatePerson.frameCounter++;
 
-    updatePersonPosition();
-  }
+    const bounceOffset = bounceCycle[animatePerson.bounceFrame % bounceCycle.length];
 
-  function animateCar() {
-    if (gameEnded) return;
+    person.css({
+      top: `${personTop + bounceOffset}px`,
+      left: `${personLeft}px`
+    });
 
-    updateCarPosition();
-    checkCollision();
-    animationId = requestAnimationFrame(animateCar);
+    requestAnimationFrame(animatePerson);
   }
 
   function endGame(isSuccess) {
@@ -181,7 +189,6 @@ $(function () {
       failImage.addClass('kaboom');
 
       $('.splash-effect').show().addClass('active');
-
       $('.part_2_layer1').css('background-image', 'url(./images/game/part_2_layer1_fail.png)');
 
       failImage.one('animationend', function () {
@@ -208,8 +215,8 @@ $(function () {
       leftBtn.show();
       rightBtn.show();
 
-      animateCar();
-      animatePerson();
+      requestAnimationFrame(animateCar);
+      requestAnimationFrame(animatePerson);
 
       successTimer = setTimeout(() => {
         endGame(true);

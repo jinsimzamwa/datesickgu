@@ -277,7 +277,7 @@ const part04_story2 = [
       { name: 'jakurai', position: 'center', expression: 'idle' }
     ],
     speaker: {
-      kor: '神宮寺 寂雷',
+      kor: '진구지 쟈쿠라이',
       jpn: '神宮寺 寂雷'
     },
     text: {
@@ -290,7 +290,7 @@ const part04_story2 = [
       { name: 'jakurai', position: 'center', expression: 'idle' }
     ],
     speaker: {
-      kor: '神宮寺 寂雷',
+      kor: '진구지 쟈쿠라이',
       jpn: '神宮寺 寂雷'
     },
     text: {
