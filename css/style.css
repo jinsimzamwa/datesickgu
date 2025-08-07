@@ -32,11 +32,10 @@ body{
 }
 
 header{
-    width: 911px;
-    height: 419px;
+    width: 1144px;
+    height: 526px;
     background-image: url(../images/header2.png);
     margin-bottom: 50px;
-    margin-left: 97px;
 }
 header>h1{text-indent: -9999px;}
 
