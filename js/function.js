@@ -7,13 +7,41 @@ function preloadImages(urls) {
 
 $(function () {
   preloadImages([
+    './images/stand/hitoya_default.png',
+    './images/stand/hitoya_eyes.png',
+    './images/stand/hitoya_haaa.png',
+    './images/stand/hitoya_hut.png',
+    './images/stand/hitoya_huu.png',
+    './images/stand/hitoya_surp.png',
+
     './images/stand/rei_default.png',
-    './images/stand/rei_angry.png',
+    './images/stand/rei_laugh.png',
+    './images/stand/rei_sunoff.png',
+
+    './images/stand/saburo_ang1.png',
+    './images/stand/saburo_ang2.png',
+    './images/stand/saburo_at.png',
+    './images/stand/saburo_default.png',
+    './images/stand/saburo_happy.png',
+    './images/stand/saburo_simu.png',
+    './images/stand/saburo_wakan.png',
+    './images/stand/saburo_wakan2.png',
+    './images/stand/saburo_yata.png',
+
+    './images/stand/jakurai_at.png',
+    './images/stand/jakurai_default.png',
+    './images/stand/jakurai_idle.png',
+    './images/stand/jakurai_smile.png',
+
+    './images/stand/kuko_default.png',
+
+    './images/stand/ichiro_default.png',
+
+    './images/stand/rei_default.png',
     './images/background/station.png',
     './images/ui/start.png',
     './images/ui/success.png',
     './images/ui/fail.png',
-    './images/part3/layer2.png'
   ]);
 });
 
