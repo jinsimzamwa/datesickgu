@@ -133,14 +133,12 @@ function initDialogue({ sectionSelector, script }) {
       }
 
       if (line.next === 'finalNext') {
+        console.log('다이얼로그 유틸에서 호출!')
         const seen = JSON.parse(localStorage.getItem('seenEndings') || '[]');
         const all = ['end01', 'end02', 'end03', 'end04', 'end05'];
         const seenAll = all.every(id => seen.includes(id));
         finalNext = seenAll ? './game/part05_story_true.html' : './game/part05_story.html';
       }
-
-      if (window.isTransitioning) return;
-        window.isTransitioning = true;
 
       $('.container-inner').fadeOut(600, function () {
         $('.container-inner').load(finalNext, function () {
