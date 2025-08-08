@@ -246,7 +246,7 @@ let isTransitioning = false;
 
 $('.skipBtn').click(function () {
 
-  if (isTransitioning) return;
+  /*if (isTransitioning) return;
   isTransitioning = true;
 
   const lastLine = part04_success[part04_success.length - 1];
@@ -263,11 +263,32 @@ $('.skipBtn').click(function () {
         : './game/part05_story.html';
     }
 
-    if (window.isTransitioning) return;
-      window.isTransitioning = true;
-
     $('.container-inner').css('opacity', 0).load(finalNext, function () {
       $('.container-inner').animate({ opacity: 1 }, 800);
     });
-  }
+  }*/
+
+    if (isTransitioning) return;
+  isTransitioning = true;
+  
+  if ($('.container-inner').data('loading')) return;
+  $('.container-inner').data('loading', true);
+
+   const seen = JSON.parse(localStorage.getItem('seenEndings') || '[]');
+      const all = ['end01', 'end02', 'end03', 'end04', 'end05'];
+      const seenAll = all.every(id => seen.includes(id));
+      finalNext = seenAll
+        ? './game/part05_story_true.html'
+        : './game/part05_story.html';
+
+        $('#wrap').not(':first').remove();
+     $('.container-inner').fadeOut(600, function () {
+      $('.container-inner').load(finalNext, function () {
+      $('.container-inner').fadeIn(600, function () {
+        // 로드 완료 후 로딩 상태 해제
+        $('.container-inner').data('loading', false);
+      });
+    });
+  });
+
 });
