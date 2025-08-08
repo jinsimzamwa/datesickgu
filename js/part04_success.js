@@ -231,7 +231,7 @@ const part04_success = [
 
 $(function () {
   const seenEndings = JSON.parse(localStorage.getItem('seenEndings') || '[]');
-		const hasEnd05 = seenEndings.includes('end05');
+  const hasEnd05 = seenEndings.includes('end05');
 
 		if (hasEnd05) {
 			$('.skipBtn').show();
@@ -242,9 +242,13 @@ $(function () {
   initDialogue({ sectionSelector: '.part04_success', script: part04_success });
 });
 
+let isTransitioning = false;
 
 $('.skipBtn').click(function () {
     
+    if (isTransitioning) return;
+    isTransitioning = true;
+
     const seen = JSON.parse(localStorage.getItem('seenEndings') || '[]');
     const all = ['end01', 'end02', 'end03', 'end04', 'end05'];
     const seenAll = all.every(id => seen.includes(id));
@@ -252,8 +256,10 @@ $('.skipBtn').click(function () {
       ? './game/part05_story_true.html'
       : './game/part05_story.html';
 
-
-    $('.container-inner').css('opacity', 0).load(finalNext + ' #container > .container-inner > *', function () {
-      $('.container-inner').animate({ opacity: 1 }, 800);
+    $('.container-inner').fadeOut(300, function () {
+      $('.container-inner').load(finalNext, function () {
+        $('.container-inner').fadeIn(500);
+        isTransitioning = false;
+      });
     });
 });
