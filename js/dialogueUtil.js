@@ -139,6 +139,9 @@ function initDialogue({ sectionSelector, script }) {
         finalNext = seenAll ? './game/part05_story_true.html' : './game/part05_story.html';
       }
 
+      if (window.isTransitioning) return;
+        window.isTransitioning = true;
+
       $('.container-inner').fadeOut(600, function () {
         $('.container-inner').load(finalNext, function () {
           $('.container-inner').fadeIn(800);

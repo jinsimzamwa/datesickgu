@@ -263,6 +263,9 @@ $('.skipBtn').click(function () {
         : './game/part05_story.html';
     }
 
+    if (window.isTransitioning) return;
+      window.isTransitioning = true;
+
     $('.container-inner').css('opacity', 0).load(finalNext, function () {
       $('.container-inner').animate({ opacity: 1 }, 800);
     });
