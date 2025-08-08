@@ -75,8 +75,6 @@ $(function () {
   ]);
 });
 
-window.isTransitioning = false;
-
 function attachGameEvents() {
 
   let currentLang = localStorage.getItem('lang') || 'jpn';

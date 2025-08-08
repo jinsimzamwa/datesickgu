@@ -133,7 +133,6 @@ function initDialogue({ sectionSelector, script }) {
       }
 
       if (line.next === 'finalNext') {
-        console.log('다이얼로그 유틸에서 호출!')
         const seen = JSON.parse(localStorage.getItem('seenEndings') || '[]');
         const all = ['end01', 'end02', 'end03', 'end04', 'end05'];
         const seenAll = all.every(id => seen.includes(id));

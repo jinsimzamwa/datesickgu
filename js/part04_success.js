@@ -244,8 +244,6 @@ $(function () {
 
 
 $('.skipBtn').click(function () {
-
-    console.log('스킵버튼에서 호출!')
     
     const seen = JSON.parse(localStorage.getItem('seenEndings') || '[]');
     const all = ['end01', 'end02', 'end03', 'end04', 'end05'];
@@ -255,7 +253,7 @@ $('.skipBtn').click(function () {
       : './game/part05_story.html';
 
 
-    $('.container-inner').css('opacity', 0).load(finalNext, function () {
+    $('.container-inner').css('opacity', 0).load(finalNext + ' #container > .container-inner > *', function () {
       $('.container-inner').animate({ opacity: 1 }, 800);
     });
 });
