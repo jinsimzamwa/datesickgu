@@ -244,7 +244,7 @@ $(function () {
 
 let isTransitioning = false;
 
-$('.skipBtn').click(function () {
+$('.skipBtn').off('click').on('click', function() {
     
     if (isTransitioning) return;
     isTransitioning = true;
